@@ -1,0 +1,33 @@
+<component xmlns="http://adobe.com/idp/dsc/component/document">
+   <component-id>com.adobe.livecycle.samples.directory.SampleDirectoryManagerService</component-id>
+   <version>1.0</version>    
+   <supports-export>false</supports-export> 
+   <class-path></class-path>
+   <search-order>PARENT_FIRST</search-order>
+   <services>
+      <service name="SampleDirectoryManagerService">
+      	  <implementation-class>com.adobe.livecycle.samples.directory.SampleDirectoryManager</implementation-class>
+      	  <auto-deploy category-id="Samples" service-id="SampleDirectoryManagerService" major-version="1" minor-version="0"/>
+          <specifications>
+              <specification spec-id="com.adobe.idp.um.spi.directoryservices.directoryGroupProvider"/>
+              <specification spec-id="com.adobe.idp.um.spi.directoryservices.directoryUserProvider"/>
+          </specifications>
+         <operations>
+            <operation name="getPrincipals" method="getPrincipals" >
+               <input-parameter name="config" type="com.adobe.idp.um.spi.directoryservices.DirectoryProviderConfig" />
+               <input-parameter name="state" type="java.lang.Object" />
+               <output-parameter name="result" type="com.adobe.idp.um.spi.directoryservices.DSPrincipalCollection"/>
+            </operation>
+            <operation name="testConfiguration" method="testConfiguration" >
+               <input-parameter name="config" type="com.adobe.idp.um.spi.directoryservices.DirectoryProviderConfig" />
+               <output-parameter name="result" type="boolean"/>
+            </operation>
+            <operation name="getGroupMembers" method="getGroupMembers" >
+               <input-parameter name="config" type="com.adobe.idp.um.spi.directoryservices.DirectoryProviderConfig" />
+               <input-parameter name="group" type="com.adobe.idp.um.spi.directoryservices.DSPrincipalIdRecord" />
+               <output-parameter name="result" type="com.adobe.idp.um.spi.directoryservices.DSGroupContainmentRecord"/>
+            </operation>
+           </operations>
+       </service>
+   </services>
+</component>

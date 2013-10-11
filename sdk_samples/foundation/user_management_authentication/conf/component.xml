@@ -1,0 +1,26 @@
+<component xmlns="http://adobe.com/idp/dsc/component/document">
+   <component-id>com.adobe.livecycle.samples.authentication.SampleAuthenticationManagerService</component-id>
+   <version>1.0</version>    
+   <supports-export>false</supports-export> 
+   <class-path></class-path>
+   <search-order>PARENT_FIRST</search-order>
+   <services>
+      <service name="SampleAuthenticationManagerService">
+      	  <implementation-class>com.adobe.livecycle.samples.authentication.SampleAuthenticationManager</implementation-class>
+      	  <specifications>
+				<specification spec-id="com.adobe.idp.um.spi.authentication.AuthProvider"/>
+          </specifications>
+      	  <auto-deploy category-id="Samples" service-id="SampleAuthenticationManagerService" major-version="1" minor-version="0"/>
+         <operations>
+            <operation name="authenticate" method="authenticate" >
+               <input-parameter name="credential" type="java.util.Map" />
+               <input-parameter name="authConfigs" type="java.util.List" />
+               <output-parameter name="echoed-value" type="com.adobe.idp.um.spi.authentication.AuthResponse"/>
+            </operation>
+            <operation name="getConfigName" method="getConfigName" >
+               <output-parameter name="echoed-value" type="java.lang.String"/>
+            </operation>
+           </operations>
+       </service>
+   </services>
+</component>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************************
+ * 
+ * ADOBE SYSTEMS INCORPORATED
+ * Copyright 2007 Adobe Systems Incorporated
+ * All Rights Reserved
+ *  
+ * NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the 
+ * terms of the Adobe license agreement accompanying it.  If you have received this file from a 
+ * source other than Adobe, then your use, modification, or distribution of it requires the prior 
+ * written permission of Adobe.
+ * 
+ * ************************************************************************* -->
+
+<project name="authentication-spi" default="compile" basedir=".">
+	
+    <property environment="env"/>
+
+    <!-- local properties -->
+    <property file="${basedir}/build.properties" />
+
+	<path id="class.path" >
+		<pathelement location="${livecycle.client.libs.dir}/adobe-livecycle-client.jar"/>
+		<pathelement location="${livecycle.client.libs.dir}/adobe-usermanager-client.jar"/>
+		<pathelement location="${livecycle.spi.libs.dir}/um-spi.jar"/>
+	</path>
+	
+	<!-- ********************************************************************* -->
+	<!-- Build Targets -->
+	<!-- ********************************************************************* -->
+
+    <target name="javac">
+        <javac debug="${debug}" destdir="${build.classes.dir}"  target="1.5">
+            <src path="${src.dir}" />
+            <classpath refid="class.path"/>
+        </javac>
+    </target>
+
+    <target name="compile" depends="createdir,javac">
+        <jar destfile="${sample.dsc.dir}/adobe-authentication-spi-dsc.jar">
+        	<zipfileset dir="${build.classes.dir}">       
+        	      <include name="**/*.class"/>
+        	</zipfileset>
+			<zipfileset dir="${src.dir}">       
+	    		  <include name="**/*.java"/>
+			</zipfileset>
+        	<zipfileset dir="${conf.dir}">
+                <include name="component.xml"/>
+            </zipfileset>
+        </jar>
+		<antcall target="clean"/>
+    </target>
+
+	<!-- ********************************************************************* -->
+	<!-- Cleanup Targets -->
+	<!-- ********************************************************************* -->	
+	<target name="createdir" depends="clean">
+       <!-- ****** Create new directories ****** -->
+       <mkdir dir="${build.classes.dir}" />
+	</target>
+	<target name="clean">
+       <!-- ****** Clean up previous directories ****** -->
+       <delete dir="${build.classes.dir}" quiet="true" />
+    </target>
+	
+ </project>

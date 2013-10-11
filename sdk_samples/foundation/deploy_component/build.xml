@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Samples-Foundation-API" default="compile" basedir=".">
+    <path id="project.classpath">
+      	<fileset dir="${client-libs}">
+        	<include name="**/*.jar"/>
+      	</fileset>
+    </path>
+
+
+    <target name="compile" >
+        <echo message="compile LiveCycle foundation API samples"/>
+        <javac debug="on">
+            <src path="src"/>
+           <classpath refid="project.classpath"/>
+        </javac>
+    </target>
+
+  	
+  <target name="run.jboss" depends="compile">
+     <echo message="run LiveCycle foundation API samples--deploy a LiveCycle component"/>
+      <java classname="com.adobe.livecycle.samples.foundationAPI.DeployComponent" fork="yes">
+       <arg value="JBoss.properties"/>
+      <arg value="${component}"/>
+		<sysproperty key="component" value="${component}" />
+       <classpath>
+         <pathelement path="./src"/>
+         <pathelement path="."/>
+        </classpath>
+       <classpath refid="project.classpath"/>
+    </java>
+  </target>
+
+  <target name="run.weblogic" depends="compile">
+     <echo message="run LiveCycle foundation API samples--deploy a LiveCycle component"/>
+      <java classname="com.adobe.livecycle.samples.foundationAPI.DeployComponent" fork="yes">
+       <arg value="Weblogic.properties"/>
+      <arg value="${component}"/>
+		<sysproperty key="component" value="${component}" />
+       <classpath>
+         <pathelement path="./src"/>
+         <pathelement path="."/>
+        </classpath>
+       <classpath refid="project.classpath"/>
+    </java>
+  </target>
+
+  <target name="run.websphere" depends="compile">
+     <echo message="run LiveCycle foundation API samples--deploy a LiveCycle component"/>
+      <java classname="com.adobe.livecycle.samples.foundationAPI.DeployComponent" fork="yes">
+       <arg value="WebSphere.properties"/>
+      <arg value="${component}"/>
+		<sysproperty key="component" value="${component}" />
+       <classpath>
+         <pathelement path="./src"/>
+         <pathelement path="."/>
+        </classpath>
+       <classpath refid="project.classpath"/>
+    </java>
+  </target>
+</project>

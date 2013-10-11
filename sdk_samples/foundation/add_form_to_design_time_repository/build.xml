@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Samples-Foundation-API" default="compile" basedir=".">
+
+  <property name="client.sdk.root" value="${client-libs}"/>
+
+  <path id="project.classpath">
+        <pathelement path="${client.sdk.root}/common/adobe-usermanager-client.jar"/>
+      	<pathelement path="${client.sdk.root}/common/adobe-livecycle-client.jar"/>
+        <pathelement path="${client.sdk.root}/common/adobe-repository-client.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/axis.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/jaxrpc.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/saaj.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/commons-logging.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/commons-discovery.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/activation.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/mail.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/wsdl4j.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/commons-codec-1.3.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/commons-collections-3.1.jar"/>
+        <pathelement path="${client.sdk.root}/thirdparty/log4j.jar"/>
+  </path>
+
+  <target name="compile" >
+      <echo message="compile LiveCycle foundation API samples"/>
+      <javac debug="on">
+          <src path="src"/>
+         <classpath refid="project.classpath"/>
+      </javac>
+  </target>
+
+  <target name="run.weblogic" depends="compile">
+      <echo message="run LiveCycle foundation API samples-- Add form to design time repository"/>
+     <java classname="com.adobe.livecycle.samples.repository.AddFormToDesignTimeRepository" fork="yes">
+       <arg value="WebLogic.properties"/>
+       <classpath>
+         <pathelement path="./src"/>
+         <pathelement path="."/>
+        </classpath>
+       <classpath refid="project.classpath"/>
+    </java>
+  </target>
+
+  <target name="run.jboss" depends="compile">
+      <echo message="run LiveCycle foundation API samples-- Add form to design time repository"/>
+     <java classname="com.adobe.livecycle.samples.repository.AddFormToDesignTimeRepository" fork="yes">
+       <arg value="JBoss.properties"/>
+       <classpath>
+         <pathelement path="./src"/>
+         <pathelement path="."/>
+        </classpath>
+       <classpath refid="project.classpath"/>
+    </java>
+  </target>
+
+  <target name="run.websphere" depends="compile">
+      <echo message="run LiveCycle foundation API samples-- Add form to design time repository"/>
+     <java classname="com.adobe.livecycle.samples.repository.AddFormToDesignTimeRepository" fork="yes">
+       <arg value="WebSphere.properties"/>
+       <classpath>
+         <pathelement path="./src"/>
+         <pathelement path="."/>
+        </classpath>
+       <classpath refid="project.classpath"/>
+    </java>
+  </target>
+
+ <target name="clean">
+   <echo message="clean LiveCycle foundation API Sample - Add form to design time repository"/>
+   <delete dir="com"/>
+ </target>
+
+</project>
