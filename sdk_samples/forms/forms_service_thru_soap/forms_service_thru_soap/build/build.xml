@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!-- ====================================================================== 
+     FormsServiceThruSOAP    
+     ====================================================================== -->
+<project name="FormsServiceThruSOAP" default="all">
+
+	<property file="build.properties" />
+
+	<property environment="env" />
+	<property name="target" value="1.5" />
+	<property name="source" value="1.5" />
+
+	<!-- ================================= 
+          target: all              
+         ================================= -->
+	<target name="all" depends="clean, wsdl2java, compile, run">
+
+	</target>
+
+	<target name="wsdl2java">
+		<java classname="org.apache.axis.wsdl.WSDL2Java" classpath="${wsdl2java.class.path}" fork="true">
+			<arg line="-o ${GEN_SRC_ROOT}" />
+			<arg line="${wsdl.forms.url}" />
+		</java>
+	</target>
+
+	<target name="compile">
+		<javac debuglevel="${debug.level}" destdir="${classes}" source="${source}" target="${target}" 
+			   optimize="${compile.for.optimize}" deprecation="${compile.tofind.deprecation}" 
+			   classpath="${wsdl2java.class.path}" debug="${compile.for.debugging}">
+			<src path="${SRC_ROOT}" />
+			<src path="${GEN_SRC_ROOT}" />
+		</javac>
+		<copy file="../collaterals/input.props" todir="${classes}" />
+		<copy file="${SRC_ROOT}/log4j.properties" todir="${classes}" />
+	</target>
+
+	<target name="run">
+		<java classname="com.adobe.livecycle.samples.formsservice.FormsServiceThruSOAP" fork="true" classpath="${project.class.path}" />
+	</target>
+
+	<target name="clean">
+		<delete>
+			<fileset dir="${classes}">
+				<include name="**/*" />
+			</fileset>
+		</delete>
+
+		<delete>
+			<fileset dir="${GEN_SRC_ROOT}">
+				<include name="**/*" />
+			</fileset>
+		</delete>
+	</target>
+</project>

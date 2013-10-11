@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<input>
+	<customer>
+		<name>Akira Tanaka</name>
+		<address1>#39, Any Street</address1>
+		<address2>Any Town</address2>
+		<address3>CA 95113</address3>
+		<toEmail/>
+		<fromEmail/>
+	</customer>
+	<attachments total="2">
+		<attachment no="1">
+			<file>Mutual Fund Fact Sheets 1.pdf</file>
+			<description>Mutual Funds Fact Sheet 1</description>
+		</attachment>
+		<attachment no="2">
+			<file>Mutual Fund Fact Sheets 2.pdf</file>
+			<description>Mutual Funds Fact Sheet 2</description>
+		</attachment>
+	</attachments>
+</input>

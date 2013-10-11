@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.6.3
+Created-By: 1.5.0_04-b05 (Sun Microsystems Inc.)
+AdobeIP: A0000231
+Class-Path: adobe-rightsmanagement-client.jar adobe-livecycle-client.jar edc-server-spi.jar
+Built-By: RelDev
+AdobeVersion: 8.0.3051.1.141800.1
+AdobeTimeStamp: 20070220123131
+Specification-Vendor: Adobe Systems
+Specification-Version: 8.0.3051.1.141800.1
+Implementation-Vendor: Adobe Systems
+Implementation-Version: 8.0.3051.1.141800.1
+Application-Server: All
+Operating-System: All

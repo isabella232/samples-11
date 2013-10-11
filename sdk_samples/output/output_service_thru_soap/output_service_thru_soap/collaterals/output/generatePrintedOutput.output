@@ -1,0 +1,2797 @@
+%!PS-Adobe
+save
+% simple drawing functions
+/edge {/y2 exch def /x2 exch def /y1 exch def /x1 exch def x1 y1 neg moveto x2 y2 neg lineto } bind def
+/line {/y2 exch def /x2 exch def /y1 exch def /x1 exch def newpath x1 y1 neg moveto x2 y2 neg lineto stroke} bind def
+/rline {/y2 exch def /x2 exch def /y1 exch def /x1 exch def x1 y1 neg moveto x2 y2 neg lineto } bind def
+/arcdraw {/a2 exch def /a1 exch def /r exch def /y exch def /x exch def newpath x y r a1 a1 a2 add arc} bind def
+/as {/sweep exch def /start exch def /radius exch def /sy exch def /sx exch def /yc exch def /xc exch def xc yc neg translate sx sy scale 0 0 radius start sweep arcdraw stroke} def
+/arcfill {/a2 exch def /a1 exch def /r exch def /y exch def /x exch def newpath x y r a1 a2 arc closepath fill} bind def
+/c255 {/b exch def /g exch def /r exch def r 255 div g 255 div b 255 div setrgbcolor} bind def
+% rectangle rounded corners
+/rc1 {/r exch def /y exch def /x exch def x y neg r 90 180 arc } def /rc2 {/r exch def /y exch def /x exch def x y neg r 0 90 arc } def
+/rc3 {/r exch def /y exch def /x exch def x y neg r 270 0 arc } def /rc4 {/r exch def /y exch def /x exch def x y neg r 180 270 arc } def
+% rectangle inverted rounded corners
+/ric1 {/r exch def /yc exch def /xc exch def xc yc neg r 360 270 arcn } def /ric2 {/r exch def /yc exch def /xc exch def xc yc neg r 270 180 arcn } def
+/ric3 {/r exch def /yc exch def /xc exch def xc yc neg r 180 90 arcn } def /ric4 {/r exch def /yc exch def /xc exch def xc yc neg r 90 0 arcn } def
+% pattern fills
+globaldict begin true setglobal
+/hP {/bB exch def /gB exch def /rB exch def /b exch def /g exch def /r exch def << /PatternType 1 /PaintType 1 /TilingType 1 /BBox[0 0 9 9] /XStep 9 /YStep 9 
+/h {gsave 0 setlinewidth rB 255 div gB 255 div bB 255 div setrgbcolor newpath 0 0 moveto 11 0 lineto 11 11 lineto 0 11 lineto closepath fill r 255 div g 255 div b 255 div setrgbcolor 
+0 5 moveto 9 5 lineto stroke grestore} bind /PaintProc {begin h end} bind >> matrix makepattern /horizontal exch def horizontal setpattern} def
+/vP {/bB exch def /gB exch def /rB exch def /b exch def /g exch def /r exch def << /PatternType 1 /PaintType 1 /TilingType 1 /BBox[0 0 9 9] /XStep 9 /YStep 9 
+/v {0 setlinewidth gsave rB 255 div gB 255 div bB 255 div setrgbcolor newpath 0 0 moveto 11 0 lineto 11 11 lineto 0 11 lineto closepath fill r 255 div g 255 div b 255 div setrgbcolor 
+5 0 moveto 5 9 lineto stroke grestore} bind /PaintProc {begin v end} bind >> matrix makepattern /vertical exch def vertical setpattern} def
+/chP {/bB exch def /gB exch def /rB exch def /b exch def /g exch def /r exch def << /PatternType 1 /PaintType 1 /TilingType 1 /BBox[0 0 9 9] /XStep 9 /YStep 9 
+/ch {gsave 0 setlinewidth rB 255 div gB 255 div bB 255 div setrgbcolor newpath 0 0 moveto 9 0 lineto 9 9 lineto 0 9 lineto closepath fill r 255 div g 255 div b 255 div setrgbcolor 
+5 0 moveto 5 9 lineto stroke 0 5 moveto 9 5 lineto stroke grestore} bind /PaintProc {begin ch end} bind >> matrix makepattern /crossHatch exch def crossHatch setpattern} def
+/dlP {/bB exch def /gB exch def /rB exch def /b exch def /g exch def /r exch def << /PatternType 1 /PaintType 1 /TilingType 1 /BBox[0 0 9 9] /XStep 9 /YStep 9 
+/dl {gsave 0 setlinewidth rB 255 div gB 255 div bB 255 div setrgbcolor newpath 0 0 moveto 9 0 lineto 9 9 lineto 0 9 lineto closepath fill r 255 div g 255 div b 255 div setrgbcolor 
+9 0 moveto 0 9 lineto stroke grestore} bind /PaintProc {begin dl end} bind >> matrix makepattern /diagonalLeft exch def diagonalLeft setpattern} def
+/drP { /bB exch def /gB exch def /rB exch def /b exch def /g exch def /r exch def << /PatternType 1 /PaintType 1 /TilingType 1 /BBox[0 0 9 9] /XStep 9 /YStep 9 
+/dr {gsave 0 setlinewidth rB 255 div gB 255 div bB 255 div setrgbcolor newpath 0 0 moveto 9 0 lineto 9 9 lineto 0 9 lineto closepath fill r 255 div g 255 div b 255 div setrgbcolor 
+0 0 moveto 9 9 lineto stroke grestore} bind /PaintProc {begin dr end} bind >> matrix makepattern /diagonalRight exch def diagonalRight setpattern} def
+/cdP {/bB exch def /gB exch def /rB exch def /b exch def /g exch def /r exch def << /PatternType 1 /PaintType 1 /TilingType 1 /BBox[0 0 9 9] /XStep 8 /YStep 8 
+/cd {gsave 0 setlinewidth rB 255 div gB 255 div bB 255 div setrgbcolor newpath 0 0 moveto 9 0 lineto 9 9 lineto 0 9 lineto closepath fill r 255 div g 255 div b 255 div setrgbcolor 
+0 0 moveto 9 9 lineto stroke 9 0 moveto 0 9 lineto stroke grestore} bind /PaintProc {begin cd end} bind >> matrix makepattern /crossDiagonal exch def crossDiagonal setpattern} def
+% linear fill
+/lnP {/b2 exch def /g2 exch def /r2 exch def /b exch def /g exch def /r exch def /y2 exch def /x2 exch def /y1 exch def /x1 exch def r 255 div /r exch def g 255 div /g exch def b 255 div /b exch def 
+r2 255 div /r2 exch def g2 255 div /g2 exch def b2 255 div /b2 exch def <</PatternType 2 /Shading << /ShadingType 2 /ColorSpace /DeviceRGB /Coords [x1 y1 x2 y2] /Extend [false false] /Function <<
+/FunctionType 2 /Domain [0 1] /C0 [r g b ] /C1 [r2 g2 b2] /N 1 >> >> >> matrix makepattern /linear exch def linear setpattern} def
+% radial fill
+/rdP {/b2 exch def /g2 exch def /r2 exch def /b exch def /g exch def /r exch def /rad2 exch def /y2 exch def /x2 exch def /rad1 exch def /y1 exch def /x1 exch def r 255 div /r exch def g 255 div /g exch def b 255 div /b exch def 
+r2 255 div /r2 exch def g2 255 div /g2 exch def b2 255 div /b2 exch def <</PatternType 2 /Shading << /ShadingType 3 /ColorSpace /DeviceRGB /Coords [x1 y1 rad1 x2 y2 rad2] /Extend [true true] /Function <<
+/FunctionType 2 /Domain [0 1] /C0 [r g b] /C1 [r2 g2 b2] /N 1 >> >> >> matrix makepattern /radial exch def radial setpattern} def
+false setglobal end
+% font encoding
+/pa_reencsmalldict 12 dict def /pa_ReEncode {pa_reencsmalldict begin /newcodesandnames exch def /newfontname exch def /basefontname exch def /basefontdict basefontname findfont def /newfont basefontdict maxlength dict def
+basefontdict {exch dup /FID ne {dup /Encoding eq {exch dup length array copy newfont 3 1 roll put} {exch newfont 3 1 roll put} ifelse} {pop pop} ifelse}
+forall newfont /FontName newfontname put newcodesandnames aload pop newcodesandnames length 2 idiv {newfont /Encoding get 3 1 roll put} repeat newfontname newfont definefont pop end} def
+/BeginEPSF {/b4_Inc_state save def /dict_count countdictstack def /op_count count 1 sub def 
+userdict begin /showpage {} def 0 setgray 0 setlinecap 1 setlinewidth 0 setlinejoin 10 setmiterlimit [] 0 setdash /languagelevel where 
+{pop languagelevel 1 ne {false setstrokeadjust false setoverprint} if} if 
+currentpoint eps_vertical_offset sub exch eps_horizontal_offset add exch translate eps_angle rotate 
+eps_scale_factor dup scale eps_llx neg eps_lly neg translate newpath} bind def
+/EndEPSF {count op_count sub {pop} repeat countdictstack dict_count sub {end} repeat b4_Inc_state restore} bind def
+/pa_ISO-8859-1 [128 /Euro 129 /questiondown 130 /quotesinglbase 131 /florin 132 /quotedblbase 133 /ellipsis 134 /dagger 135 /daggerdbl 136 /circumflex 137 /perthousand 138 /Scaron 139 /guilsinglleft 
+140 /OE 141 /questiondown 142 /Zcaron 143 /questiondown 144 /questiondown 145 /quoteleft 146 /quoteright 147 /quotedblleft 148 /quotedblright 149 /bullet 150 /endash 151 /emdash 152 /tilde 153 /trademark 154 /scaron 155 /guilsinglright 
+156 /oe 157 /questiondown 158 /zcaron 159 /Ydieresis 160 /space 161 /exclamdown 162 /cent 163 /sterling 164 /currency 165 /yen 166 /brokenbar 167 /section 168 /dieresis 169 /copyright 170 /ordfeminine 171 /guillemotleft 172 /logicalnot 173 /hyphen 
+174 /registered 175 /macron 176 /degree 177 /plusminus 178 /twosuperior 179 /threesuperior 180 /acute 181 /mu 182 /paragraph 183 /periodcentered 184 /cedilla 185 /onesuperior 186 /ordmasculine 187 /guillemotright 188 /onequarter 189 /onehalf 
+190 /threequarters 191 /questiondown 192 /Agrave 193 /Aacute 194 /Acircumflex 195 /Atilde 196 /Adieresis 197 /Aring 198 /AE 199 /Ccedilla 200 /Egrave 201 /Eacute 202 /Ecircumflex 203 /Edieresis 204 /Igrave 205 /Iacute 206 /Icircumflex 
+207 /Idieresis 208 /Eth 209 /Ntilde 210 /Ograve 211 /Oacute 212 /Ocircumflex 213 /Otilde 214 /Odieresis 215 /multiply 216 /Oslash 217 /Ugrave 218 /Uacute 219 /Ucircumflex 220 /Udieresis 221 /Yacute 222 /Thorn 223 /germandbls
+224 /agrave 225 /aacute 226 /acircumflex 227 /atilde 228 /adieresis 229 /aring 230 /ae 231 /ccedilla 232 /egrave 233 /eacute 234 /ecircumflex 235 /edieresis 236 /igrave 237 /iacute 238 /icircumflex 239 /idieresis 240 /eth 
+241 /ntilde 242 /ograve 243 /oacute 244 /ocircumflex 245 /otilde 246 /odieresis 247 /divide 248 /oslash 249 /ugrave 250 /uacute 251 /ucircumflex 252 /udieresis 253 /yacute 254 /thorn 255 /ydieresis
+] def
+/pa_ISO-8859-2 [128 /Euro 129 /questiondown 130 /quotesinglbase 131 /questiondown 132 /quotedblbase 133 /ellipsis 134 /dagger 135 /daggerdbl 136 /questiondown 137 /perthousand 138 /Scaron 139 /guilsinglleft 
+140 /Sacute 141 /Tcaron 142 /Zcaron 143 /Zacute 144 /questiondown 145 /quoteleft 146 /quoteright 147 /quotedblleft 148 /quotedblright 149 /bullet 150 /endash 151 /emdash 152 /questiondown 153 /trademark 154 /scaron 155 /guilsinglright 
+156 /sacute 157 /tcaron 158 /zcaron 159 /zacute 160 /nbspace 161 /caron 162 /breve 163 /Lslash 164 /currency 165 /Aogonek 166 /brokenbar 167 /section 168 /dieresis 169 /copyright 170 /Scedilla 171 /guillemotleft 172 /logicalnot 173 /hyphen 
+174 /registered 175 /Zdotaccent 176 /degree 177 /plusminus 178 /ogonek 179 /lslash 180 /acute 181 /mu 182 /paragraph 183 /periodcentered 184 /cedilla 185 /aogonek 186 /scedilla 187 /guillemotright 188 /Lcaron 189 /hungarumlaut 190 /lcaron 
+191 /zdotaccent 192 /Racute 193 /Aacute 194 /Acircumflex 195 /Abreve 196 /Adieresis 197 /Lacute 198 /Cacute 199 /Ccedilla 200 /Ccaron 201 /Eacute 202 /Eogonek 203 /Edieresis 204 /Ecaron 205 /Iacute 206 /Icircumflex 207 /Dcaron
+208 /Dcroat 209 /Nacute 210 /Ncaron 211 /Oacute 212 /Ocircumflex 213 /Ohungarumlaut 214 /Odieresis 215 /multiply 216 /Rcaron 217 /Uring 218 /Uacute 219 /Udblacute 220 /Udieresis 221 /Yacute 222 /Tcedilla 223 /germandbls 224 /racute 
+225 /aacute 226 /acircumflex 227 /abreve 228 /adieresis 229 /lacute 230 /cacute 231 /ccedilla 232 /ccaron 233 /eacute 234 /eogonek 235 /edieresis 236 /ecaron 237 /iacute 238 /icircumflex 239 /dcaron 240 /dcroat 241 /nacute 242 /ncaron 
+243 /oacute 244 /ocircumflex 245 /ohungarumlaut 246 /odieresis 247 /divide 248 /rcaron 249 /uring 250 /uacute 251 /udblacute 252 /udieresis 253 /yacute 254 /tcedilla 255 /dotaccent
+] def
+/pa_fontSpecific [ ] def
+%Begin Document
+<</NumCopies 1>>setpagedevice
+%Begin Record
+globaldict begin true setglobal
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 Initial
+%ADOt1write: (1.0.24)
+12 dict dup begin
+/FontType 1 def
+/FontName /MyriadPro-RegularISO-8859-1 def
+/FontInfo 7 dict dup begin
+/Notice (Copyright 1992, 1994, 1997, 2000, 2004 Adobe Systems Incorporated. All rights reserved. Protected by U.S. Patents D454,582. Myriad is either a registered trademark or a trademark of Adobe Systems Incorporated in the United States and/or other countries.) def
+/Weight (Regular) def
+/ItalicAngle 0 def
+/FSType 8 def
+end def
+/PaintType 0 def
+/FontMatrix [0.001 0 0 0.001 0 0] def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 32 /space put
+def
+/FontBBox {-157 -250 1126 952} def
+end
+systemdict begin
+dup /Private
+12 dict dup begin
+/|- {def} def
+/| {put} def
+/BlueValues [-11 -0 674 686 484 495 650 661 710 721 241 248] def
+/OtherBlues [438 444 260 266 -209 -198 -153 -147 -118 -112] def
+/BlueScale 0.0604583 def
+/StdHW [67] def
+/StdVW [88] def
+/StemSnapV [88 92] def
+/password 5839 def
+/MinFeature {16 16} def
+/OtherSubrs[{}{}{}{systemdict/internaldict known not{pop 3}{1183615869
+systemdict/internaldict get exec dup/startlock known{/startlock get exec}{dup
+/strtlck known{/strtlck get exec}{pop 3}ifelse}ifelse}ifelse}executeonly]def
+/Subrs 5 array
+dup 0 <1C60D8A8CC31FE2BF6E07AA3E541E2> |
+dup 1 <1C60D8A8C9C3D06D9E> |
+dup 2 <1C60D8A8C9C202D79A> |
+dup 3 <1C60D8A849> |
+dup 4 <1C60D8A8CC3674F41144B13B77> |
+def
+put
+dup /CharStrings
+2 dict dup begin
+/space <1C60D8A8C9B896187A> |-
+/.notdef <1C60D8A8C9B7A73DC56ED86B010528A4AE924D9B6A4AEB6B57364C
+BBC1FC7743E3F5B16223C8BD8911534CBC6ED69BD6AA5A2C449B7A6EF268B5A0
+D64C6C74FC81FE7341B7ED82094E8390BB44FFD88AB4DB74763338FA8306E917
+B17192> |-
+end put
+end
+dup /FontName get exch definefont pop
+end
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/dollar <1C60D8A8C9B7BA8F787C9356878095C6EAEBE6D8C24EDA9E128F30B
+D92E1457D11DE22D1CDF5C6C292985815F4EDB234B94297821622493501D378C
+51E3731A216815D0372A29EA8B48FAF5BF8619165142C83330F93FE20D2419B4
+9A1CB3F4791AA94AB311F02FFDDD7DECA6933D8E1F1BE38AA1E637D62B4431DA
+752698DCFCEC62BAF8BA31B94D38D20F4D526E1CF6406DE3C0B98EDA321FD629
+27ED3C03C5B9523F49C6C665D> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 36 /dollar put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/quotesingle <1C60D8A8C9B8AE7DA6CE0948B7965010928D447AE0433488D2
+B7725C620BAF4C2CC58D6F> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 39 /quotesingle put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/parenleft <1C60D8A8C9B84E0A47D7FED6098F93D599A35099EC3AF2C571CF
+0E48D8A711D412E34AAB2732DF92ADCDC95C7C6D97E8C44CE2751654BC55BD12
+CD842E> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 40 /parenleft put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/parenright <1C60D8A8C9B84E0A47D7FED609B3683507871E5C5015E3549BF
+91653A329EF8D5BF37DF948A5A8471707D087A577F9EE79FD91DC92667BCDE58
+8EC87D3> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 41 /parenright put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/asterisk <1C60D8A8C9B71C16FD6190DE2747ECD6E73FF07230A807E96C7AE
+2B98B3B10B9552D7A2F8DB1494B6D182C31A4D9AB4A4349CBF43A3D56BEC1068
+448E5F4282D9D59206E816275B1EF4B6EA21F17B5CFA3518C7E5A044A5E16A3E
+5363912798C4BC12A384F0DCFFC564312FABC87A136226D4061A4502240CA590
+7EA37376CC3> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 42 /asterisk put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/comma <1C60D8A8C9B89DB7C9B4756630BFB06276234AECCA3BC685A5120ED7
+E73C100A605F362E52A669> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 44 /comma put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/period <1C60D8A8C9B89DB76243241956147685E9D11B558168E06D18275E2
+338D279B9913C7A1D115D13271EAC> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 46 /period put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/slash <1C60D8A8C9B8151C27268C28135E46A906DDC9504EC2C635F21A9AA1
+DC0B003BE7> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 47 /slash put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/zero <1C60D8A8C9B7BA8F6239473D6D0952B7B27F0FFDEC3D4AC868BB2F3F3
+5FB5E9F1C0F84AF60C7D8EABDB59B8E1F960151F9511E55A6B26091EC60E1C90
+C277465A6CD6BF415E99C1E3222E5D8229E07EB706E217942A6C6EE460AA0> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 48 /zero put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/one <1C60D8A8C9B7BA8F425ECEA255C7F445C46B341EF282C71048D555A5D5
+98E89496E7235E7E5E61E755DE1DD927709B69AF39C5FFA2F961FADB> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 49 /one put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/two <1C60D8A8C9B7BA8F694E6FA15FFB6B382A3EE4F45111A59DACAF941116
+582617B9738BB5AF1D396C826652BF6DBB46CC2019C22EEDB26045C1BEFE4887
+D256AE5DA3C25CAA99D62ED97486E7939D89DEC92F35F04285> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 50 /two put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/three <1C60D8A8C9B7BA8F622456C4A5B0CA9B1BA284AF806928062A6B7B09
+FB3F0AFA0642E6C0751425F2912B774695F4573A7ED10CC8657328CADE6CD5BA
+97A6C5BF6C1485B23CC65AC596605B697818C329637772F63BFEC9BF78A14135
+7498BBAC8062C44F8B28D5A5EFBE38074FF4A38C9291B6291D33E32B99042454
+59FFD3AE6CFBA6472FEF21B7BFBB29FDDBA248755ED07D6E4AD20219> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 51 /three put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/four <1C60D8A8C9B7BA8F425ECEAC1D5FB15843FC3AEF325D7DA4AC5B49218
+1366F1B4D605798E0A37299E20A2C781E96943F501C8D283CF9274FA8718C41B
+B1F2F8D3022028ECD22D73F736D12B17047DF40EDD60B6519E74C55A33C> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 52 /four put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/five <1C60D8A8C9B7BA8F622456C4991FA35B552AABDBA410C5FE2A289D1C4
+B46CC6EA81B6F378E0E9FBB887620926C1C295BED9DF5CC60E1506BC8F14C40D
+D7EC5F146AE0B602E11477020F8E0DC1E61B7E5001ACA3564CDADF4245B4EB16
+6D458A0663DB06F2579480E048AFCB0FC> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 53 /five put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/colon <1C60D8A8C9B89DB76243278294073DF27AE5537531F4FA2681A370F5
+FCCA7E6E1FA86AF450F5EF64102F632D9C8870983D71709A25CADA9622AD5CCA
+20A33D7B0A8891ABF97827B8> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 58 /colon put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/A <1C60D8A8C9B7D7E88499B0B4629F6223175CD4E8063229FBCC9F00B932F1
+5865B21E5E7BB034E6AEB00B8493B7416EA5F21E0E31EA4A4AA7B249DD04C202
+0B54E2FE3571164F33157FAF89CB55ED12EC09CD04764D59017211B80D8BF81F
+E221E84A40> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 65 /A put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/C <1C60D8A8C9B7F7BFE242671C9E817400744FCB1930C8B6D982C0603B0F56
+B2079EC8B4534AB9C74A497574D9EF71E8F51BC97EB8824D6E23EF8EFAA3DEBE
+8D568C2956BA1E496299B0678E1779132A604465EA4ECC38726918FAF069884E
+38826C83426FA3C94ADFC9002199C86D8D> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 67 /C put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/E <1C60D8A8C9B7AFA9BC4F00998616708AD319D689B216B721CBB286284877
+352BA785E1B053DF2EC2B77B2A321D6047CBD4FD467F6DD70A1B400CD3EB> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 69 /E put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/F <1C60D8A8C9B7544E530E823999841DA2F8EC66E9CFE2CD6B50437205F942
+FF37E122B69D17C7AA691A603207160811AFB791> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 70 /F put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/I <1C60D8A8C9B87DE005AD6F3C5D74814B2BFE06F81F462471EDB11E0EC39F
+39EA> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 73 /I put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/M <1C60D8A8C9B6D9EA19A14B847D0E8EB8BF4B471CD6F46D062EB4BE987671
+1DE846CB52CA29717591BA788944E909A85262E823C4FA12BA37712263FC72E9
+89A6DED74E14903D34D6198FBDC555D5CFE2C4496EBCDE1C8C3752795BF188E4
+FAAED3EDACC0501E6038041D4A8B4E60EE57E2BABA6257E8> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 77 /M put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/N <1C60D8A8C9B647206730D8F66F8AC61925B6B1318E1FB010B62374917FD8
+33E1AD6BC7D55692C9AE2F77E568D5881F8457D1A44289B0DB31B4E1DC1F3487
+A85D6C086A5A13FB7D7B66A3F61EF4969C1AE080F7AF6D145220EBF9A7BF4151
+121C2FA015E52FB7E43B5305D938D71B0B61429953BBCCA81012B7A0E4> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 78 /N put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/P <1C60D8A8C9B7876E235FC614E63EC6DDBF5153E7285DD594B4A59D9CFED1
+9B0A38B3CB0F4F897304E6BAD66C826BEE7E4169B0E7C80E2CF9471E5F92DE30
+A72B04AC0EEA14B3B5B59AE75C5D253EAF073DA7CF16B6D745CDF6FBBE2E5B43
+C2B5E88E6AFB64C1CBC51F> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 80 /P put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/S <1C60D8A8C9B7AED8035FF9728E9C78ACC28F20CC9666D445523C20D6BC6D
+45C854A0BE693CA04DDB35CE9C6FCC12699F3ECF3D1B67F9F5777A6EECDAF3C0
+F3F32C0B6BC38F752623DB2A9617BDB514ED25F1A310A0C42BE659A27D8F2C06
+C4BFA42A6084F73A353D30020A89B386DABBAAA17119B17F011D1BF8067CBFE1
+7C2D6AE10C51C95BF00F09A50ED067AF> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 83 /S put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/T <1C60D8A8C9B7AA91799D50BEC147DC15659E7F5EC34F826A01358F7E6EB5
+3E56E1831B0550D2FE4055F5> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 84 /T put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/a <1C60D8A8C9B75946039FC5B56ED6A50878B478B1780B40C4125CE8039A26
+1528F027CE6FDEC5783823498623E2545F156FE1817CCA8E4CEF932EAF146EA4
+E45F8E44AF7B3429BDE6EAD3417E01676A62E7E41175148C72742B2C6CC241FF
+06B9AE6A99EACBD61DC0A967A1A9EA490A3B86CCCCBA356FE0C46F09ED4CCD9D
+7FD84EFCB667453A166D73A23A48C3A48DCEEFA9A85E6DA8EDA33C7A566D8839
+3EC5B1BCAE7CEACDFA7D9A043D> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 97 /a put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/b <1C60D8A8C9B7E2CE503F0CE2BC5634A8F8728B9E7DF78E9EB37EA1AAF5A6
+E14429B2FFC30BA7B2B7F7056F226E2401F24ABDAD5426247AC27BE4FA97CE94
+C91E5B97490DDD42E9AC1499720E52A641A6B5FD3039B53C33A6C3FB59A9FDC5
+809A26029808C985DEBED644B28F1427AE3990CDC08FE3F67389E1C6D971D03C
+58C4203806687562D626FE9888BA19E8E374C457B0F0CAD2096A35C2A25CA9F8
+8F3E7B91EC8C23BC> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 98 /b put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/c <1C60D8A8C9B77BBBDD6F2DE36836EA750B0DCDA2C66B70D3B3E9B799935A
+114CCF88968CB157B7DEA63450CA5D1B4BBF8E61AF225B205D414E242FC06624
+097F1B5D47BF4F384727F53BA1763156DBDB0266> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 99 /c put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/d <1C60D8A8C9B7E7C1D82219353B31AE497773900CFE039E7C34F7CEBE1010
+56958EFFC2C789CCBD8768CC683564B6074DAAAE648B50C88AD4C58AC712C847
+6BA68C74E592EF7E71792F9E5367AB3C80F9D183D28DD5E961AA14DCB5D92067
+68FB9E099DA642A8BAA73D52C56C9913DC619FDF3F90996DC8D242E6BF94BEBE
+752CB2F5D6196384CDD6E5AC10AFB49712810FFD82A2782B9B182DA37A23E604
+3872EFC1C407DD53136E> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 100 /d put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/e <1C60D8A8C9B7A66F85F3DBE5AE1E76F6A9740420B265CA4AC9DE99AD8AED
+C4233110D7344BA8969F49ACBE3164296BAF8D8824063AB5A81F8F9142D2C049
+2C8D085FBBDD29052840FCC873C574581FB314AC3521D9DA4AE8E6D987C45E9E
+8106797186054DABC39E6B> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 101 /e put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/f <1C60D8A8C9B8469EE0EEFD5AEC6CA97A72064EDB5F8138E6D1529C05D71A
+D800DE9767801FDF34CB86E1E21FD9D405698D46905E6F519DDB7CBC96570BA0
+9B7E74CE45A9784C89ACE8876894AF309C859106C75B1212CD> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 102 /f put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/g <1C60D8A8C9B7ECD94DE1A189191AD5F29F43B727FC67DAAB0A1AC3463640
+03E4FEF79FBAC399EF60BAB44182D20FA0C6402BF1E27F05398DCDDDA14D79F5
+733F11E560A813FF9D16C42617DFDA23021803BAB86086244EE74B29A5E1F99E
+79BC6C6C8880FE4C572C55E990D88B7521BD46854B97930948AAC94E7DFE2FF6
+9F2221950186414A7427A5E80E1B04B219E3300404246D87351FD05C6F3EA0B9
+5C636083B47E4D5C2DAA8BBB8D343439CEC8A6CCD7C3BA57C2332F2A02343DC5
+6BF6AA691E1A081F9D254D> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 103 /g put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/h <1C60D8A8C9B790A816BA887E1DA4852044FABD5C80CA3A9E2E9C1F200BD2
+00369E1A531F52CE66B5B19C492F0751A1C2858510B2E2690FB789B214E0E0C6
+537C1C71B0F5B79BE42FC591254AEEEA9BA5BA2F0A43A49AB11B4C> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 104 /h put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/i <1C60D8A8C9B88055FF27B3934D040E8DA53B043AB8CFF68E8D519FEAB9D5
+A4874DC9B90E63751BC12355D9D8276E2A66CDDB9CE6DD75534C5A54C45E2D6E
+21C6C79BBDA40B7772F2DEC85ADAD3476B> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 105 /i put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/l <1C60D8A8C9B87EB6C12D27FEBAAD9108B57B5CEF2AA76DC2FD884A8623> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 108 /l put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/m <1C60D8A8C9B6B770778B71072C32D83B2DE18F9EFFEDDA9C73816E98D1CE
+691983731B7222B167A6D2F63D304D344E93EA069603D18629A4320C5F1BC8DC
+C049DE26F978CA9BC88005768D4CD278F658DBD0215EC4C428D90DCB1C70291E
+674313AFD07F4ACB4C5152C73088F1801AB89447326D19BFA79413EE5F810BDD
+4269F23365D24789FC23A7E37320B3F849B7FB9F5D52128289A6456940F89EBC
+F3> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 109 /m put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/n <1C60D8A8C9B790A816BA887E1EEC2C6B98EC99098FC021FEBA148F884875
+E3B03D8F5BA9B51A6918EFA4195D8FABF82DC961545110C1672CA0A5B167A366
+46DBDC6B2B1EB2CCFFCB412605A41F5E921E35125025B68561FC08FF5F5A87F0
+318D13C761F9DF> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 110 /n put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/o <1C60D8A8C9B7967683396363C4C5A9E451FFBD75248EC3A8EC4B566E5BD4
+E7BBB72EB29C672F7BE91209F1171F84980F7DA08B43C90BC9E3BDC65B190F81
+C7A4B1ED6D074E407F8CF228B147D6A94BC016CC67> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 111 /o put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/p <1C60D8A8C9B7E2CE2B5D9AEC775B38F2FDCA5DD8FB0C9C7D76709EB2E3CE
+F7455DFF330D234D9132A6F52698D79064F174F1D99AEB0CF9139A6469F8D4BE
+826FAC77DD18B951C7429F3A77A1434C1A624632AE9545E6FD8A1CFF86A978EB
+2F9D9C8D213E3AEF1293A1DF353A70DA5E24E2AC4CE8D2656D24B8166AAA778D
+66777269CA00CCD283376A690AE85A4058A8C9155FC3FA3A08F87D3A4F002FFB
+BE8C69D79181> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 112 /p put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/r <1C60D8A8C9B825FA276057E430FDF01407E8A25201058EF45B5C185214AB
+1116383552C8A26ACD44FF0BE1E00A052AF17C7B552C44648BDA524B50952CB0
+AE525A4563499AD1C42D4D0C12A5AD458628362FB1B81E032637466F> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 114 /r put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/s <1C60D8A8C9B70FAD6F31E6985338EEEA1793890FC3B3DC4027B9CC9488D5
+A6B4D4C4E3E08CED307B2C798C1699A9DD310011666D86920512F1C3EB9CEE4F
+24B897BB1E950EE111237B9A2BC5BBB8732A07D9407EA3C86D8241785B5209F0
+AEBA9DE73147EEE82D829B87C7> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 115 /s put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/t <1C60D8A8C9B821B37F30E246C711EE3A9B1905ECA3B2281EC66105C6FB87
+D8A11F34421A86A4C8EB1634F07587A29F1959067E8F5C01D391C88E64020888
+37AF0D6E016A2B2057BCC898EDBE8C7509BAF139B3EFB89894D72C8915100CD3
+D16C57> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 116 /t put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/u <1C60D8A8C9B794D34CED683BC0F75FB25BE8ECA5D4F8D235649E81E6A62D
+D7B90AF6DE09B4373C71DC870DE9EFA0B94E7506F75EEE558DF81CD33372DAD0
+B84FB6B3C173C4DB8D5EA8C4F6D8C721F2FFE6909411B724C264F09293D8D8F8
+9019F8CCCB6FE3AF5C57> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 117 /u put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/v <1C60D8A8C9B75A17982D11DC3FC677436DFDC6EA949B3A8A476902498B78
+CD729866CE567C88B5C4105F11006EA75E6774682E91A2E1F257423C8BD0B940
+F1B9F1BCB8B413DFC78AF75D4027> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 118 /v put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/w <1C60D8A8C9B615D1D39C3ADF830FB08A1A35A87DCFD157E58FABDD21BA80
+846DED508D58D627D5468CDEA878B4EBB2BC39F9E17357A3B538845D213A53BE
+481E0D6B92FA11EAB84DAA099CD1E52DEE6734C0A900F3A37F8B6CBD74174B2B
+AF5100CBE402299FC69ADD471E1494375657D0074EB17A39D5C9C17257D613AB
+99E3> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 119 /w put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/x <1C60D8A8C9B74CDDCE74E258E27BD7DEC2AC84271E6C98FD20D770EC885A
+525E4B13092058B38B98D913CBB4CB890C6B5723895529FEAE9BA916EC36A86A
+9F59939408772A8E004C80432C1BF5EAC4792ACA2BAD6B237FD805243D397605
+6A1B26> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 120 /x put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/y <1C60D8A8C9B744514052D02E803EBAB86C11F12291D9D5A1504FC788087D
+686381D5B543506197B0A8ADF9BBF970FE769142A069FB8380E5823DCC497A6C
+0095124D4923B5CA9C6A958F4E90ADD7B82826865D1CD8932D873AEC8C248461
+B62B69DDE1FA42A8CFA455E382875F1E62FEF36E2B6CCC071B48DCAFB9B91BFA
+AE28D80C> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 121 /y put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-RegularISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-RegularISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/z <1C60D8A8C9B76F05D40D9AF06C62C52F8E7A83C69F6CDC031056F31E455A
+DB43C89D34E1A28A8E500535BCBC2826CEC41780F6E88D88BBC16CBA809407E1
+9164AA6CDC22FB> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-RegularISO-8859-1 findfont /Encoding get
+dup 122 /z put
+pop
+%ADOEndSubsetFont
+
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 Initial
+%ADOt1write: (1.0.24)
+12 dict dup begin
+/FontType 1 def
+/FontName /MyriadPro-BoldISO-8859-1 def
+/FontInfo 7 dict dup begin
+/Notice (Copyright 1992, 1994, 1997, 2000, 2004 Adobe Systems Incorporated. All rights reserved. Protected by U.S. Patents D454,582. Myriad is either a registered trademark or a trademark of Adobe Systems Incorporated in the United States and/or other countries.) def
+/Weight (Bold) def
+/ItalicAngle 0 def
+/FSType 8 def
+end def
+/PaintType 0 def
+/FontMatrix [0.001 0 0 0.001 0 0] def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 32 /space put
+def
+/FontBBox {-163 -250 1256 989} def
+end
+systemdict begin
+dup /Private
+15 dict dup begin
+/|- {def} def
+/| {put} def
+/BlueValues [-11 -0 674 686 489 500 650 661 711 721 242 248] def
+/OtherBlues [438 443 260 266 -209 -198 -153 -147 -127 -120] def
+/FamilyBlues [-11 -0 674 686 484 495 650 661 710 721 241 248] def
+/FamilyOtherBlues [438 444 260 266 -209 -198 -153 -147 -118 -112] def
+/BlueScale 0.0604583 def
+/StdHW [112] def
+/StdVW [152] def
+/StemSnapV [152 161] def
+/ForceBold true def
+/password 5839 def
+/MinFeature {16 16} def
+/OtherSubrs[{}{}{}{systemdict/internaldict known not{pop 3}{1183615869
+systemdict/internaldict get exec dup/startlock known{/startlock get exec}{dup
+/strtlck known{/strtlck get exec}{pop 3}ifelse}ifelse}ifelse}executeonly]def
+/Subrs 5 array
+dup 0 <1C60D8A8CC31FE2BF6E07AA3E541E2> |
+dup 1 <1C60D8A8C9C3D06D9E> |
+dup 2 <1C60D8A8C9C202D79A> |
+dup 3 <1C60D8A849> |
+dup 4 <1C60D8A8CC3674F41144B13B77> |
+def
+put
+dup /CharStrings
+2 dict dup begin
+/space <1C60D8A8C9B8A02BC0> |-
+/.notdef <1C60D8A8C9B7A73DC56ED86B010528A4AE924D9B6A4AEB6B57364C
+BBC1FC7743E3F5B16223C8BD8911534CBC6ED69BD6AA5A2C449B7A6EF268B5A0
+D64C6C74FC81FE7341B7ED82094E8390BB44FFD88AB4DB74763338FA8306E917
+B17192> |-
+end put
+end
+dup /FontName get exch definefont pop
+end
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/dollar <1C60D8A8C9B790A88215C69A600496FC6B0CD40348425D7B2C53519
+78C96F9D0305E02FF7F4F87D190B8B2C11F6E434BF72FC22C260E9C499CBF1C0
+E593252BA9A3C89D33D5C01B0D9396B5F9A192E11444FDF1FA7B1A5EA2F4542E
+CBE910214F4E2C7C42C15618A8DE38801FE04791E08E00646677C1C4202171AA
+761CF03AD2B6AD643B700FE47C291D5916891654C118E9C8C7AE5365896A2F38
+62F81DC776F81B942EB4CDC8CEE77A34040943DA6B9C46F6899D586527911C56
+7DF23598241D60E7EE91A003875D92CB776> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 36 /dollar put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/asterisk <1C60D8A8C9B775D2B2C6AAE783C4ACB99044570567F2C9686F98F
+061918FCE6093F7B63D36A594B239D5F8AC005A6DA6B306DB47418279B0BF02C
+18B3A57FDEB36C9400F7292DAB796D0DBFAE79597D9BD51058FF398652596080
+73C2947E4F8546E> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 42 /asterisk put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/period <1C60D8A8C9B8666CA9DB8529FD5448EC52F39630F0D5E5532F51687
+383074FC1586F1FFD38AFA0D68C246C16B76DD7A70921B46D020157C2BB4C100
+8CCC8> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 46 /period put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/zero <1C60D8A8C9B790A8366E89150801674E7EAC3B153E643FFE0C5ED2E14
+2897984029F78371C636DE24BE0B8B80C72878861E6B6F843BEE2CAB41C7E14B
+E3BD1C3CA6D55A20A8CFC09AAEF434D64517A6044165F3B973C0DECD61908E94
+B3AD85B> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 48 /zero put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/C <1C60D8A8C9B7C8C125B7F05969D3A48CD0F4EC93A0D977D3E60C205D5869
+9A261E2B37BF61026658B957BC8BE1FB0F76E3785EA4C4B2AD08833E7DB727CD
+F4357AED6077658D1336BAEC27882658DCA35AF7B332E1521FD08651E95CBE3B
+6E875C0315EE679006E2C52696D9E029E7CEAEE3A89DB182CC21E9> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 67 /C put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/D <1C60D8A8C9B62D3B5A1EF65EAF00F76801FC7B737F5CB1FE141DF9804C75
+8FE003E1B799FC8BC1726FE8C628E235C9FBC048E08362D4083634B3C7C66B34
+B4999A8CFEEDBEE986332CA72262026E29FAD4896AA2230F8ACBD5DEBB622701
+E5F729B04C74C21E2D650B876D46D5BE48248F69> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 68 /D put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/E <1C60D8A8C9B785CBC7F16DAA23AFD2F01DD6D5C693CF9ED143B370BFFC69
+E4802A87B899D9DFB8FC49A2D79293B4FC9DE6D759D386C60207BDE197A51931
+484791BF> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 69 /E put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/H <1C60D8A8C9B624F905A02204A12010C9CBA199E18A2ED71EA89563804FF5
+6776D9F0BD91D8E2DA9004538CA809AEE6023017C3CEE2A1C3A73D575FFE60C7
+2437B864C9AC> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 72 /H put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/M <1C60D8A8C9B683825E2D04460CA15635DA1A012D6EC911F7E5EE694FA467
+49101BE80725F022EA04354A70F243FC325398DDC15F3121C1EC05D176D8B82B
+BBD0C33D75BD428BB69DBA21CAF72AF4FD90C6755DF3819E42F97F019C6810AD
+C02B882294CF6127FA71EE3518D743618C380CB5E5FD> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 77 /M put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/P <1C60D8A8C9B7F6E9050DD22BC553EE5F792DC9E15C0569841A858FAC8DEF
+37C1269D0FB3CA9EBCC54794918F66028F65F843823BF14A4CC7CC6009815BA3
+853F12CF0B11480A31BEC10ECAE4F386CDC76143943382AFD2C9ECE8C2FB4710
+58E35C23F6F450C57F6ADFD39051D26F1E> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 80 /P put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/R <1C60D8A8C9B7CA647DE1C48FBA151CF8C34FD0FDD9E43DB424AA12FFD9AC
+D0D643AAE2304F02F5DE8CE845BDE1983DDA18E6FF843570A640F222B1DD6B57
+9451F2FF3CBECD02F1308BB8E8CE5548774D5677B3CEDD29D0E6FA9BC7430F5D
+4A61C0CF7DD15D6B8967A179EFE738DD83D6FCC2415B8CE2DDFD7213FB89FD61
+1B> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 82 /R put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/T <1C60D8A8C9B7974717B730AB1C549E2F679AF3D4DCB907BDD637455E06CF
+B010510B0087334E79868DC974B1B3D290> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 84 /T put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/a <1C60D8A8C9B78B91867A8DC7C15FB2F1EFCB18BCE97C9C699E0F07FF3EB0
+AEBF42EAFD9A62782FA38362F7874385A52B905C4C3A29825B3934CAB80EFE43
+1484880972F4295D85969FBD5E0DEAEA5DC9B0A9B9131A7EC4B6AF288A398FA3
+6A48CE51B910E2BE8D91181CC014428C2B7E17688D0F6D16FD50ACC7018840D2
+4659E669F1904CA5C095CDEC903B9622B9C9E42595A6B555CCC37972BE89BD85
+5B7D8F12DDD2F14F65D9F520324B5B95F0F070E3C4E59EC6718C386B688AB53E
+979D3EE2FDB0> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 97 /a put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/b <1C60D8A8C9B7C56CECCA99B6CB04FCDF428EB59B49052D2E1641A2906BA2
+10BB22351B5551A2FB1420734A45CDE4D1CB3BC938DFE7F8D005DF575581CCDF
+31A3EA2C0D1FAB77CC5BC289B2753A44BA1D6C6DF527416BBF4CB29B2EED49D5
+D2CA1921516FF60C32F563A1756383748E9DB3FD1D8C78D66B9ED80860F2DAF9
+7425945581EE1983411240DC5B85069AF86B4729AB65AD1650F82F06E6F361> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 98 /b put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/c <1C60D8A8C9B7784784BBCDEE31F46D14D119BC4F1B14CE03337461F31AA7
+A54233192436238BA44F54CE788A6A593F0C5AF9EFEFE29BEA03AC1A9262D3F8
+BC12EE7A2DD8246F2260985AC064C22A5C8D0BEB5EA5B88ACCDCC9C54CA3BC1B
+D5BC112BFD26B7B697C9BD21FB7B26D755613AF64CD1> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 99 /c put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/d <1C60D8A8C9B7C7F3FCFFFDBE7393BA699653897FC52A8720BB3E0497B5A0
+AD83EEEE0D480A4AAD2F23E86B75C93A2DE2C8CC35431C24C7850798198F76BF
+B932C1063B138BEFA78BA29E997145E90BE21BABB618DE2485BADA0FD6D8A852
+ACC98A5CB1E1278B98BA15ACF23F235DCEFEB41ABB84ED525C7324EF76DF9195
+055C23B98B38A5FA2B628283A84C436527F1FDE8C1B2FAE07FE8DE5B756104B9
+D8453BC7CA8E6DCA85AAE11A00A46C924D303B7FA565AD1AEC26FC224B7DD1E0
+9D1A5BDBF84773B876005AD78651> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 100 /d put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/e <1C60D8A8C9B78B91A75FABEAF2834102048AB5127C88BDE4553E93F7DDE2
+A0ABB57C4176C61FD95C77645E4D4FC1EF17749EE3183D026D4A559F76EBABD9
+7F406A39496E400A5346CCB9E458FF43EBD54E7EEB8A5D2A7B13782341E6427D
+EFCB5BEB82FE5C284FC4D9B3> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 101 /e put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/f <1C60D8A8C9B817A0233793C9AD1ADC382DE9BA24105126C1A2FF247C2434
+A9EA7585F9D3FAD6B8737405848B02293AE5DE0CECCFAEA5DD8344D9613625AE
+7CE5CCBD66DA9A6F480EA16757954A5EE7E72064CFC0FF40313BCA5EE46262D1
+2FFEA58A439C53F4C6C439EB548B01C61BCD3775C98E239C7223AC1E6FB6EBE4
+9332E359408C23CD87083E9C619686E75F0D2830> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 102 /f put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/g <1C60D8A8C9B7F2A7FF35CBB5E924B0A04AC0B8B949DA5FA2BBB091F59D3C
+2F337A91C644DD6E2925CBB8337170A6A68552CEE5930CA2C712EB7B650EF331
+2349AFA1115545798C39132C7C940453BB67E583732F36811C2530BD5CABF5DB
+3B2F04CDBEED36CF7ED2759F67509A53588BFD4484C4791BB928C32F630ACF28
+E8FCECC3F0A31EB688EA1B4312871E07125262D38F06648D649304D9ADA152C1
+9EDC2F559EC0907086B653105C6003D67F093BC5034D30213B921A87C8A4E227
+B981321798E0BC5F6B3DC2F3B535F2A8D825EDFFF86A21E108> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 103 /g put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/h <1C60D8A8C9B7F1D1E7783E2CED1D74FC901DC7F6FF903173AA408DD0A1D1
+B9BB63268615F8A5A799A3FD7F46D88DB9FBE9F9BEF7A797A8CFA18FE06EB22A
+0E594C05DC36E7EC277DAB9C6A1953F0A410BF8E54F7B701B5E25C758D06F518
+48> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 104 /h put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/i <1C60D8A8C9B8581A0B08AEB90736162406B498E3C3936CFEBE27D7194429
+0959CF2B030F317C20656798274A1B946F07AC2DFCFB171C30D399C5342B2AD7
+6269395C2E52A288C2A7ECD3B5E802FF7BCE6F2276> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 105 /i put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/k <1C60D8A8C9B79D2DFFE43840BE077A53493DEE690D032D77CB36AEED5770
+D9ADC2DB82ACC1A797897B0585993BE57F0F5BBF7145FF32AC2C7EAAEBAC09F4
+872D017DC241D48ADDB8485493452C0767> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 107 /k put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/l <1C60D8A8C9B859EB6C7454A0C68F6A460C7930A56FC58784196BEC828043
+DE45> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 108 /l put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/m <1C60D8A8C9B691D42E18896E3BD0E969BB8E1120FEE0283E27561A0F79BC
+C028E9E0F14646A08EDD84F9A079A88D7A42E50EB1D883195E95969844FE3CAA
+BBE639B2943C34F9B0EB8B1B2E069EA7EE969485AE4686C4BA68BD8EBFE034B7
+4F31B8E9F6C53DB55B6E2B5590987B03BDBE199DCF392480C0A22BDF830A111B
+212B3E28C324648C1A1D9C345E42851FFEE8E0E7C62D4EE7D5816A1C8B3A77E2
+B0E118A94D61B7F76E95F7B6B4C0723AB6A8CC56744A51D2656056D31C50254F
+738C79> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 109 /m put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/n <1C60D8A8C9B7F1D1E7783E2C9D1FD6F7B6BC5A1F557D5B2CAE42AC1D291D
+BB5D85AFC5A897D7FB1FD8167978818B2D03A998DA5986E84F964B10A7AC4A00
+B2367991CCC27F283DD96AB9CDE7FCEE48F4DA920569CF4FDBC9EE1FA8E214F7
+1E7DE8213D1356491F1F61BFBDE74B28BC34618B52396CBAEFE019CC03752C79
+D6> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 110 /n put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/o <1C60D8A8C9B7FA1300A59CB80CE3A4432C11B819FA7C7DE01042F56DDFA0
+A8E8EA16C1B2AB4A8249248CA6142876977D9377FC524620B0FE5A67A0D9B8C0
+9A59C3C6479F6932FE2A4094E32F309E2D5B6A629454D3F14947> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 111 /o put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/p <1C60D8A8C9B7C56CB7BACFA0134F592A1B428DF719C873B1D2CF3DAB3DFB
+3D939C018588197B94BDA30C01C7350185E9FFDFE3D62827A8A8B53CB3A455BF
+BE5FBE8F08F39599BF74FED48D47B8467BB44F3305353991B8D9E06F3A3F889C
+BA7EBF274DDE103AD4CB6D7E63B1FA353C2676CC155F970089F25A71DF7D0755
+85B19205FF51DEE14976B08CFCF6D338447495D9FED86E928E7F4EAE6B55F728
+5CF0FB0D6188ADAF10C38AD576F431FACEAE11F4F42455C904ADBBEEE1D30CF2
+82FC8FEE6830C2AB3091> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 112 /p put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/r <1C60D8A8C9B73F598778880AEC6ECE3718D5F3B3D37D6A291DCFDB3F74D4
+58942CF649E2F0572C4045DE2A027A6A92542A9E859AF33428179DA18C2359DD
+95A1828C6EB004FF1477D7848B06C0DBCFF7046C8A2393F49B6262D5C4F68EBB
+CA5B74E00779077D4A0B379189BDEEAEEFB15920C150D3503F0CF15BA8589AD2
+61354DBBFC1681E4DDDD> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 114 /r put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/s <1C60D8A8C9B7693F057495DA869D575BCA9A84A085BC83E4AC3E322E48A3
+61EEFF6DF1A4DB7D228FBE25E2288EBBAAFB7A243D14CE5F032CB19DCC162955
+05A30C2D3C4F360F03D86CA5882DE1B6247E4B8D8571CCBC560D1A38DE57D939
+F0ADF67EFC201278052472BE0361F9DF> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 115 /s put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/t <1C60D8A8C9B72C0F871D3ECA6462DDA683B9A97C0F8B54CE7A9FCA44219D
+F5344950BF9FF2E4347F23D9BAC51D7BECB6960C1B7EC705C58DC804AD6F8B12
+C7599C0DF29F811756B3424058741C2E9952A53F8CDC59FD1EADAC265F> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 116 /t put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/u <1C60D8A8C9B7F44A9B78E03EAC1EFBCA5BC31555C3431C8B3D6D6DD64257
+ADA4D4826500E64AAC669B6D2FC15E051AB8DACBA8FEAC926E9A50C300EC114C
+AD7721AC30FEE954E38DAC98252FCE77BB8D46F3FBD18E3ED8003FB855BE9B14
+0127C9A3917B06B4DD93FB2A97B6B07CD1B027AE7263916AADA1FB81FFC2394E
+61CB8657> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 117 /u put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/v <1C60D8A8C9B7890D21F219072916A685EB283BAD64419B84FC4F987CD07D
+4A37DBE22A18164DE8908AC8E6AEEDE12C888C7450AA70EE1D18770D0494BB4C
+0CE9A3A1CBB41F388C62806D0667ABB5C5> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 118 /v put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/x <1C60D8A8C9B7B4A1684D51776FEE366FF4169FA4BD77E5C855F8C7260160
+D3DE1818C5DFF5CA4AD414C260A552D99E56154A0373E275D668E29BA8D20598
+796D7ADAA5F582B597BBFAA34C65C7DD7802DDA4FB8D2945518E140AA11AC1AF
+17E80037> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 120 /x put
+pop
+%ADOEndSubsetFont
+%ADOBeginSubsetFont: MyriadPro-BoldISO-8859-1 AddGlyphs
+%ADOt1write: (1.0.24)
+systemdict begin
+/MyriadPro-BoldISO-8859-1 findfont dup
+/Private get dup rcheck
+{begin true}{pop false}ifelse exch
+/CharStrings get begin
+systemdict /gcheck known {currentglobal currentdict gcheck setglobal} if
+/y <1C60D8A8C9B7B07F0BB44E341970E343D9CADF3339A29C1E0371E76A7195
+6654805356BCDB24481C563F15322C92B5F0A066E94CDDC72C3C039D5DE2E7C8
+016CCA464C379A242AEB482F38B0CBEB5F1808A79E71BE60B8D47949358ACC6D
+AEF3794EBE7AA0BB97754DD0> |-
+systemdict /gcheck known {setglobal} if end {end} if
+end
+/MyriadPro-BoldISO-8859-1 findfont /Encoding get
+dup 121 /y put
+pop
+%ADOEndSubsetFont
+
+false setglobal end
+%Begin Page
+<</Duplex false>>setpagedevice
+<</DeferredMediaSelection true /PageSize[612 792] /ImagingBBox null>> setpagedevice
+save
+0 792 translate
+0 0 0 c255
+/MyriadPro-RegularISO-8859-1 7.0 selectfont
+279.572 23.950 neg moveto
+(Any Company Inc.) show
+/MyriadPro-BoldISO-8859-1 20.0 selectfont
+54.000 159.000 neg moveto
+(Expense Claim) show
+0.500 setlinewidth
+143.750 198.000 288.250 198.000 edge stroke
+/MyriadPro-RegularISO-8859-1 9.0 selectfont
+54.000 190.750 neg moveto
+(Employee's Name) show
+144.000 190.750 neg moveto
+(Employee Name) show
+143.750 219.600 288.250 219.600 edge stroke
+54.000 212.350 neg moveto
+(Manager's Name) show
+144.000 212.350 neg moveto
+(Manager Name) show
+474.950 198.000 558.250 198.000 edge stroke
+324.000 190.750 neg moveto
+(Expenses From  \(mm/dd/yyyy\)) show
+475.200 190.750 neg moveto
+(04/21/2005) show
+474.950 219.600 558.250 219.600 edge stroke
+324.000 212.350 neg moveto
+(Expenses To  \(mm/dd/yyyy\)) show
+475.200 212.350 neg moveto
+(04/22/2005) show
+192 192 192 c255
+54.000 244.800 neg 72.000 25.200 neg rectfill
+0 0 0 c255
+54.000 244.800 neg 72.000 25.200 neg rectstroke
+/MyriadPro-BoldISO-8859-1 9.0 selectfont
+80.465 254.250 neg moveto
+(Date ) show
+/MyriadPro-RegularISO-8859-1 9.0 selectfont
+63.297 265.050 neg moveto
+(\(mm/dd/yyyy\)) show
+192 192 192 c255
+126.000 244.800 neg 79.200 25.200 neg rectfill
+0 0 0 c255
+126.000 244.800 neg 79.200 25.200 neg rectstroke
+/MyriadPro-BoldISO-8859-1 9.0 selectfont
+145.809 259.650 neg moveto
+(Transport) show
+192 192 192 c255
+205.200 244.800 neg 54.000 25.200 neg rectfill
+0 0 0 c255
+205.200 244.800 neg 54.000 25.200 neg rectstroke
+221.238 259.650 neg moveto
+(Hotel) show
+192 192 192 c255
+259.200 244.800 neg 54.000 25.200 neg rectfill
+0 0 0 c255
+259.200 244.800 neg 54.000 25.200 neg rectstroke
+274.451 259.650 neg moveto
+(Meals) show
+192 192 192 c255
+313.200 244.800 neg 54.000 25.200 neg rectfill
+0 0 0 c255
+313.200 244.800 neg 54.000 25.200 neg rectstroke
+327.339 259.650 neg moveto
+(Phone) show
+192 192 192 c255
+367.200 244.800 neg 54.000 25.200 neg rectfill
+0 0 0 c255
+367.200 244.800 neg 54.000 25.200 neg rectstroke
+378.558 259.650 neg moveto
+(Parking) show
+192 192 192 c255
+421.200 244.800 neg 54.000 25.200 neg rectfill
+0 0 0 c255
+421.200 244.800 neg 54.000 25.200 neg rectstroke
+436.226 259.650 neg moveto
+(Misc ) show
+255 0 0 c255
+456.088 259.650 neg moveto
+(*) show
+192 192 192 c255
+475.200 244.800 neg 82.800 25.200 neg rectfill
+0 0 0 c255
+475.200 244.800 neg 82.800 25.200 neg rectstroke
+495.032 259.650 neg moveto
+(Daily Total) show
+54.000 269.750 54.000 288.250 edge stroke
+192 192 192 c255
+53.750 288.000 126.250 288.000 edge stroke
+0 0 0 c255
+126.000 269.750 126.000 288.250 edge stroke
+53.750 270.000 126.250 270.000 edge stroke
+126.000 269.750 126.000 288.250 edge stroke
+192 192 192 c255
+125.750 288.000 205.450 288.000 edge stroke
+0 0 0 c255
+205.200 269.750 205.200 288.250 edge stroke
+125.750 270.000 205.450 270.000 edge stroke
+205.200 269.750 205.200 288.250 edge stroke
+192 192 192 c255
+204.950 288.000 259.450 288.000 edge stroke
+0 0 0 c255
+259.200 269.750 259.200 288.250 edge stroke
+204.950 270.000 259.450 270.000 edge stroke
+259.200 269.750 259.200 288.250 edge stroke
+192 192 192 c255
+258.950 288.000 313.450 288.000 edge stroke
+0 0 0 c255
+313.200 269.750 313.200 288.250 edge stroke
+258.950 270.000 313.450 270.000 edge stroke
+313.200 269.750 313.200 288.250 edge stroke
+192 192 192 c255
+312.950 288.000 367.450 288.000 edge stroke
+0 0 0 c255
+367.200 269.750 367.200 288.250 edge stroke
+312.950 270.000 367.450 270.000 edge stroke
+367.200 269.750 367.200 288.250 edge stroke
+192 192 192 c255
+366.950 288.000 421.450 288.000 edge stroke
+0 0 0 c255
+421.200 269.750 421.200 288.250 edge stroke
+366.950 270.000 421.450 270.000 edge stroke
+421.200 269.750 421.200 288.250 edge stroke
+192 192 192 c255
+420.950 288.000 475.450 288.000 edge stroke
+0 0 0 c255
+475.200 269.750 475.200 288.250 edge stroke
+420.950 270.000 475.450 270.000 edge stroke
+475.200 269.750 475.200 288.250 edge stroke
+192 192 192 c255
+474.950 288.000 558.250 288.000 edge stroke
+0 0 0 c255
+558.000 269.750 558.000 288.250 edge stroke
+474.950 270.000 558.250 270.000 edge stroke
+/MyriadPro-RegularISO-8859-1 9.0 selectfont
+534.835 281.250 neg moveto
+($0.00) show
+54.000 287.750 54.000 306.250 edge stroke
+192 192 192 c255
+53.750 306.000 126.250 306.000 edge stroke
+0 0 0 c255
+126.000 287.750 126.000 306.250 edge stroke
+192 192 192 c255
+53.750 288.000 126.250 288.000 edge stroke
+0 0 0 c255
+126.000 287.750 126.000 306.250 edge stroke
+192 192 192 c255
+125.750 306.000 205.450 306.000 edge stroke
+0 0 0 c255
+205.200 287.750 205.200 306.250 edge stroke
+192 192 192 c255
+125.750 288.000 205.450 288.000 edge stroke
+0 0 0 c255
+205.200 287.750 205.200 306.250 edge stroke
+192 192 192 c255
+204.950 306.000 259.450 306.000 edge stroke
+0 0 0 c255
+259.200 287.750 259.200 306.250 edge stroke
+192 192 192 c255
+204.950 288.000 259.450 288.000 edge stroke
+0 0 0 c255
+259.200 287.750 259.200 306.250 edge stroke
+192 192 192 c255
+258.950 306.000 313.450 306.000 edge stroke
+0 0 0 c255
+313.200 287.750 313.200 306.250 edge stroke
+192 192 192 c255
+258.950 288.000 313.450 288.000 edge stroke
+0 0 0 c255
+313.200 287.750 313.200 306.250 edge stroke
+192 192 192 c255
+312.950 306.000 367.450 306.000 edge stroke
+0 0 0 c255
+367.200 287.750 367.200 306.250 edge stroke
+192 192 192 c255
+312.950 288.000 367.450 288.000 edge stroke
+0 0 0 c255
+367.200 287.750 367.200 306.250 edge stroke
+192 192 192 c255
+366.950 306.000 421.450 306.000 edge stroke
+0 0 0 c255
+421.200 287.750 421.200 306.250 edge stroke
+192 192 192 c255
+366.950 288.000 421.450 288.000 edge stroke
+0 0 0 c255
+421.200 287.750 421.200 306.250 edge stroke
+192 192 192 c255
+420.950 306.000 475.450 306.000 edge stroke
+0 0 0 c255
+475.200 287.750 475.200 306.250 edge stroke
+192 192 192 c255
+420.950 288.000 475.450 288.000 edge stroke
+0 0 0 c255
+475.200 287.750 475.200 306.250 edge stroke
+192 192 192 c255
+474.950 306.000 558.250 306.000 edge stroke
+0 0 0 c255
+558.000 287.750 558.000 306.250 edge stroke
+192 192 192 c255
+474.950 288.000 558.250 288.000 edge stroke
+0 0 0 c255
+534.835 299.250 neg moveto
+($0.00) show
+54.000 305.750 54.000 324.250 edge stroke
+192 192 192 c255
+53.750 324.000 126.250 324.000 edge stroke
+0 0 0 c255
+126.000 305.750 126.000 324.250 edge stroke
+192 192 192 c255
+53.750 306.000 126.250 306.000 edge stroke
+0 0 0 c255
+126.000 305.750 126.000 324.250 edge stroke
+192 192 192 c255
+125.750 324.000 205.450 324.000 edge stroke
+0 0 0 c255
+205.200 305.750 205.200 324.250 edge stroke
+192 192 192 c255
+125.750 306.000 205.450 306.000 edge stroke
+0 0 0 c255
+205.200 305.750 205.200 324.250 edge stroke
+192 192 192 c255
+204.950 324.000 259.450 324.000 edge stroke
+0 0 0 c255
+259.200 305.750 259.200 324.250 edge stroke
+192 192 192 c255
+204.950 306.000 259.450 306.000 edge stroke
+0 0 0 c255
+259.200 305.750 259.200 324.250 edge stroke
+192 192 192 c255
+258.950 324.000 313.450 324.000 edge stroke
+0 0 0 c255
+313.200 305.750 313.200 324.250 edge stroke
+192 192 192 c255
+258.950 306.000 313.450 306.000 edge stroke
+0 0 0 c255
+313.200 305.750 313.200 324.250 edge stroke
+192 192 192 c255
+312.950 324.000 367.450 324.000 edge stroke
+0 0 0 c255
+367.200 305.750 367.200 324.250 edge stroke
+192 192 192 c255
+312.950 306.000 367.450 306.000 edge stroke
+0 0 0 c255
+367.200 305.750 367.200 324.250 edge stroke
+192 192 192 c255
+366.950 324.000 421.450 324.000 edge stroke
+0 0 0 c255
+421.200 305.750 421.200 324.250 edge stroke
+192 192 192 c255
+366.950 306.000 421.450 306.000 edge stroke
+0 0 0 c255
+421.200 305.750 421.200 324.250 edge stroke
+192 192 192 c255
+420.950 324.000 475.450 324.000 edge stroke
+0 0 0 c255
+475.200 305.750 475.200 324.250 edge stroke
+192 192 192 c255
+420.950 306.000 475.450 306.000 edge stroke
+0 0 0 c255
+475.200 305.750 475.200 324.250 edge stroke
+192 192 192 c255
+474.950 324.000 558.250 324.000 edge stroke
+0 0 0 c255
+558.000 305.750 558.000 324.250 edge stroke
+192 192 192 c255
+474.950 306.000 558.250 306.000 edge stroke
+0 0 0 c255
+534.835 317.250 neg moveto
+($0.00) show
+54.000 323.750 54.000 342.250 edge stroke
+192 192 192 c255
+53.750 342.000 126.250 342.000 edge stroke
+0 0 0 c255
+126.000 323.750 126.000 342.250 edge stroke
+192 192 192 c255
+53.750 324.000 126.250 324.000 edge stroke
+0 0 0 c255
+126.000 323.750 126.000 342.250 edge stroke
+192 192 192 c255
+125.750 342.000 205.450 342.000 edge stroke
+0 0 0 c255
+205.200 323.750 205.200 342.250 edge stroke
+192 192 192 c255
+125.750 324.000 205.450 324.000 edge stroke
+0 0 0 c255
+205.200 323.750 205.200 342.250 edge stroke
+192 192 192 c255
+204.950 342.000 259.450 342.000 edge stroke
+0 0 0 c255
+259.200 323.750 259.200 342.250 edge stroke
+192 192 192 c255
+204.950 324.000 259.450 324.000 edge stroke
+0 0 0 c255
+259.200 323.750 259.200 342.250 edge stroke
+192 192 192 c255
+258.950 342.000 313.450 342.000 edge stroke
+0 0 0 c255
+313.200 323.750 313.200 342.250 edge stroke
+192 192 192 c255
+258.950 324.000 313.450 324.000 edge stroke
+0 0 0 c255
+313.200 323.750 313.200 342.250 edge stroke
+192 192 192 c255
+312.950 342.000 367.450 342.000 edge stroke
+0 0 0 c255
+367.200 323.750 367.200 342.250 edge stroke
+192 192 192 c255
+312.950 324.000 367.450 324.000 edge stroke
+0 0 0 c255
+367.200 323.750 367.200 342.250 edge stroke
+192 192 192 c255
+366.950 342.000 421.450 342.000 edge stroke
+0 0 0 c255
+421.200 323.750 421.200 342.250 edge stroke
+192 192 192 c255
+366.950 324.000 421.450 324.000 edge stroke
+0 0 0 c255
+421.200 323.750 421.200 342.250 edge stroke
+192 192 192 c255
+420.950 342.000 475.450 342.000 edge stroke
+0 0 0 c255
+475.200 323.750 475.200 342.250 edge stroke
+192 192 192 c255
+420.950 324.000 475.450 324.000 edge stroke
+0 0 0 c255
+475.200 323.750 475.200 342.250 edge stroke
+192 192 192 c255
+474.950 342.000 558.250 342.000 edge stroke
+0 0 0 c255
+558.000 323.750 558.000 342.250 edge stroke
+192 192 192 c255
+474.950 324.000 558.250 324.000 edge stroke
+0 0 0 c255
+534.835 335.250 neg moveto
+($0.00) show
+54.000 341.750 54.000 360.250 edge stroke
+192 192 192 c255
+53.750 360.000 126.250 360.000 edge stroke
+0 0 0 c255
+126.000 341.750 126.000 360.250 edge stroke
+192 192 192 c255
+53.750 342.000 126.250 342.000 edge stroke
+0 0 0 c255
+126.000 341.750 126.000 360.250 edge stroke
+192 192 192 c255
+125.750 360.000 205.450 360.000 edge stroke
+0 0 0 c255
+205.200 341.750 205.200 360.250 edge stroke
+192 192 192 c255
+125.750 342.000 205.450 342.000 edge stroke
+0 0 0 c255
+205.200 341.750 205.200 360.250 edge stroke
+192 192 192 c255
+204.950 360.000 259.450 360.000 edge stroke
+0 0 0 c255
+259.200 341.750 259.200 360.250 edge stroke
+192 192 192 c255
+204.950 342.000 259.450 342.000 edge stroke
+0 0 0 c255
+259.200 341.750 259.200 360.250 edge stroke
+192 192 192 c255
+258.950 360.000 313.450 360.000 edge stroke
+0 0 0 c255
+313.200 341.750 313.200 360.250 edge stroke
+192 192 192 c255
+258.950 342.000 313.450 342.000 edge stroke
+0 0 0 c255
+313.200 341.750 313.200 360.250 edge stroke
+192 192 192 c255
+312.950 360.000 367.450 360.000 edge stroke
+0 0 0 c255
+367.200 341.750 367.200 360.250 edge stroke
+192 192 192 c255
+312.950 342.000 367.450 342.000 edge stroke
+0 0 0 c255
+367.200 341.750 367.200 360.250 edge stroke
+192 192 192 c255
+366.950 360.000 421.450 360.000 edge stroke
+0 0 0 c255
+421.200 341.750 421.200 360.250 edge stroke
+192 192 192 c255
+366.950 342.000 421.450 342.000 edge stroke
+0 0 0 c255
+421.200 341.750 421.200 360.250 edge stroke
+192 192 192 c255
+420.950 360.000 475.450 360.000 edge stroke
+0 0 0 c255
+475.200 341.750 475.200 360.250 edge stroke
+192 192 192 c255
+420.950 342.000 475.450 342.000 edge stroke
+0 0 0 c255
+475.200 341.750 475.200 360.250 edge stroke
+192 192 192 c255
+474.950 360.000 558.250 360.000 edge stroke
+0 0 0 c255
+558.000 341.750 558.000 360.250 edge stroke
+192 192 192 c255
+474.950 342.000 558.250 342.000 edge stroke
+0 0 0 c255
+534.835 353.250 neg moveto
+($0.00) show
+54.000 359.750 54.000 378.250 edge stroke
+192 192 192 c255
+53.750 378.000 126.250 378.000 edge stroke
+0 0 0 c255
+126.000 359.750 126.000 378.250 edge stroke
+192 192 192 c255
+53.750 360.000 126.250 360.000 edge stroke
+0 0 0 c255
+126.000 359.750 126.000 378.250 edge stroke
+192 192 192 c255
+125.750 378.000 205.450 378.000 edge stroke
+0 0 0 c255
+205.200 359.750 205.200 378.250 edge stroke
+192 192 192 c255
+125.750 360.000 205.450 360.000 edge stroke
+0 0 0 c255
+205.200 359.750 205.200 378.250 edge stroke
+192 192 192 c255
+204.950 378.000 259.450 378.000 edge stroke
+0 0 0 c255
+259.200 359.750 259.200 378.250 edge stroke
+192 192 192 c255
+204.950 360.000 259.450 360.000 edge stroke
+0 0 0 c255
+259.200 359.750 259.200 378.250 edge stroke
+192 192 192 c255
+258.950 378.000 313.450 378.000 edge stroke
+0 0 0 c255
+313.200 359.750 313.200 378.250 edge stroke
+192 192 192 c255
+258.950 360.000 313.450 360.000 edge stroke
+0 0 0 c255
+313.200 359.750 313.200 378.250 edge stroke
+192 192 192 c255
+312.950 378.000 367.450 378.000 edge stroke
+0 0 0 c255
+367.200 359.750 367.200 378.250 edge stroke
+192 192 192 c255
+312.950 360.000 367.450 360.000 edge stroke
+0 0 0 c255
+367.200 359.750 367.200 378.250 edge stroke
+192 192 192 c255
+366.950 378.000 421.450 378.000 edge stroke
+0 0 0 c255
+421.200 359.750 421.200 378.250 edge stroke
+192 192 192 c255
+366.950 360.000 421.450 360.000 edge stroke
+0 0 0 c255
+421.200 359.750 421.200 378.250 edge stroke
+192 192 192 c255
+420.950 378.000 475.450 378.000 edge stroke
+0 0 0 c255
+475.200 359.750 475.200 378.250 edge stroke
+192 192 192 c255
+420.950 360.000 475.450 360.000 edge stroke
+0 0 0 c255
+475.200 359.750 475.200 378.250 edge stroke
+192 192 192 c255
+474.950 378.000 558.250 378.000 edge stroke
+0 0 0 c255
+558.000 359.750 558.000 378.250 edge stroke
+192 192 192 c255
+474.950 360.000 558.250 360.000 edge stroke
+0 0 0 c255
+534.835 371.250 neg moveto
+($0.00) show
+54.000 377.750 54.000 396.250 edge stroke
+192 192 192 c255
+53.750 396.000 126.250 396.000 edge stroke
+0 0 0 c255
+126.000 377.750 126.000 396.250 edge stroke
+192 192 192 c255
+53.750 378.000 126.250 378.000 edge stroke
+0 0 0 c255
+126.000 377.750 126.000 396.250 edge stroke
+192 192 192 c255
+125.750 396.000 205.450 396.000 edge stroke
+0 0 0 c255
+205.200 377.750 205.200 396.250 edge stroke
+192 192 192 c255
+125.750 378.000 205.450 378.000 edge stroke
+0 0 0 c255
+205.200 377.750 205.200 396.250 edge stroke
+192 192 192 c255
+204.950 396.000 259.450 396.000 edge stroke
+0 0 0 c255
+259.200 377.750 259.200 396.250 edge stroke
+192 192 192 c255
+204.950 378.000 259.450 378.000 edge stroke
+0 0 0 c255
+259.200 377.750 259.200 396.250 edge stroke
+192 192 192 c255
+258.950 396.000 313.450 396.000 edge stroke
+0 0 0 c255
+313.200 377.750 313.200 396.250 edge stroke
+192 192 192 c255
+258.950 378.000 313.450 378.000 edge stroke
+0 0 0 c255
+313.200 377.750 313.200 396.250 edge stroke
+192 192 192 c255
+312.950 396.000 367.450 396.000 edge stroke
+0 0 0 c255
+367.200 377.750 367.200 396.250 edge stroke
+192 192 192 c255
+312.950 378.000 367.450 378.000 edge stroke
+0 0 0 c255
+367.200 377.750 367.200 396.250 edge stroke
+192 192 192 c255
+366.950 396.000 421.450 396.000 edge stroke
+0 0 0 c255
+421.200 377.750 421.200 396.250 edge stroke
+192 192 192 c255
+366.950 378.000 421.450 378.000 edge stroke
+0 0 0 c255
+421.200 377.750 421.200 396.250 edge stroke
+192 192 192 c255
+420.950 396.000 475.450 396.000 edge stroke
+0 0 0 c255
+475.200 377.750 475.200 396.250 edge stroke
+192 192 192 c255
+420.950 378.000 475.450 378.000 edge stroke
+0 0 0 c255
+475.200 377.750 475.200 396.250 edge stroke
+192 192 192 c255
+474.950 396.000 558.250 396.000 edge stroke
+0 0 0 c255
+558.000 377.750 558.000 396.250 edge stroke
+192 192 192 c255
+474.950 378.000 558.250 378.000 edge stroke
+0 0 0 c255
+534.835 389.250 neg moveto
+($0.00) show
+54.000 395.750 54.000 414.250 edge stroke
+192 192 192 c255
+53.750 414.000 126.250 414.000 edge stroke
+0 0 0 c255
+126.000 395.750 126.000 414.250 edge stroke
+192 192 192 c255
+53.750 396.000 126.250 396.000 edge stroke
+0 0 0 c255
+126.000 395.750 126.000 414.250 edge stroke
+192 192 192 c255
+125.750 414.000 205.450 414.000 edge stroke
+0 0 0 c255
+205.200 395.750 205.200 414.250 edge stroke
+192 192 192 c255
+125.750 396.000 205.450 396.000 edge stroke
+0 0 0 c255
+205.200 395.750 205.200 414.250 edge stroke
+192 192 192 c255
+204.950 414.000 259.450 414.000 edge stroke
+0 0 0 c255
+259.200 395.750 259.200 414.250 edge stroke
+192 192 192 c255
+204.950 396.000 259.450 396.000 edge stroke
+0 0 0 c255
+259.200 395.750 259.200 414.250 edge stroke
+192 192 192 c255
+258.950 414.000 313.450 414.000 edge stroke
+0 0 0 c255
+313.200 395.750 313.200 414.250 edge stroke
+192 192 192 c255
+258.950 396.000 313.450 396.000 edge stroke
+0 0 0 c255
+313.200 395.750 313.200 414.250 edge stroke
+192 192 192 c255
+312.950 414.000 367.450 414.000 edge stroke
+0 0 0 c255
+367.200 395.750 367.200 414.250 edge stroke
+192 192 192 c255
+312.950 396.000 367.450 396.000 edge stroke
+0 0 0 c255
+367.200 395.750 367.200 414.250 edge stroke
+192 192 192 c255
+366.950 414.000 421.450 414.000 edge stroke
+0 0 0 c255
+421.200 395.750 421.200 414.250 edge stroke
+192 192 192 c255
+366.950 396.000 421.450 396.000 edge stroke
+0 0 0 c255
+421.200 395.750 421.200 414.250 edge stroke
+192 192 192 c255
+420.950 414.000 475.450 414.000 edge stroke
+0 0 0 c255
+475.200 395.750 475.200 414.250 edge stroke
+192 192 192 c255
+420.950 396.000 475.450 396.000 edge stroke
+0 0 0 c255
+475.200 395.750 475.200 414.250 edge stroke
+192 192 192 c255
+474.950 414.000 558.250 414.000 edge stroke
+0 0 0 c255
+558.000 395.750 558.000 414.250 edge stroke
+192 192 192 c255
+474.950 396.000 558.250 396.000 edge stroke
+0 0 0 c255
+534.835 407.250 neg moveto
+($0.00) show
+54.000 413.750 54.000 432.250 edge stroke
+192 192 192 c255
+53.750 432.000 126.250 432.000 edge stroke
+0 0 0 c255
+126.000 413.750 126.000 432.250 edge stroke
+192 192 192 c255
+53.750 414.000 126.250 414.000 edge stroke
+0 0 0 c255
+126.000 413.750 126.000 432.250 edge stroke
+192 192 192 c255
+125.750 432.000 205.450 432.000 edge stroke
+0 0 0 c255
+205.200 413.750 205.200 432.250 edge stroke
+192 192 192 c255
+125.750 414.000 205.450 414.000 edge stroke
+0 0 0 c255
+205.200 413.750 205.200 432.250 edge stroke
+192 192 192 c255
+204.950 432.000 259.450 432.000 edge stroke
+0 0 0 c255
+259.200 413.750 259.200 432.250 edge stroke
+192 192 192 c255
+204.950 414.000 259.450 414.000 edge stroke
+0 0 0 c255
+259.200 413.750 259.200 432.250 edge stroke
+192 192 192 c255
+258.950 432.000 313.450 432.000 edge stroke
+0 0 0 c255
+313.200 413.750 313.200 432.250 edge stroke
+192 192 192 c255
+258.950 414.000 313.450 414.000 edge stroke
+0 0 0 c255
+313.200 413.750 313.200 432.250 edge stroke
+192 192 192 c255
+312.950 432.000 367.450 432.000 edge stroke
+0 0 0 c255
+367.200 413.750 367.200 432.250 edge stroke
+192 192 192 c255
+312.950 414.000 367.450 414.000 edge stroke
+0 0 0 c255
+367.200 413.750 367.200 432.250 edge stroke
+192 192 192 c255
+366.950 432.000 421.450 432.000 edge stroke
+0 0 0 c255
+421.200 413.750 421.200 432.250 edge stroke
+192 192 192 c255
+366.950 414.000 421.450 414.000 edge stroke
+0 0 0 c255
+421.200 413.750 421.200 432.250 edge stroke
+192 192 192 c255
+420.950 432.000 475.450 432.000 edge stroke
+0 0 0 c255
+475.200 413.750 475.200 432.250 edge stroke
+192 192 192 c255
+420.950 414.000 475.450 414.000 edge stroke
+0 0 0 c255
+475.200 413.750 475.200 432.250 edge stroke
+192 192 192 c255
+474.950 432.000 558.250 432.000 edge stroke
+0 0 0 c255
+558.000 413.750 558.000 432.250 edge stroke
+192 192 192 c255
+474.950 414.000 558.250 414.000 edge stroke
+0 0 0 c255
+534.835 425.250 neg moveto
+($0.00) show
+54.000 431.750 54.000 450.250 edge stroke
+192 192 192 c255
+53.750 450.000 126.250 450.000 edge stroke
+0 0 0 c255
+126.000 431.750 126.000 450.250 edge stroke
+192 192 192 c255
+53.750 432.000 126.250 432.000 edge stroke
+0 0 0 c255
+126.000 431.750 126.000 450.250 edge stroke
+192 192 192 c255
+125.750 450.000 205.450 450.000 edge stroke
+0 0 0 c255
+205.200 431.750 205.200 450.250 edge stroke
+192 192 192 c255
+125.750 432.000 205.450 432.000 edge stroke
+0 0 0 c255
+205.200 431.750 205.200 450.250 edge stroke
+192 192 192 c255
+204.950 450.000 259.450 450.000 edge stroke
+0 0 0 c255
+259.200 431.750 259.200 450.250 edge stroke
+192 192 192 c255
+204.950 432.000 259.450 432.000 edge stroke
+0 0 0 c255
+259.200 431.750 259.200 450.250 edge stroke
+192 192 192 c255
+258.950 450.000 313.450 450.000 edge stroke
+0 0 0 c255
+313.200 431.750 313.200 450.250 edge stroke
+192 192 192 c255
+258.950 432.000 313.450 432.000 edge stroke
+0 0 0 c255
+313.200 431.750 313.200 450.250 edge stroke
+192 192 192 c255
+312.950 450.000 367.450 450.000 edge stroke
+0 0 0 c255
+367.200 431.750 367.200 450.250 edge stroke
+192 192 192 c255
+312.950 432.000 367.450 432.000 edge stroke
+0 0 0 c255
+367.200 431.750 367.200 450.250 edge stroke
+192 192 192 c255
+366.950 450.000 421.450 450.000 edge stroke
+0 0 0 c255
+421.200 431.750 421.200 450.250 edge stroke
+192 192 192 c255
+366.950 432.000 421.450 432.000 edge stroke
+0 0 0 c255
+421.200 431.750 421.200 450.250 edge stroke
+192 192 192 c255
+420.950 450.000 475.450 450.000 edge stroke
+0 0 0 c255
+475.200 431.750 475.200 450.250 edge stroke
+192 192 192 c255
+420.950 432.000 475.450 432.000 edge stroke
+0 0 0 c255
+475.200 431.750 475.200 450.250 edge stroke
+192 192 192 c255
+474.950 450.000 558.250 450.000 edge stroke
+0 0 0 c255
+558.000 431.750 558.000 450.250 edge stroke
+192 192 192 c255
+474.950 432.000 558.250 432.000 edge stroke
+0 0 0 c255
+534.835 443.250 neg moveto
+($0.00) show
+54.000 449.750 54.000 468.250 edge stroke
+192 192 192 c255
+53.750 468.000 126.250 468.000 edge stroke
+0 0 0 c255
+126.000 449.750 126.000 468.250 edge stroke
+192 192 192 c255
+53.750 450.000 126.250 450.000 edge stroke
+0 0 0 c255
+126.000 449.750 126.000 468.250 edge stroke
+192 192 192 c255
+125.750 468.000 205.450 468.000 edge stroke
+0 0 0 c255
+205.200 449.750 205.200 468.250 edge stroke
+192 192 192 c255
+125.750 450.000 205.450 450.000 edge stroke
+0 0 0 c255
+205.200 449.750 205.200 468.250 edge stroke
+192 192 192 c255
+204.950 468.000 259.450 468.000 edge stroke
+0 0 0 c255
+259.200 449.750 259.200 468.250 edge stroke
+192 192 192 c255
+204.950 450.000 259.450 450.000 edge stroke
+0 0 0 c255
+259.200 449.750 259.200 468.250 edge stroke
+192 192 192 c255
+258.950 468.000 313.450 468.000 edge stroke
+0 0 0 c255
+313.200 449.750 313.200 468.250 edge stroke
+192 192 192 c255
+258.950 450.000 313.450 450.000 edge stroke
+0 0 0 c255
+313.200 449.750 313.200 468.250 edge stroke
+192 192 192 c255
+312.950 468.000 367.450 468.000 edge stroke
+0 0 0 c255
+367.200 449.750 367.200 468.250 edge stroke
+192 192 192 c255
+312.950 450.000 367.450 450.000 edge stroke
+0 0 0 c255
+367.200 449.750 367.200 468.250 edge stroke
+192 192 192 c255
+366.950 468.000 421.450 468.000 edge stroke
+0 0 0 c255
+421.200 449.750 421.200 468.250 edge stroke
+192 192 192 c255
+366.950 450.000 421.450 450.000 edge stroke
+0 0 0 c255
+421.200 449.750 421.200 468.250 edge stroke
+192 192 192 c255
+420.950 468.000 475.450 468.000 edge stroke
+0 0 0 c255
+475.200 449.750 475.200 468.250 edge stroke
+192 192 192 c255
+420.950 450.000 475.450 450.000 edge stroke
+0 0 0 c255
+475.200 449.750 475.200 468.250 edge stroke
+192 192 192 c255
+474.950 468.000 558.250 468.000 edge stroke
+0 0 0 c255
+558.000 449.750 558.000 468.250 edge stroke
+192 192 192 c255
+474.950 450.000 558.250 450.000 edge stroke
+0 0 0 c255
+534.835 461.250 neg moveto
+($0.00) show
+54.000 467.750 54.000 486.250 edge stroke
+192 192 192 c255
+53.750 486.000 126.250 486.000 edge stroke
+0 0 0 c255
+126.000 467.750 126.000 486.250 edge stroke
+192 192 192 c255
+53.750 468.000 126.250 468.000 edge stroke
+0 0 0 c255
+126.000 467.750 126.000 486.250 edge stroke
+192 192 192 c255
+125.750 486.000 205.450 486.000 edge stroke
+0 0 0 c255
+205.200 467.750 205.200 486.250 edge stroke
+192 192 192 c255
+125.750 468.000 205.450 468.000 edge stroke
+0 0 0 c255
+205.200 467.750 205.200 486.250 edge stroke
+192 192 192 c255
+204.950 486.000 259.450 486.000 edge stroke
+0 0 0 c255
+259.200 467.750 259.200 486.250 edge stroke
+192 192 192 c255
+204.950 468.000 259.450 468.000 edge stroke
+0 0 0 c255
+259.200 467.750 259.200 486.250 edge stroke
+192 192 192 c255
+258.950 486.000 313.450 486.000 edge stroke
+0 0 0 c255
+313.200 467.750 313.200 486.250 edge stroke
+192 192 192 c255
+258.950 468.000 313.450 468.000 edge stroke
+0 0 0 c255
+313.200 467.750 313.200 486.250 edge stroke
+192 192 192 c255
+312.950 486.000 367.450 486.000 edge stroke
+0 0 0 c255
+367.200 467.750 367.200 486.250 edge stroke
+192 192 192 c255
+312.950 468.000 367.450 468.000 edge stroke
+0 0 0 c255
+367.200 467.750 367.200 486.250 edge stroke
+192 192 192 c255
+366.950 486.000 421.450 486.000 edge stroke
+0 0 0 c255
+421.200 467.750 421.200 486.250 edge stroke
+192 192 192 c255
+366.950 468.000 421.450 468.000 edge stroke
+0 0 0 c255
+421.200 467.750 421.200 486.250 edge stroke
+192 192 192 c255
+420.950 486.000 475.450 486.000 edge stroke
+0 0 0 c255
+475.200 467.750 475.200 486.250 edge stroke
+192 192 192 c255
+420.950 468.000 475.450 468.000 edge stroke
+0 0 0 c255
+475.200 467.750 475.200 486.250 edge stroke
+192 192 192 c255
+474.950 486.000 558.250 486.000 edge stroke
+0 0 0 c255
+558.000 467.750 558.000 486.250 edge stroke
+192 192 192 c255
+474.950 468.000 558.250 468.000 edge stroke
+0 0 0 c255
+534.835 479.250 neg moveto
+($0.00) show
+54.000 485.750 54.000 504.250 edge stroke
+192 192 192 c255
+53.750 504.000 126.250 504.000 edge stroke
+0 0 0 c255
+126.000 485.750 126.000 504.250 edge stroke
+192 192 192 c255
+53.750 486.000 126.250 486.000 edge stroke
+0 0 0 c255
+126.000 485.750 126.000 504.250 edge stroke
+192 192 192 c255
+125.750 504.000 205.450 504.000 edge stroke
+0 0 0 c255
+205.200 485.750 205.200 504.250 edge stroke
+192 192 192 c255
+125.750 486.000 205.450 486.000 edge stroke
+0 0 0 c255
+205.200 485.750 205.200 504.250 edge stroke
+192 192 192 c255
+204.950 504.000 259.450 504.000 edge stroke
+0 0 0 c255
+259.200 485.750 259.200 504.250 edge stroke
+192 192 192 c255
+204.950 486.000 259.450 486.000 edge stroke
+0 0 0 c255
+259.200 485.750 259.200 504.250 edge stroke
+192 192 192 c255
+258.950 504.000 313.450 504.000 edge stroke
+0 0 0 c255
+313.200 485.750 313.200 504.250 edge stroke
+192 192 192 c255
+258.950 486.000 313.450 486.000 edge stroke
+0 0 0 c255
+313.200 485.750 313.200 504.250 edge stroke
+192 192 192 c255
+312.950 504.000 367.450 504.000 edge stroke
+0 0 0 c255
+367.200 485.750 367.200 504.250 edge stroke
+192 192 192 c255
+312.950 486.000 367.450 486.000 edge stroke
+0 0 0 c255
+367.200 485.750 367.200 504.250 edge stroke
+192 192 192 c255
+366.950 504.000 421.450 504.000 edge stroke
+0 0 0 c255
+421.200 485.750 421.200 504.250 edge stroke
+192 192 192 c255
+366.950 486.000 421.450 486.000 edge stroke
+0 0 0 c255
+421.200 485.750 421.200 504.250 edge stroke
+192 192 192 c255
+420.950 504.000 475.450 504.000 edge stroke
+0 0 0 c255
+475.200 485.750 475.200 504.250 edge stroke
+192 192 192 c255
+420.950 486.000 475.450 486.000 edge stroke
+0 0 0 c255
+475.200 485.750 475.200 504.250 edge stroke
+192 192 192 c255
+474.950 504.000 558.250 504.000 edge stroke
+0 0 0 c255
+558.000 485.750 558.000 504.250 edge stroke
+192 192 192 c255
+474.950 486.000 558.250 486.000 edge stroke
+0 0 0 c255
+534.835 497.250 neg moveto
+($0.00) show
+54.000 503.750 54.000 522.250 edge stroke
+192 192 192 c255
+53.750 522.000 126.250 522.000 edge stroke
+0 0 0 c255
+126.000 503.750 126.000 522.250 edge stroke
+192 192 192 c255
+53.750 504.000 126.250 504.000 edge stroke
+0 0 0 c255
+126.000 503.750 126.000 522.250 edge stroke
+192 192 192 c255
+125.750 522.000 205.450 522.000 edge stroke
+0 0 0 c255
+205.200 503.750 205.200 522.250 edge stroke
+192 192 192 c255
+125.750 504.000 205.450 504.000 edge stroke
+0 0 0 c255
+205.200 503.750 205.200 522.250 edge stroke
+192 192 192 c255
+204.950 522.000 259.450 522.000 edge stroke
+0 0 0 c255
+259.200 503.750 259.200 522.250 edge stroke
+192 192 192 c255
+204.950 504.000 259.450 504.000 edge stroke
+0 0 0 c255
+259.200 503.750 259.200 522.250 edge stroke
+192 192 192 c255
+258.950 522.000 313.450 522.000 edge stroke
+0 0 0 c255
+313.200 503.750 313.200 522.250 edge stroke
+192 192 192 c255
+258.950 504.000 313.450 504.000 edge stroke
+0 0 0 c255
+313.200 503.750 313.200 522.250 edge stroke
+192 192 192 c255
+312.950 522.000 367.450 522.000 edge stroke
+0 0 0 c255
+367.200 503.750 367.200 522.250 edge stroke
+192 192 192 c255
+312.950 504.000 367.450 504.000 edge stroke
+0 0 0 c255
+367.200 503.750 367.200 522.250 edge stroke
+192 192 192 c255
+366.950 522.000 421.450 522.000 edge stroke
+0 0 0 c255
+421.200 503.750 421.200 522.250 edge stroke
+192 192 192 c255
+366.950 504.000 421.450 504.000 edge stroke
+0 0 0 c255
+421.200 503.750 421.200 522.250 edge stroke
+192 192 192 c255
+420.950 522.000 475.450 522.000 edge stroke
+0 0 0 c255
+475.200 503.750 475.200 522.250 edge stroke
+192 192 192 c255
+420.950 504.000 475.450 504.000 edge stroke
+0 0 0 c255
+475.200 503.750 475.200 522.250 edge stroke
+192 192 192 c255
+474.950 522.000 558.250 522.000 edge stroke
+0 0 0 c255
+558.000 503.750 558.000 522.250 edge stroke
+192 192 192 c255
+474.950 504.000 558.250 504.000 edge stroke
+0 0 0 c255
+534.835 515.250 neg moveto
+($0.00) show
+54.000 521.750 54.000 540.250 edge stroke
+53.750 540.000 126.250 540.000 edge stroke
+126.000 521.750 126.000 540.250 edge stroke
+192 192 192 c255
+53.750 522.000 126.250 522.000 edge stroke
+0 0 0 c255
+126.000 521.750 126.000 540.250 edge stroke
+125.750 540.000 205.450 540.000 edge stroke
+205.200 521.750 205.200 540.250 edge stroke
+192 192 192 c255
+125.750 522.000 205.450 522.000 edge stroke
+0 0 0 c255
+205.200 521.750 205.200 540.250 edge stroke
+204.950 540.000 259.450 540.000 edge stroke
+259.200 521.750 259.200 540.250 edge stroke
+192 192 192 c255
+204.950 522.000 259.450 522.000 edge stroke
+0 0 0 c255
+259.200 521.750 259.200 540.250 edge stroke
+258.950 540.000 313.450 540.000 edge stroke
+313.200 521.750 313.200 540.250 edge stroke
+192 192 192 c255
+258.950 522.000 313.450 522.000 edge stroke
+0 0 0 c255
+313.200 521.750 313.200 540.250 edge stroke
+312.950 540.000 367.450 540.000 edge stroke
+367.200 521.750 367.200 540.250 edge stroke
+192 192 192 c255
+312.950 522.000 367.450 522.000 edge stroke
+0 0 0 c255
+367.200 521.750 367.200 540.250 edge stroke
+366.950 540.000 421.450 540.000 edge stroke
+421.200 521.750 421.200 540.250 edge stroke
+192 192 192 c255
+366.950 522.000 421.450 522.000 edge stroke
+0 0 0 c255
+421.200 521.750 421.200 540.250 edge stroke
+420.950 540.000 475.450 540.000 edge stroke
+475.200 521.750 475.200 540.250 edge stroke
+192 192 192 c255
+420.950 522.000 475.450 522.000 edge stroke
+0 0 0 c255
+475.200 521.750 475.200 540.250 edge stroke
+474.950 540.000 558.250 540.000 edge stroke
+558.000 521.750 558.000 540.250 edge stroke
+192 192 192 c255
+474.950 522.000 558.250 522.000 edge stroke
+0 0 0 c255
+534.835 533.250 neg moveto
+($0.00) show
+54.000 540.000 neg 313.200 54.000 neg rectstroke
+255 0 0 c255
+/MyriadPro-BoldISO-8859-1 9.0 selectfont
+56.808 551.250 neg moveto
+(*) show
+0 0 0 c255
+60.894 551.250 neg moveto
+( Provide an explanation for all miscellaneous charges) show
+367.200 539.750 367.200 558.250 edge stroke
+192 192 192 c255
+366.950 558.000 558.250 558.000 edge stroke
+0 0 0 c255
+558.000 539.750 558.000 558.250 edge stroke
+366.950 540.000 558.250 540.000 edge stroke
+416.377 551.250 neg moveto
+(Total Expense) show
+530.064 551.250 neg moveto
+($0.00) show
+367.200 557.750 367.200 576.250 edge stroke
+192 192 192 c255
+366.950 576.000 558.250 576.000 edge stroke
+0 0 0 c255
+558.000 557.750 558.000 576.250 edge stroke
+192 192 192 c255
+366.950 558.000 558.250 558.000 edge stroke
+0 0 0 c255
+/MyriadPro-RegularISO-8859-1 9.0 selectfont
+439.605 569.250 neg moveto
+(Advance) show
+367.200 575.750 367.200 594.250 edge stroke
+366.950 594.000 558.250 594.000 edge stroke
+558.000 575.750 558.000 594.250 edge stroke
+192 192 192 c255
+366.950 576.000 558.250 576.000 edge stroke
+0 0 0 c255
+/MyriadPro-BoldISO-8859-1 9.0 selectfont
+385.849 587.250 neg moveto
+(Total Reimbursement) show
+530.064 587.250 neg moveto
+($0.00) show
+53.750 655.200 288.250 655.200 edge stroke
+/MyriadPro-RegularISO-8859-1 10.0 selectfont
+54.000 666.700 neg moveto
+(Employee's Signature) show
+323.750 655.200 558.250 655.200 edge stroke
+324.000 666.700 neg moveto
+(Manager's Signature) show
+212 208 200 c255
+475.200 684.000 neg 82.800 21.600 neg rectfill
+[] 0 setdash
+128 128 128 c255
+475.700 704.850 557.500 704.850 line
+557.250 684.500 557.250 705.100 line
+64 64 64 c255
+475.200 705.350 558.000 705.350 line
+557.750 684.000 557.750 705.600 line
+212 208 200 c255
+475.450 684.000 475.450 705.100 line
+475.200 684.250 557.500 684.250 line
+255 255 255 c255
+475.700 684.750 557.000 684.750 line
+475.950 684.500 475.950 704.600 line
+0 0 0 c255
+/MyriadPro-RegularISO-8859-1 9.0 selectfont
+503.046 697.050 neg moveto
+(Submit) show
+[] 0 setdash
+53.750 749.520 558.250 749.520 edge stroke
+/MyriadPro-RegularISO-8859-1 7.0 selectfont
+121.162 744.106 neg moveto
+(Any Company Inc. * 123, Any Ave * Any Town * Any Country * Phone: 111.222.3333 Fax: 111.222.4444 * www.anyCompany.com) show
+59.579 758.950 neg moveto
+(Any reference to company names and company logos in the sample forms included in this software is for demonstration purposes only and is not intended to refer to any ) show
+277.181 767.350 neg moveto
+(actual organization.) show
+%End Page
+showpage
+restore
+%End Record
+%End Document
+restore

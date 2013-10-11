@@ -1,0 +1,13 @@
+<rights>
+	<formFillIn enabled="0"/>
+	<formDataImportExport enabled="0"/>
+	<comments enabled="1"/>
+	<commentsOnline enabled="0"/>
+	<submitStandalone enabled="0"/>
+	<onlineForms enabled="0"/>
+	<barcodeDecoding enabled="0"/>
+	<digitalSignatures enabled="1"/>
+	<embeddedFiles enabled="0"/>
+	<dynamicFormFields enabled="0"/>
+	<dynamicFormPages enabled="0"/>
+</rights>

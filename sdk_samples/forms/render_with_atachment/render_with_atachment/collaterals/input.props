@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------------------------
+#
+# ADOBE SYSTEMS INCORPORATED
+# Copyright 2007 Adobe Systems Incorporated
+# All Rights Reserved
+# 
+# NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the
+# terms of the Adobe license agreement accompanying it.  If you have received this file from a
+# source other than Adobe, then your use, modification, or distribution of it requires the prior
+# written permission of Adobe.
+#
+# ---------------------------------------------------------------------------------
+#
+# Input Properties to the Orchestration client RenderWithAttachmentClient
+#
+# Replace LC_Sample with correct LiveCycle Sample directory path (i.e. The path where the zip file is extracted)
+# ---------------------------------------------------------------------------------
+
+# The folder path from where this client program should pick the input form/data file. 
+# This location is also used to store the output file. This is a REQUIRED property.
+
+contentRootURI=LC_Sample/Forms/RenderWithAttachment/collaterals/resources
+
+# --------------------------------------------------------------------------------------------------
+
+# The URL to use for doing a lookup to the LiveCycle Server. This should look something like 
+# jnp://localhost:1099 for JBOSS running on localhost at port number 1099. This is a REQUIRED property.
+
+ejbEndpoint=jnp://localhost:1099
+
+# --------------------------------------------------------------------------------------------------
+
+# The user-name to be used to log on to LiveCycle Server. It could be, say administrator.
+# This is a REQUIRED property.
+
+userName=administrator
+
+# --------------------------------------------------------------------------------------------------
+
+# The password to be used to log on to LiveCycle Server. This is a REQUIRED property.
+
+password=password
+
+# --------------------------------------------------------------------------------------------------
+
+# The input form to be used, lying under the contentRoot location. This is an OPTIONAL property. 
+# Default value of this property is taken as "input.xdp".
+
+# inputForm=input.xdp
+
+# --------------------------------------------------------------------------------------------------
+
+# The input XML data used to render the input form. This is an OPTIONAL property.
+
+inputData=input.xml
+
+# --------------------------------------------------------------------------------------------------
+
+# The output PDF file created on rendering the input. 
+# This is an OPTIONAL property. Default value of this property is taken as "output.pdf".
+
+# outputFile=output.pdf
+
+# --------------------------------------------------------------------------------------------------
+
+# The files to be attached with the output PDF created on rendering the input. These should be 
+# comma seperated string and are expected to be present under contentRootURI. This is an OPTIONAL property.
+
+attachments=Attachment 1.pdf,Attachment 2.pdf
+
+# --------------------------------------------------------------------------------------------------

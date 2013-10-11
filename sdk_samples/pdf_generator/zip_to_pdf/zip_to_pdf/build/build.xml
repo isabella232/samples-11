@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright [first year code created] Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+-->
+
+<project default="inc" name="SamplePDFGOrchestration" basedir=".">
+
+<property environment="env"/>
+
+<property name="project.dir" value=".." />
+<property name="export.dir" location="${project.dir}/export" />
+<property name="build.out.dir" location="${project.dir}/build/out" />
+<property name="build.classes.dir" location="${export.dir}/classes" />
+<property name="build.src.dir" location="${project.dir}/src" />
+<property name="property.dir" location="${project.dir}/properties" />
+<property file="build.properties"/>
+
+<path id="path.libs">
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/common/adobe-livecycle-client.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/common/adobe-generatepdf-client.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/common/adobe-usermanager-client.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/activation.jar"/>
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/axis.jar"/>
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/commons-collections-3.1.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/commons-discovery.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/commons-logging.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/jaxrpc.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/log4j.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/mail.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/saaj.jar"/>
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/wsdl4j.jar"/>	
+	<pathelement location="${LiveCycle_ROOT}/sdk/client-libs/thirdparty/xercesImpl.jar"/>
+</path>
+
+<target name="inc">
+		<antcall target="compile"/>
+</target>
+
+<!-- Creates the classes output & export directory-->
+<target name="prepare" >
+	<echo message="Creating the output directories for ZipToPDF sample"/>
+	<mkdir dir="${build.out.dir}" />
+	<mkdir dir="${export.dir}" />
+</target>
+
+ <!-- Empties the export directory & removes the classes output directory -->
+<target name="clean">
+	<echo message="Cleaning ZipToPDF sample"/>
+    <delete quiet="true" dir="${build.out.dir}" />
+	<delete quiet="true" dir="${export.dir}" />
+</target>
+
+<!-- Compiles the java files in src & creates the jar-->
+<target name="compile" depends="prepare">
+	<echo message="Compile PDFG ZipToPDF sample orchestration code"/>
+	<echo message="${client-libs.dir}"/>
+	<echo message="${LiveCycle_ROOT}"/>
+	<javac destdir="${build.out.dir}" debug="true" deprecation="true">
+		<classpath>
+			<path refid="path.libs"/>
+		</classpath>
+		<src path="${build.src.dir}"/>
+			<include name="**/*.java"/>
+	</javac>
+	<copy todir="${build.out.dir}">
+		<fileset dir="${build.src.dir}" includes="**/*.properties" />
+	</copy>
+
+	<jar destfile="${export.dir}/ZipToPDFTestClient.jar">
+		<zipfileset dir="${build.out.dir}">
+	       <include name="**/*.class"/>
+		   <include name="**/*.properties"/>
+        </zipfileset>
+	</jar>
+</target>
+
+<target name="runConversionSample" depends="compile">
+   <java classname="com.adobe.livecycle.samples.pdfg.ZipToPDFSample">
+   <classpath>
+      <pathelement path="${export.dir}/ZipToPDFTestClient.jar"/>
+	   <path refid="path.libs"/>
+   </classpath>
+   </java>
+</target>
+</project>

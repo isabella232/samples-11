@@ -1,0 +1,62 @@
+<component xmlns="http://adobe.com/idp/dsc/component/document">
+
+	<component-id>com.adobe.livecycle.dataaccesssample</component-id>
+	<version>@version@</version>
+	<bootstrap-class>com.adobe.livecycle.samples.centralmigrationbridge.service.DataAccessSampleBootstrapImpl</bootstrap-class>
+	<lifecycle-class>com.adobe.livecycle.samples.centralmigrationbridge.service.DataAccessSampleLifeCycleImpl</lifecycle-class>
+
+	<!-- Start of the Service definition -->
+	<services>
+
+		<!-- Unique name for service descriptor. 
+			
+			The value is used as the default name for 
+			
+			deployed services -->
+
+		<service name="DataAccessSample" orchestrateable="true" title="Data Access Sample">
+			<specification-id>com.adobe.livecycle.dataaccesssample</specification-id>
+			<specification-version>@specificationVersion@</specification-version>
+			<implementation-class>com.adobe.livecycle.samples.centralmigrationbridge.service.DataAccessSampleServiceImpl</implementation-class>
+			<description>A sample to access key attributes of the Data file as an XML.</description>
+			
+			<operation-config>
+				<operation-name>*</operation-name>
+				<transaction-type>Container</transaction-type>
+				<transaction-propagation>Required</transaction-propagation>
+				<transaction-timeout>180</transaction-timeout>
+			</operation-config>
+			
+			<supported-connectors>default</supported-connectors>
+			
+			<auto-deploy service-id="DataAccessSample" major-version="1" minor-version="0" category-id="Samples - Output"/>
+			
+			<operations>			
+				<operation name="centralDataAccess" orchestrateable="true" anonymous-access="false">
+					<hint>Extract the ^field, ^global, ^form, and ^job commands from the field-nominated data files and renders them as XML.</hint>
+
+					<output-parameter name="outXMLDoc" title="Output XML" type="com.adobe.idp.Document">
+						<hint>Well-formed XML file that represent the generated content. Type: document.</hint>
+					</output-parameter>
+					
+					<input-parameter name="inDataDoc" title="Data File" type="com.adobe.idp.Document" required="true">
+						<hint>Field-nominated data file (*.dat) to be processed. Type: document.</hint>
+					</input-parameter>
+					
+					<input-parameter name="inMaxBytesToProcess" title="Bytes To Be Processed" type="int">
+						<default-value>100000</default-value>
+						<hint>Maximum bytes to be processed from the data file. Type: int. Default value: 100000 bytes.</hint>
+					</input-parameter>
+
+					<faults>
+						<fault name="DataAccessSampleException" type="com.adobe.livecycle.samples.centralmigrationbridge.exception.DataAccessSampleException" />
+					</faults>
+					
+				</operation>
+			</operations>
+
+		</service>
+
+	</services>
+
+</component>

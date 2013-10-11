@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen-src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="LIVECYCLE_HOME/jboss/client/activation.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_HOME/jboss/client/jbossall-client.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/adobe-convertpdf-client.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/common/adobe-livecycle-client.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/common/adobe-forms-client.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/common/adobe-usermanager-client.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

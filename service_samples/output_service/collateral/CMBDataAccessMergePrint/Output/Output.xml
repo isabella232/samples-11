@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<File>
+    
+  <jobs>
+   
+   <job>outputTemplate</job>
+     
+   <job>-afp"/tmp/LCSamples/Resources/"</job>
+       
+   <job>-alp"/tmp/LCSamples/Resources/"</job>
+   
+ </jobs>
+  
+  
+   <fields>
+        
+
+   <MEMO_TO>Akira Tanaka, Manager, Purchasing</MEMO_TO>
+     
+   <MEMO_CC>John Jacobs, Manager, Accounts Receivable</MEMO_CC>
+    
+   <MEMO_FROM>Kara Bowman, Chief Financial Officer</MEMO_FROM>
+     
+   <MEMO_DATE>January 31, 1999</MEMO_DATE>
+       
+   <MEMO_SUBJ>Budget Meeting</MEMO_SUBJ>
+       
+   <MEMO_MSG>The meeting scheduled for Monday, February 19th at 2:00is rescheduled to Tuesday, February 20th at 3:30. If this conflicts with other activities on your calendar,please let me know immediately.</MEMO_MSG>
+ 
+   </fields>
+
+</File>

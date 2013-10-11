@@ -1,0 +1,10 @@
+{{BEGIN}}
+{{FAX 123456-7899}}
+{{WINSECID 971193}}
+{{BILLING 2010-02-23T02:04:44Z}}
+{{ATTACH OutputPDF.pdf}}
+{{PRIORITY High}}
+{{nocover}}
+{{CONTACT Contact Name}}
+{{COMMENT Purchase Order Details}}
+{{END}}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***************************************************************************
+
+    ADOBE SYSTEMS INCORPORATED
+    Copyright 2009 Adobe Systems Incorporated
+    All Rights Reserved
+ 
+    NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the
+    of the Adobe license agreement accompanying it.  If you have received this file from a
+    source other than Adobe, then your use, modification, or distribution of it requires the prior
+    written permission of Adobe.
+
+******************************************************************************************************************
+
+    Replace LDAP_UID with an existing user ID in your LDAP server.
+
+******************************************************************************************************************
+-->
+
+<PrePopulateLDAPQuery>
+    <LdapUid>LDAP_UID</LdapUid>
+	<transaction>
+		<header>
+			<txtPONum>8745236985</txtPONum>
+			<dtmDate>2004-02-08</dtmDate>
+			<txtOrderedByCompanyName>Any Company Name</txtOrderedByCompanyName>
+			<txtOrderedByAddress>555, Any Blvd.</txtOrderedByAddress>
+			<txtOrderedByCity>Any City</txtOrderedByCity>
+			<txtOrderedByStateProv>Alabama</txtOrderedByStateProv
+			><txtOrderedByZipCode>12345</txtOrderedByZipCode>
+			<txtOrderedByCountry>United States</txtOrderedByCountry>
+			<txtOrderedByPhone></txtOrderedByPhone>
+			<txtOrderedByEmail></txtOrderedByEmail>
+			<txtOrderedByContactName></txtOrderedByContactName>
+			<txtDeliverToCompanyName>Any Company Name</txtDeliverToCompanyName>
+			<txtDeliverToAddress>7895, Any Street</txtDeliverToAddress>
+			<txtDeliverToCity>Any City</txtDeliverToCity>
+			<txtDeliverToStateProv>Alabama</txtDeliverToStateProv>
+			<txtDeliverToZipCode>12346</txtDeliverToZipCode>
+			<txtDeliverToCountry>United States</txtDeliverToCountry>
+			<txtDeliverToPhone>(123) 456-7891</txtDeliverToPhone>
+			<txtDeliverToEmail>user@company.com</txtDeliverToEmail>
+			<txtDeliverToContactName>Contact Name</txtDeliverToContactName>
+		</header>
+		<detail>
+			<txtPartNum>580463116</txtPartNum>
+			<txtDescription>Electric Fuel Pump</txtDescription>
+			<numQty>1</numQty>
+			<numUnitPrice>149.95</numUnitPrice>
+		</detail>
+		<detail>
+			<txtPartNum>25906311C</txtPartNum>
+			<txtDescription>Air Flow Meter</txtDescription>
+			<numQty>3</numQty>
+			<numUnitPrice>145.95</numUnitPrice>
+		</detail>
+		<detail>
+			<txtPartNum>25129637J</txtPartNum>
+			<txtDescription>Air Intake Sleeve</txtDescription>
+			<numQty>5</numQty>
+			<numUnitPrice>98.95</numUnitPrice>
+		</detail>
+		<detail>
+			<txtPartNum>771128</txtPartNum>
+			<txtDescription>Fuel Filter</txtDescription>
+			<numQty>2</numQty>
+			<numUnitPrice>10.95</numUnitPrice>
+		</detail>
+		<total>
+			<txtCondition>Account number: 123456</txtCondition>
+			<numStateTaxRate>7.00</numStateTaxRate>
+			<numFederalTaxRate>8.00</numFederalTaxRate>
+			<numShippingCharge>50.00</numShippingCharge>
+		</total>
+	</transaction>
+</PrePopulateLDAPQuery>

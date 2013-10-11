@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+  <xfa:datasets>
+    <xfa:data>
+      <form1>
+        <t_SID>511</t_SID>
+        <t_FirstName>Paul</t_FirstName>
+        <t_MiddleName>X.</t_MiddleName>
+        <t_LastName>Powerz</t_LastName>
+        <c_Status>2</c_Status>
+        <d_ReturnDate>2006-11-28</d_ReturnDate>
+      </form1>
+    </xfa:data>
+  </xfa:datasets>
+</xdp:xdp>

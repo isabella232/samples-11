@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://aditya-desk:8080/soap/services/RightsManagementService?wsdl&amp;lc_version=9.0.0" filename="RightsManagementService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

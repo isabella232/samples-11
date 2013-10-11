@@ -1,0 +1,4516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V8.1" APIVersion="2.6.7069.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2007-04-30T07:23:04Z" uuid="29e97ade-26d7-47ce-b1f2-59630aaa1475">
+<template xmlns="http://www.xfa.org/schema/xfa-template/2.4/">
+   <?formServer defaultPDFRenderFormat acrobat7.0.5static?>
+   <?formServer allowRenderCaching 1?>
+   <?formServer formModel client?>
+   <subform name="form1" layout="tb" locale="ambient" allowMacro="1">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="8in" h="10.5in"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <?templateDesigner expand 0?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="8in" h="10.5in" name="leaveRequest">
+         <draw name="StaticText1" x="88.9mm" w="25.4mm" h="2.9718mm">
+            <ui>
+               <textEdit>
+               </textEdit>
+            </ui>
+            <value>
+               <text>Any Company Inc.</text>
+            </value>
+            <font size="7pt" typeface="Myriad Pro"/>
+            <para hAlign="center" vAlign="middle"/>
+            <?renderCache.bounds 72000 8424 0 0 0 0 0 0?>
+            <?renderCache.textRun 16 Any Company Inc. 0 9572 5962 0 0 0 "Myriad Pro" 0 0 7000 ISO-8859-1?></draw>
+         <draw name="StaticImage1" y="12.7mm" x="12.7mm" w="38.1mm" h="25.4mm">
+            <value>
+               <image contentType="image/gif">R0lGODlhbAEKAfcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Z
+mf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8A
+Zv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZ
+M8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wA
+AJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm
+/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/
+zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZm
+mWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/
+ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNm
+MzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/
+AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz
+/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAMwAAAPCzs8LCwsnJ8dTU9N7e98nJ2+bm+e7u
++9TU38bGz/Pz/Pf3/fr6/uDg4cXFxtHS0sjjyNHo0dns2cTSxOHw4ejz6O727vP588PIw/f79/z9
++8rJyPLAwPXLy9+6uvfV1fjf39G/v93Ly/ro6Pzw8MjBwf329v///yH5BAEAAP8ALAAAAABsAQoB
+AAj/AAEIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKAm+c1eu3Llz
+K7LJnElzxcuW7t6l3Mmzp8+fQDe+awcuJs2jSJPOXAGunM6gUKNKnUrVYrx258wp3co1qblz5eJV
+HUu2rNmT8coZ7cq2bc2wZ+PKnUsXoTy1bvPqXVpOXt2/gAP/dAdur+HD4NwJXsy4sUashyMfPtfO
+seXLmA22mydZprkVK/SJHk163rx+nbPNq5y5teu67jgb/qyv3D18uHPrvse7N+96omUbXv26uPGp
+787tnVdbt/Pct3nj8039N/B8qPWee3q8u/eSd/XO/zuHb98+3Oef754uvXq9e+/rxa+XT2vevt/z
+69+42e3X8uYFGKB661VH3XzyJUhfXuawtt+DEDYkT2FtrVCOgBiepyGBBR7YG4IKXufWOX5FaOKJ
+AsXWFnn78JMhhuWh91x07Bn4G3whKkjPgmzNoxiKQOpXzoot8uOieUfCuCGH0zVp4Hw4hrhjPTvm
+01Y5QWZpnDzKdUWekS6C+aKSBN5Wo41Q5ijfjvS0mR1XJGop52XvrKXUPOWAqWeRLb4IoHkcmhmd
+jVGqSeWh9NjzplIrcDfno3+9Y99W4OhpqZF9ZpphjOkVeKZ78BWqI6Jt0mMlV+Y4CumqZrUzaVIr
+FP95qaWaKtlpoIP69l6ohk5Z6q/0LJoUlqwWO9aQXFXqz7LMzrrnmAPeipughOIoaoK+UgnsqVs5
+aOy3QLWDajnMLsuPP+eie6msY8ZY5rSfhmrdtdrWC6w9XXkL7r4oIcvoPuUGjK66syLpJ6BlVhsf
+vdiyCaybXBHL78QkibvVOekKXO65BScpIICBQvckr2q2SerDbXKblL4Ut7yRv0mdo/HMHBfc7pLO
+tRfvh4auqS3K2KQcsctEa/SOcEiROzPNBK/bbsgj83pttg4/HDS+d6pa9NYPxfPqUUozK48/Y4+9
+9LoeR8sp1KD27DPKwF69lTlicW23hHaCXW7Z8vT/vazZG5uL9sEJV3tjyW8DTU/Q2GCDNazk3C15
+QhQOK3DZZPcNeMAd16o2k2gejnjVcC+e6MWTp04QzHqLnXnfAGQuu8Y2byotdE7uDGKvpZvOuONb
+Saz63e9cfLnmyGtOe9Nheg7y7fASujDvJ5catO+NY6PyUVoP77I8SNMk895kv+4XOX5v3mztm767
+s7y7Y7tm74xjv/1M80TuPWbttOT//wAMoAAHGMAuIWUFGRMb8giCPJo5zXYympGTPCQfhrHpZ3DL
+ngaFNROwEPCDIAyhCEdIwhKa8IQg7J5P5JG31HTGHAC73OsG0kD11eyBflIPtaLmNodh0Hptql/j
+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
+Ey5s+HDhgAA7</image>
+            </value>
+            <border>
+               <edge presence="hidden"/>
+               <corner presence="hidden" thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+            </border>
+            <ui>
+               <imageEdit>
+               </imageEdit>
+            </ui>
+         </draw>
+         <draw name="StaticText2" y="44.45mm" x="12.7mm" w="63.5mm" h="10.16mm">
+            <ui>
+               <textEdit>
+               </textEdit>
+            </ui>
+            <value>
+               <text>Leave Request</text>
+            </value>
+            <font size="20pt" typeface="Myriad Pro" weight="bold"/>
+            <?renderCache.bounds 180000 28800 0 0 0 0 0 0?>
+            <?renderCache.textRun 13 Leave Request 0 0 15000 0 0 0 "Myriad Pro" 1 0 20000 ISO-8859-1?></draw>
+         <field name="txtEmpName" y="57.15mm" x="12.7mm" w="82.55mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <caption reserve="31.75mm">
+               <font size="9pt" typeface="Myriad Pro"/>
+               <value>
+                  <text>Employee's Name</text>
+               </value>
+               <para vAlign="middle"/>
+            </caption>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <para vAlign="middle"/>
+         </field>
+         <field name="txtEmpId" y="64.77mm" x="12.7mm" w="82.55mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <caption reserve="31.75mm">
+               <font size="9pt" typeface="Myriad Pro"/>
+               <value>
+                  <text>Employee's ID</text>
+               </value>
+               <para vAlign="middle"/>
+            </caption>
+            <value>
+               <text maxChars="5"/>
+            </value>
+            <para vAlign="middle"/>
+         </field>
+         <field name="txtManagersName" y="57.15mm" x="107.95mm" w="82.55mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <caption reserve="31.75mm">
+               <font size="9pt" typeface="Myriad Pro"/>
+               <value>
+                  <text>Manager's Name</text>
+               </value>
+               <para vAlign="middle"/>
+            </caption>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <para vAlign="middle"/>
+         </field>
+         <field name="txtDept" y="64.77mm" x="107.95mm" w="82.55mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <caption reserve="31.75mm">
+               <font size="9pt" typeface="Myriad Pro"/>
+               <value>
+                  <text>Department</text>
+               </value>
+               <para vAlign="middle"/>
+            </caption>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <para vAlign="middle"/>
+         </field>
+         <?templateDesigner expand 0?>
+         <draw name="StaticText3" y="80.01mm" x="12.7mm" w="31.75mm" h="8.89mm">
+            <ui>
+               <textEdit>
+               </textEdit>
+            </ui>
+            <value>
+               <text>Leave Type</text>
+            </value>
+            <font size="9pt" typeface="Myriad Pro" weight="bold"/>
+            <para hAlign="center" vAlign="middle"/>
+            <border>
+               <fill>
+                  <color value="192,192,192"/>
+               </fill>
+               <edge/>
+               <corner thickness="0.006in"/>
+            </border>
+            <?renderCache.bounds 90000 25200 0 0 0 0 0 0?>
+            <?renderCache.textRun 10 Leave Type 0 22392 14850 0 0 0 "Myriad Pro" 1 0 9000 ISO-8859-1?></draw>
+         <draw name="StaticText4" y="80.01mm" x="44.45mm" w="69.85mm" h="8.89mm">
+            <ui>
+               <textEdit>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <value>
+               <text>Comments</text>
+            </value>
+            <font size="9pt" typeface="Myriad Pro" weight="bold"/>
+            <para hAlign="center" vAlign="middle"/>
+            <border>
+               <fill>
+                  <color value="192,192,192"/>
+               </fill>
+               <edge/>
+               <corner thickness="0.006in"/>
+            </border>
+            <?renderCache.bounds 198000 25200 0 0 0 0 0 0?>
+            <?renderCache.textRun 8 Comments 0 77369 14850 0 0 0 "Myriad Pro" 1 0 9000 ISO-8859-1?></draw>
+         <draw name="StaticText5" y="80.01mm" x="114.3mm" w="25.4mm" h="8.89mm">
+            <ui>
+               <textEdit>
+               </textEdit>
+            </ui>
+            <value>
+               <exData contentType="text/html" maxLength="0">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="2.2.4330.0">
+                                <p style="text-decoration:none">Start Date<br/><span style="font-weight:normal">(mm/dd/yyyy)</span></p>
+                            </body>
+               </exData>
+            </value>
+            <font size="9pt" typeface="Myriad Pro" weight="bold"/>
+            <para hAlign="center" vAlign="middle"/>
+            <border>
+               <fill>
+                  <color value="192,192,192"/>
+               </fill>
+               <edge/>
+               <corner thickness="0.006in"/>
+            </border>
+            <?renderCache.bounds 72000 25200 0 0 0 0 0 0?>
+            <?renderCache.textRun 11 Start Date  0 15737 9450 0 0 0 "Myriad Pro" 1 0 9000 ISO-8859-1?>
+            <?renderCache.textRun 12 (mm/dd/yyyy) 0 9297 20250 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?></draw>
+         <draw name="StaticText6" y="80.01mm" x="139.7mm" w="25.4mm" h="8.89mm">
+            <ui>
+               <textEdit>
+               </textEdit>
+            </ui>
+            <value>
+               <exData contentType="text/html" maxLength="0">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="2.2.4330.0">
+                                <p style="text-decoration:none">End Date<br/><span style="font-weight:normal;text-decoration:none">(mm/dd/yyyy)</span></p>
+                            </body>
+               </exData>
+            </value>
+            <font size="9pt" typeface="Myriad Pro" weight="bold"/>
+            <para hAlign="center" vAlign="middle"/>
+            <border>
+               <fill>
+                  <color value="192,192,192"/>
+               </fill>
+               <edge/>
+               <corner thickness="0.006in"/>
+            </border>
+            <?renderCache.bounds 72000 25200 0 0 0 0 0 0?>
+            <?renderCache.textRun 9 End Date  0 17834 9450 0 0 0 "Myriad Pro" 1 0 9000 ISO-8859-1?>
+            <?renderCache.textRun 12 (mm/dd/yyyy) 0 9297 20250 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?></draw>
+         <draw name="StaticText7" y="80.01mm" x="165.1mm" w="25.4mm" h="8.89mm">
+            <ui>
+               <textEdit>
+               </textEdit>
+            </ui>
+            <value>
+               <text>Days</text>
+            </value>
+            <font size="9pt" typeface="Myriad Pro" weight="bold"/>
+            <para hAlign="center" vAlign="middle"/>
+            <border>
+               <fill>
+                  <color value="192,192,192"/>
+               </fill>
+               <edge/>
+               <corner thickness="0.006in"/>
+            </border>
+            <?renderCache.bounds 72000 25200 0 0 0 0 0 0?>
+            <?renderCache.textRun 4 Days 0 26186 14850 0 0 0 "Myriad Pro" 1 0 9000 ISO-8859-1?></draw>
+         <field name="drpType" y="88.9mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+               </edge>
+               <corner thickness="0.006in">
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="88.9mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="88.9mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+               </edge>
+               <corner thickness="0.006in">
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="88.9mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+               </edge>
+               <corner thickness="0.006in">
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="88.9mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+               </edge>
+               <corner thickness="0.006in">
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <border>
+            <edge presence="hidden"/>
+         </border>
+         <field name="drpType" y="95.25mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="95.25mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="95.25mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="95.25mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="95.25mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="101.6mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="101.6mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="101.6mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="101.6mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="101.6mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="107.95mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="107.95mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="107.95mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="107.95mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="107.95mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="114.3mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="114.3mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="114.3mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="114.3mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="114.3mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="120.65mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="120.65mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="120.65mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="120.65mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="120.65mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="127mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="127mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="127mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="127mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="127mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="133.35mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="133.35mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="133.35mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="133.35mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="133.35mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="139.7mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="139.7mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="139.7mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="139.7mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="139.7mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="146.05mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="146.05mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="146.05mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="146.05mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="146.05mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="152.4mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="152.4mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="152.4mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="152.4mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="152.4mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="158.75mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="158.75mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="158.75mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="158.75mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="158.75mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="165.1mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="165.1mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="165.1mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="165.1mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="165.1mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="171.45mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="171.45mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="171.45mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="171.45mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="171.45mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="177.8mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="177.8mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="177.8mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="177.8mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="177.8mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field name="drpType" y="184.15mm" x="12.7mm" w="31.75mm" h="6.35mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge/>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+            </border>
+            <items save="1">
+               <text>
+                        </text>
+               <text>Bereavement</text>
+               <text>Family Related</text>
+               <text>Jury Duty</text>
+               <text>Leave - No Pay</text>
+               <text>Parental</text>
+               <text>Sick</text>
+               <text>Vacation</text>
+               <text>(other)</text>
+            </items>
+         </field>
+         <field name="txtComment" y="184.15mm" x="44.45mm" w="69.85mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <edge presence="hidden"/>
+                     <corner presence="hidden" thickness="0.1778mm"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <text maxChars="35"/>
+            </value>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <edge>
+               </edge>
+               <edge/>
+               <edge/>
+               <corner thickness="0.1778mm">
+                  <color value="192,192,192"/>
+               </corner>
+               <corner thickness="0.1778mm">
+               </corner>
+               <corner thickness="0.1778mm"/>
+               <corner thickness="0.1778mm"/>
+            </border>
+         </field>
+         <field name="dtmStartDate" y="184.15mm" x="114.3mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge/>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field name="dtmEndDate" y="184.15mm" x="139.7mm" w="25.4mm" h="6.35mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+               <picture>MM/DD/YYYY</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0.9906mm"/>
+            <para vAlign="middle"/>
+            <format>
+               <picture>MM/DD/YYYY</picture>
+            </format>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge/>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+            </border>
+            <value>
+               <date/>
+            </value>
+            <validate>
+               <message>
+                  <text name="formatTest"/>
+                  <text name="scriptTest">Please enter the date using MM/DD/YYYY format, e.g. for June 1, 2005, enter 06/01/2005</text>
+               </message>
+               <script contentType="application/x-javascript">this.resolveNode("leaveRequest.validateObject").validateDate(this.formattedValue);</script>
+            </validate>
+         </field>
+         <field y="184.15mm" x="165.1mm" w="25.4mm" h="6.35mm" name="numDays">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+               <picture>zz9.99</picture>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="right"/>
+            <border>
+               <edge>
+                  <color value="192,192,192"/>
+               </edge>
+               <corner thickness="0.006in">
+                  <color value="192,192,192"/>
+               </corner>
+               <edge>
+               </edge>
+               <edge/>
+               <edge/>
+               <corner thickness="0.006in">
+               </corner>
+               <corner thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <value>
+               <decimal/>
+            </value>
+            <validate>
+               <message>
+                  <text name="scriptTest">Please enter a value between 0 and 366.</text>
+               </message>
+               <script contentType="application/x-javascript">this.rawValue &gt;= 0 &amp;&amp; this.rawValue &lt; 367;</script>
+            </validate>
+         </field>
+         <field y="190.5mm" x="114.3mm" w="76.2mm" h="6.35mm" name="numTotalDays" access="readOnly">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro" weight="bold"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+            <para hAlign="right" marginRight="2.808pt" vAlign="middle"/>
+            <caption reserve="50.8mm">
+               <font size="9pt" typeface="Myriad Pro" weight="bold"/>
+               <para hAlign="right" marginRight="2.808pt" vAlign="middle"/>
+               <value>
+                  <text>Totals</text>
+               </value>
+            </caption>
+            <border>
+               <edge/>
+               <corner thickness="0.1778mm"/>
+            </border>
+            <format>
+               <picture>zz9.99</picture>
+            </format>
+            <calculate>
+               <script contentType="application/x-javascript">var oFields = xfa.resolveNodes("numDays[*]");
+var nNodesLength = oFields.length;
+var nSum = 0;
+for (var nNodeCount = 0; nNodeCount &lt; nNodesLength; nNodeCount++) {
+	nSum += oFields.item(nNodeCount).rawValue;
+}
+this.rawValue = nSum;</script>
+            </calculate>
+            <value>
+               <decimal/>
+            </value>
+         </field>
+         <field name="SignatureField1" y="205.74mm" x="12.7mm" w="82.55mm" h="19.05mm">
+            <bind match="none"/>
+            <ui>
+               <signature>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </signature>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.35mm" placement="bottom">
+               <font size="9pt" typeface="Myriad Pro"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>Employee's Signature</text>
+               </value>
+            </caption>
+         </field>
+         <field name="SignatureField2" y="205.74mm" x="107.95mm" w="82.55mm" h="19.05mm">
+            <bind match="none"/>
+            <ui>
+               <signature>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </signature>
+            </ui>
+            <font size="9pt" typeface="Myriad Pro"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.35mm" placement="bottom">
+               <font size="9pt" typeface="Myriad Pro"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>Manager's Signature</text>
+               </value>
+            </caption>
+         </field>
+         <field h="7.62mm" name="Button" w="25.4mm" x="165.1mm" y="231.775mm">
+            <ui>
+               <button/>
+            </ui>
+            <caption>
+               <value>
+                  <text>Submit</text>
+               </value>
+               <para hAlign="center" vAlign="middle"/>
+               <font size="9pt" typeface="Myriad Pro"/>
+            </caption>
+            <border>
+               <edge stroke="raised"/>
+               <fill>
+                  <color value="212,208,200"/>
+               </fill>
+               <corner/>
+            </border>
+            <bind match="none"/>
+            <event activity="click">
+               <submit textEncoding="UTF-8" xdpContent="pdf datasets xfdf"/>
+            </event>
+         </field>
+         <draw name="StaticText8" y="254mm" x="12.7mm" w="177.8mm" h="4.064mm">
+            <ui>
+               <textEdit>
+               </textEdit>
+            </ui>
+            <value>
+               <text>Any Company Inc. * 123, Any Ave * Any Town * Any Country * Phone: 111.222.3333 Fax: 111.222.4444 * www.anyCompany.com</text>
+            </value>
+            <font size="7pt" typeface="Myriad Pro"/>
+            <para hAlign="center" vAlign="bottom"/>
+            <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0.9906mm"/>
+            <border>
+               <edge presence="hidden">
+               </edge>
+               <edge presence="hidden">
+               </edge>
+               <edge/>
+               <edge presence="hidden"/>
+               <corner presence="hidden">
+               </corner>
+               <corner presence="hidden">
+               </corner>
+               <corner/>
+               <corner presence="hidden"/>
+            </border>
+            <?renderCache.bounds 504000 8712 0 0 0 0 0 0?>
+            <?renderCache.textRun 117 Any Company Inc. * 123, Any Ave * Any Town * Any Country * Phone: 111.222.3333 Fax: 111.222.4444 * www.anyCompany.com 0 67162 6962 0 0 0 "Myriad Pro" 0 0 7000 ISO-8859-1?></draw>
+         <draw name="StaticText9" y="259.08mm" x="12.7mm" w="177.8mm" h="6.35mm">
+            <ui>
+               <textEdit>
+               </textEdit>
+            </ui>
+            <value>
+               <text>Any reference to company names and company logos in the sample forms included in this software is for demonstration purposes only and is not intended to refer to any actual organization.</text>
+            </value>
+            <font size="7pt" typeface="Myriad Pro"/>
+            <para hAlign="center"/>
+            <?renderCache.bounds 504000 18000 0 0 0 0 0 0?>
+            <?renderCache.textRun 166 Any reference to company names and company logos in the sample forms included in this software is for demonstration purposes only and is not intended to refer to any  0 5579 5250 0 0 0 "Myriad Pro" 0 0 7000 ISO-8859-1?>
+            <?renderCache.textRun 20 actual organization. 0 223181 13650 0 0 0 "Myriad Pro" 0 0 7000 ISO-8859-1?></draw>
+         <variables>
+            <script contentType="application/x-javascript" name="validateObject">// Validate that the date entered is in the format MM/DD/YYYY
+// and later than 01/01/1900.
+function validateDate(sDate) {
+
+	if ((sDate == null) || (sDate.length == 0))
+		return true;
+
+	var datearray = sDate.split("/");
+
+	if (datearray.length == 3) {
+		var month = parseFloat(datearray[0]);
+		var day = parseFloat(datearray[1]);
+		var year = parseFloat(datearray[2]);
+
+		if ((year &gt; 1900)&amp;&amp;((day &gt;= 1) &amp;&amp; (day &lt;= 31))&amp;&amp;((month &gt;= 1) &amp;&amp; (month &lt;= 12)))
+			return(true);
+		else 
+			return(false);
+	} else {
+		return(false);
+	}
+}</script>
+         </variables>
+      </subform>
+      <desc>
+         <text name="title">Leave Request</text>
+         <text name="contact">Adobe Systems Incorporated</text>
+         <text name="version">1.0</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 188 47 00010009000A000B000D000F00100012001300140015001B00220024002500260027002A002E002F00310034003500420043004400450046004700480049004A004D004E004F005000510053005400550056005700580059005A005B0068 ()*,./1234:ACDEFIMNPSTabcdefghilmnoprstuvwxyz'?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 92 23 0001002400250026002D003300340035004200450046004D004E004F00500051005200530054005500560057005A CDELRSTadelmnopqrstuvy?>
+   </subform>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/2.2/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner XDPPreviewFormat 0?>
+   <?templateDesigner FormTargetVersion 24?>
+   <?templateDesigner Zoom 91?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner SavePDFWithLog 0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/1.0/">
+   <agent name="designer">
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <tagged>0</tagged>
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <version>1.65</version>
+      </pdf>
+      <common>
+         <data>
+            <adjustData>1</adjustData>
+            <attributes>preserve</attributes>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+            <range/>
+            <record/>
+            <startNode/>
+            <uri/>
+            <window/>
+            <xsl>
+               <debug>
+                  <uri/>
+               </debug>
+               <uri/>
+            </xsl>
+         </data>
+         <temp>
+            <uri/>
+         </temp>
+         <locale/>
+      </common>
+      <copies>1</copies>
+      <driver>
+         <fontInfo>
+            <embed>0</embed>
+            <map>
+               <equate/>
+            </map>
+            <subsetBelow>100</subsetBelow>
+         </fontInfo>
+         <xdc>
+            <uri/>
+         </xdc>
+      </driver>
+      <zpl>
+         <fontInfo>
+            <defaultTypeface writingScript="Roman">CG Triumvirate</defaultTypeface>
+            <defaultTypeface writingScript="Japanese">Kozuka Mincho Pro-VI R</defaultTypeface>
+            <defaultTypeface writingScript="SimplifiedChinese">Adobe Song Std L</defaultTypeface>
+            <defaultTypeface writingScript="TraditionalChinese">Adobe Ming Std L</defaultTypeface>
+            <defaultTypeface writingScript="Korean">Adobe Myungjo Std M</defaultTypeface>
+            <map>
+               <equate force="1" from="MS Gothic_*_*" to="Kozuka Gothic Pro M_*_*"/>
+            </map>
+         </fontInfo>
+      </zpl>
+      <submitUrl>http://localhost:8080/FormsIVS/SubmitFormServlet?clientType=1</submitUrl>
+      <webClient>
+         <fontInfo>
+            <embed>0</embed>
+            <map>
+               <equate/>
+            </map>
+            <subsetBelow>100</subsetBelow>
+         </fontInfo>
+         <xdc>
+            <uri/>
+         </xdc>
+      </webClient>
+      <xdp>
+         <embedRenderedOutput>1</embedRenderedOutput>
+         <packets>*</packets>
+      </xdp>
+      <layout>panel</layout>
+      <output/>
+      <script>
+         <currentPage/>
+         <exclude>nullTest formatTest</exclude>
+         <runScripts>both</runScripts>
+      </script>
+   </present>
+   <?originalXFAVersion http://www.xfa.org/schema/xci/2.6/?></config>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+</xfa:datasets>
+<form xmlns="http://www.xfa.org/schema/xfa-form/2.5/" checksum="hQPnP81cid4uF+Zv1Dbwgp4EjmM=">
+   <subform name="form1">
+      <instanceManager name="_leaveRequest"/>
+      <subform name="leaveRequest">
+         <draw name="StaticText1"/>
+         <draw name="StaticImage1"/>
+         <draw name="StaticText2"/>
+         <field name="txtEmpName"/>
+         <field name="txtEmpId"/>
+         <field name="txtManagersName"/>
+         <field name="txtDept"/>
+         <draw name="StaticText3"/>
+         <draw name="StaticText4"/>
+         <draw name="StaticText5"/>
+         <draw name="StaticText6"/>
+         <draw name="StaticText7"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="drpType"/>
+         <field name="txtComment"/>
+         <field name="dtmStartDate"/>
+         <field name="dtmEndDate"/>
+         <field name="numDays"/>
+         <field name="numTotalDays"/>
+         <field name="SignatureField1"/>
+         <field name="SignatureField2"/>
+         <field name="Button"/>
+         <draw name="StaticText8"/>
+         <draw name="StaticText9"/>
+      </subform>
+      <pageSet>
+         <pageArea name="Page1">
+            <contentArea/>
+            <medium/>
+            <occur/>
+         </pageArea>
+      </pageSet>
+   </subform>
+</form>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.0-c318 44.277456, Sun Feb 25 2007 17:17:36">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xap="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xap:MetadataDate>2007-04-30T07:23:04Z</xap:MetadataDate>
+         <xap:CreatorTool>Adobe LiveCycle Designer ES 8.1</xap:CreatorTool>
+         <xap:ModifyDate>2007-02-09T20:50:06+05:30</xap:ModifyDate>
+         <xap:CreateDate>2007-02-09T20:50:04+05:30</xap:CreateDate>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 8.1</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xapMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xapMM:DocumentID>uuid:29e97ade-26d7-47ce-b1f2-59630aaa1475</xapMM:DocumentID>
+         <xapMM:InstanceID>uuid:c2405c06-07ba-4282-b12e-fff3f11a8f12</xapMM:InstanceID>
+      </rdf:Description>
+      <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <dc:format>application/pdf</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">Leave Request</rdf:li>
+            </rdf:Alt>
+         </dc:title>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:contact rdf:parseType="Resource">
+            <rdf:value>Adobe Systems Incorporated</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:contact>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>1.0</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.1/">
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-locale-set/2.6/?></localeSet></xdp:xdp>

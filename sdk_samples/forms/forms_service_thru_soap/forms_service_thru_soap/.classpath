@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen-src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/activation.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/axis.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/commons-codec-1.3.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/commons-collections-3.1.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/commons-discovery.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/commons-logging.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/jaxrpc.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/log4j.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/mail.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/saaj.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/wsdl4j.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

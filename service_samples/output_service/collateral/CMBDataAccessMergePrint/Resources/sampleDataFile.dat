@@ -1,0 +1,18 @@
+^job outputTemplate -afp"/tmp/LCSamples/Resources/" -alp"/tmp/LCSamples/Resources/" -z"your printer name"
+^symbolset 108
+^page 1
+^field MEMO_TO
+Akira Tanaka, Manager, Purchasing
+^field MEMO_CC
+John Jacobs, Manager, Accounts Receivable
+^field MEMO_FROM
+Kara Bowman, Chief Financial Officer
+^field MEMO_DATE
+January 31, 1999
+^field MEMO_SUBJ
+Budget Meeting
+^field MEMO_MSG
+The meeting scheduled for Monday, February 19th at 2:00
+is rescheduled to Tuesday, February 20th at 3:30. 
+If this conflicts with other activities on your calendar,
+please let me know immediately.

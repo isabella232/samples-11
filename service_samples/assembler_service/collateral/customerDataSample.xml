@@ -1,0 +1,58 @@
+<customerData>
+    <Name>John Doe</Name>
+    <Address>4788 Main Street</Address>
+    <City>Hometown</City>
+    <State>CA</State>
+    <ZipCode>98451-0323</ZipCode>
+    <PolicyNumber>04-503582</PolicyNumber>
+    <EffectiveDate>May 13, 2009</EffectiveDate>
+    <TerminationDate>May 13, 2010</TerminationDate>
+    <DriversListed>John Doe, Jane Doe, Billy Doe</DriversListed>
+    <Premium>00.00</Premium>
+    <Discounts>Safe Driving, Multiple Policy, Good Student</Discounts>
+    <Gender>1</Gender>
+    <MaritalStatus>2</MaritalStatus>
+    <DOB>22 May 1955</DOB>
+    <Automobiles>
+        <Auto id="1" Reference="Auto_1">
+            <Year>1998</Year>
+            <Make>Dodge</Make>
+            <Model>Ram Pickup</Model>
+            <License>5S27027</License>
+            <VIN>12345</VIN>
+            <Premium>345.00</Premium>
+        </Auto>
+        <Auto id="2" Reference="Auto_2">
+            <Year>2003</Year>
+            <Make>Infiniti</Make>
+            <Model>I30t</Model>
+            <License>3SSN280</License>
+            <VIN>54321</VIN>
+            <Premium>289.00</Premium>
+        </Auto>
+        <Auto id="3" Reference="Auto_3">
+            <Year>2008</Year>
+            <Make>Tesla</Make>
+            <Model>Roadster</Model>
+            <License>5DLR004</License>
+            <VIN>89766</VIN>
+            <Premium>452.00</Premium>
+        </Auto>
+        <Auto id="4" Reference="None">
+            <Year>2006</Year>
+            <Make>Toyota</Make>
+            <Model>Prius</Model>
+            <License>4RCM734</License>
+            <VIN>34152</VIN>
+            <Premium>00.00</Premium>
+        </Auto>
+        <Auto id="5" Reference="None">
+            <Year>1999</Year>
+            <Make>GMC</Make>
+            <Model>Tahoe</Model>
+            <License>2MTK089</License>
+            <VIN>15423</VIN>
+            <Premium>00.00</Premium>
+        </Auto>
+    </Automobiles>
+</customerData>

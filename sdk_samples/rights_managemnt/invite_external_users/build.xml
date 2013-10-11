@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build" name="InviteExternalUsersSample">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.5"/>
+    <property name="source" value="1.5"/>
+    <property file="build.properties"/>
+    <path id="InviteExternalUsersSample.classpath">
+        <pathelement location="."/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/activation.jar"/>
+        <pathelement location="${livecycle.sdk.path}/common/adobe-livecycle-client.jar"/>
+        <pathelement location="${livecycle.sdk.path}/common/adobe-rightsmanagement-client.jar"/>
+        <pathelement location="${livecycle.sdk.path}/common/adobe-usermanager-client.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/axis.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/commons-discovery.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/commons-logging.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/jaxb-api.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/jaxb-impl.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/jaxb-libs.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/mail.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/relaxngDatatype.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/wsdl4j.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/xsdlib.jar"/>
+	<pathelement location="${livecycle.sdk.path}/../spi/edc-server-spi.jar"/>
+    </path>
+    <target name="init">
+        <copy includeemptydirs="false" todir=".">
+            <fileset dir="." excludes="**/*.launch, **/*.java"/>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete includeemptydirs="true">
+            <fileset dir="./output"/>
+        </delete>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+	<mkdir dir="./output"/>
+	<copy file="./conf/component.xml" tofile="./output/component.xml" overwrite="true"/>
+	<copy todir="./output/META-INF">
+		<fileset dir="./META-INF"/>
+	</copy>
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="./output" source="${source}" target="${target}">
+            <src path="."/>
+            <classpath refid="InviteExternalUsersSample.classpath"/>
+        </javac>
+	<jar destfile="./output/InviteExternalUsersSample.jar" basedir="./output"/>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+</project>

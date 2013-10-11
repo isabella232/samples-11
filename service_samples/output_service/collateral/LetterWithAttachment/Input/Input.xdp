@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V9.0.0.0.20091029.1.612548" APIVersion="3.1.9277.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2011-07-18T09:22:45Z" uuid="79ca1a79-1f85-4788-a4ba-1d6312db0384">
+<template xmlns="http://www.xfa.org/schema/xfa-template/2.6/">
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <?formServer defaultPDFRenderFormat acrobat8.1static?>
+   <subform layout="tb" locale="en_US" name="form1" restoreState="auto">
+      <pageSet>
+         <pageArea id="Page1" name="Page1">
+            <contentArea h="10.5in" w="8in" x="0.25in" y="0.25in"/>
+            <medium long="11in" short="8.5in" stock="letter"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform h="142.875mm" w="8in">
+         <field h="6.35mm" name="toAddress1" w="66.6312mm" x="3.175mm" y="50.8mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <?templateDesigner StyleID aped0?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0in">
+               <para vAlign="middle"/>
+            </caption>
+            <bind match="dataRef" ref="$record.toAddress1"/>
+         </field>
+         <field h="6.35mm" name="toAddress2" w="66.6312mm" x="3.175mm" y="57.15mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <?templateDesigner StyleID aped0?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0in">
+               <para vAlign="middle"/>
+            </caption>
+            <bind match="dataRef" ref="$record.toAddress2"/>
+         </field>
+         <field h="6.35mm" name="toAddress3" w="66.7074mm" x="3.1751mm" y="63.5mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <?templateDesigner StyleID aped0?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0in">
+               <para vAlign="middle"/>
+            </caption>
+            <bind match="dataRef" ref="$record.toAddress3"/>
+         </field>
+         <draw h="5.2331mm" name="StaticText1" w="0.268986in" x="3.175mm" y="38.1mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>To</text>
+            </value>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+            <?renderCache.bounds 16533 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 2 To 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+         <draw h="6.35mm" name="StaticText1" w="1.072917in" x="3.175mm" y="88.9mm">
+            <ui>
+               <textEdit>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <value>
+               <text>Dear Sir/Madam</text>
+            </value>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+            <?renderCache.bounds 74416 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 14 Dear Sir/Madam 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+         <field access="readOnly" h="6.35mm" name="DateTimeField1" w="66.7074mm" x="3.0989mm" y="76.2mm">
+            <ui>
+               <dateTimeEdit>
+                  <border presence="hidden">
+                     <?templateDesigner StyleID aped0?></border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="0in">
+               <para vAlign="middle"/>
+            </caption>
+            <bind match="none"/>
+            <calculate override="error"/>
+            <event activity="ready" ref="$layout" name="event__layout_ready">
+               <script>$.rawValue = Concat(Num2Date(Date(), "YYYY-MM-DD"), " ", Num2Time(Time(), "HH:MM:SS"))
+</script>
+            </event>
+            <?templateDesigner floatingFieldPlaceholder {current date/time}?></field>
+         <draw h="1.17825in" name="StaticText1" w="7.750681in" x="3.175mm" y="98.425mm">
+            <ui>
+               <textEdit>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="2.7.0.0"><p style="letter-spacing:0in">Pursuant to our telephonic conversation, please find attached the fact sheets.<br/><br/>Looking forward to your response.</p><p style="letter-spacing:0in"><br/><br/></p><p style="letter-spacing:0in">Regards,</p><p style="letter-spacing:0in">Account Manager.</p></body>
+               </exData>
+            </value>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+         </draw>
+         <field h="6.35mm" name="toName" w="66.7074mm" x="3.1751mm" y="44.45mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden">
+                     <?templateDesigner StyleID aped0?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro" weight="bold"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0in">
+               <para vAlign="middle"/>
+            </caption>
+            <bind match="dataRef" ref="$record.toName"/>
+         </field>
+         <draw h="25.4mm" name="StaticImage1" w="50.8mm" x="3.175mm" y="3.175mm">
+            <value>
+               <image contentType="image/gif">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
+5z33+c+BHvQ6BAEAOw==</image>
+            </value>
+            <border>
+               <edge presence="hidden"/>
+               <corner presence="hidden" thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+               <corner thickness="0.006in"/>
+            </border>
+            <desc>
+               <text name="embeddedHref">.\PurchaseOrder.gif</text>
+            </desc>
+            <ui>
+               <imageEdit/>
+            </ui>
+         </draw>
+         <?templateDesigner expand 1?></subform>
+      <subform layout="tb" name="Subform1" w="203.2mm">
+         <draw h="6.35mm" name="StaticText2" w="0.994361in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Attachments</text>
+            </value>
+            <font baselineShift="0pt" size="12pt" typeface="Myriad Pro" weight="bold"/>
+            <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+            <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
+            <?renderCache.bounds 68760 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 11 Attachments 0 1417 10417 0 0 0 "Myriad Pro" 1 0 12000 ISO-8859-1?></draw>
+         <subform layout="tb" name="Subform2" w="100mm">
+            <subform layout="tb" w="92.075mm">
+               <bind match="none"/>
+               <occur max="-1"/>
+               <field h="9.0001mm" name="attachment" w="92.075mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden">
+                           <?templateDesigner StyleID aped0?></border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="0in">
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="dataRef" ref="$record.attachment[*]"/>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <bind match="none"/>
+            <?templateDesigner expand 1?></subform>
+         <bind match="none"/>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">8.0.1291.1.339988.308172</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 132 33 0001000D000F001000220025002D002E00310033003400350042004400450046004700480049004A004C004D004E004F00500051005300540055005600570058005A ,./ADLMPRSTacdefghiklmnoprstuvwy?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 36 9 00220042004400460049004E004F00540055Aacehmnst?></subform>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner DefaultLanguage FormCalc?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner XDPPreviewFormat 14?>
+   <?templateDesigner DefaultPreviewDataFileName .\data.xml?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/2.5/?>
+   <?templateDesigner FormTargetVersion 26?>
+   <?templateDesigner Zoom 99?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/2.6/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>1</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <uri/>
+            <adjustData>1</adjustData>
+            <xsl>
+               <uri/>
+               <debug>
+                  <uri/>
+               </debug>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+         <messaging/>
+         <locale/>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+      <cache>
+         <renderCache/>
+         <macroCache/>
+      </cache>
+      <incrementalMerge/>
+      <script>
+         <runScripts/>
+         <exclude/>
+         <currentPage/>
+      </script>
+      <copies/>
+      <layout/>
+      <output/>
+   </present>
+   <psMap/>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.6/">
+   <locale desc="English (United States)" name="en_US">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+   </locale>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-locale-set/2.1/?></localeSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+</xfa:datasets>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.4/"/>
+<PDFSecurity xmlns="http://ns.adobe.com/xtd/" accessibleContent="1" change="1" contentCopy="1" documentAssembly="1" formFieldFilling="1" metadata="1" modifyAnnots="1" print="1" printHighQuality="1"/>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.0-c318 44.277456, Sun Feb 25 2007 17:17:36">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:ModifyDate>2007-03-19T11:54:04+05:30</xmp:ModifyDate>
+         <xmp:CreateDate>2007-03-19T11:54:04+05:30</xmp:CreateDate>
+         <xmp:MetadataDate>2011-07-18T09:22:45Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 9.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:79ca1a79-1f85-4788-a4ba-1d6312db0384</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:f79883be-c6d6-404f-8917-b8e28abcd888</xmpMM:InstanceID>
+      </rdf:Description>
+      <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <dc:format>application/pdf</dc:format>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 9.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>8.0.1291.1.339988.308172</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf></xdp:xdp>

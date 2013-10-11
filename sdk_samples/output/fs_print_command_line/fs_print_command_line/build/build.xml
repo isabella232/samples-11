@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+***************************************************************************
+
+    build.xml
+    Builds Render-PDF Orchestration Client for LiveCycle Core Extensions 8.0
+
+***************************************************************************
+
+
+    ADOBE SYSTEMS INCORPORATED
+    Copyright 2007 Adobe Systems Incorporated
+    All Rights Reserved
+ 
+    NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the
+    of the Adobe license agreement accompanying it.  If you have received this file from a
+    source other than Adobe, then your use, modification, or distribution of it requires the prior
+    written permission of Adobe.
+
+
+***************************************************************************
+-->
+
+<project name="FsPrint" default="compile">
+    
+    <property file="build.properties" />
+    
+    <!--
+    ***************************************************************************
+    
+        remove.classes: Removes pre-existing classes if exists.
+    
+    ***************************************************************************
+    -->
+    <target name="remove.classes">
+        <delete dir="${classes}"/>
+    </target>
+    
+    <!--
+    ***************************************************************************
+    	
+    	classes: Creates an empty directory called classes.
+    
+    ***************************************************************************
+    -->
+    <target name="classes">
+        <mkdir dir="${classes}"/>
+    </target>
+    
+    <!--
+    ***************************************************************************
+        
+        compile: Compiles the client sources if changed after last compilation.
+        
+    ***************************************************************************
+    -->
+    <target name="compile" depends="classes">
+	<javac srcdir="${SRC_ROOT}" includes="com\adobe\livecycle\samples\output\*.java"
+               destdir="${classes}"
+               debug="${compile.for.debugging}" debuglevel="${debug.level}"
+               deprecation="${compile.tofind.deprecation}"
+               classpath="${project.class.path}"
+               optimize="${compile.for.optimize}"
+	/>
+    </target>
+    
+    <!--
+    ***************************************************************************
+            
+        cleancompile: Force Compile all the client sources.
+            
+    ***************************************************************************
+    -->
+    <target name="cleancompile" depends="remove.classes,compile" />
+    
+    <!--
+    ***************************************************************************
+            
+        run: Runs the client.
+            
+    ***************************************************************************
+    -->
+    <target name="run">
+    	<java classname="com.adobe.livecycle.samples.output.FsPrint" 
+    		classpath="${classes}/..:${classes}:${project.class.path}"/>
+    </target>
+    
+    <!--
+    ***************************************************************************
+            
+    	all: First force compile and then run client.
+            
+    ***************************************************************************
+    -->
+    <target name="all" depends="cleancompile, run" />
+</project>
+

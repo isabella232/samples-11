@@ -1,0 +1,1064 @@
+^field PO_DATE
+06/31/1999
+^field REQNO
+ 230299
+^field VENDOR_CODE
+1002
+^field vendor_name
+XYZ Computers & Supplies     
+^field venaddr1
+20 Second Avenue             
+^field venaddr2
+Anywhere, ST                 
+^field venaddr3
+12345-6789
+^field ADMINISTRATION
+X
+^field SALES
+ 
+^field MARKETING
+ 
+^field ITEM
+987C
+^field qty
+   5
+^field DESCRIPTION
+Pens                     
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     5.50 
+^field TOTAL_PRICE
+   27.50
+^field ITEM
+654A
+^field qty
+  10
+^field DESCRIPTION
+Copier Paper             
+^field UNITS
+BOX  
+^field UNIT_PRICE
+   135.25 
+^field TOTAL_PRICE
+ 1352.50
+^field ITEM
+343B
+^field qty
+   2
+^field DESCRIPTION
+Rulers                   
+^field UNITS
+EA   
+^field UNIT_PRICE
+     3.50 
+^field TOTAL_PRICE
+    7.00
+^field ITEM
+987D
+^field qty
+  10
+^field DESCRIPTION
+Ballpoint Pens           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     2.60 
+^field TOTAL_PRICE
+   26.00
+^field ITEM
+380T
+^field qty
+   1
+^field DESCRIPTION
+Printer Calculator       
+^field UNITS
+EA   
+^field UNIT_PRICE
+    42.50 
+^field TOTAL_PRICE
+   42.50
+^field ITEM
+459N
+^field qty
+   8
+^field DESCRIPTION
+Staples                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     1.50 
+^field TOTAL_PRICE
+   12.00
+^field ITEM
+343D
+^field qty
+  10
+^field DESCRIPTION
+Foldback Clips           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+      .80 
+^field TOTAL_PRICE
+    8.00
+^field ITEM
+475R
+^field qty
+   6
+^field DESCRIPTION
+Erasers                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+    12.50 
+^field TOTAL_PRICE
+   75.00
+^field ITEM
+A799
+^field qty
+   5
+^field DESCRIPTION
+Mechanical Pencils       
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.00 
+^field TOTAL_PRICE
+   30.00
+^field ITEM
+A798
+^field qty
+   4
+^field DESCRIPTION
+Pencil Leads - .5mm      
+^field UNITS
+TUBE 
+^field UNIT_PRICE
+     1.30 
+^field TOTAL_PRICE
+    5.20
+^field ITEM
+878D
+^field qty
+   4
+^field DESCRIPTION
+Desk Pads                
+^field UNITS
+EA   
+^field UNIT_PRICE
+    35.00 
+^field TOTAL_PRICE
+  140.00
+^field ITEM
+886C
+^field qty
+   4
+^field DESCRIPTION
+Memo Sheet Refill        
+^field UNITS
+PKG  
+^field UNIT_PRICE
+      .85 
+^field TOTAL_PRICE
+    3.40
+^field ITEM
+446G
+^field qty
+  10
+^field DESCRIPTION
+Desk Trays               
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.90 
+^field TOTAL_PRICE
+   69.00
+^field ITEM
+355U
+^field qty
+   3
+^field DESCRIPTION
+Rotary Files             
+^field UNITS
+EA   
+^field UNIT_PRICE
+    65.00 
+^field TOTAL_PRICE
+  195.00
+^field ITEM
+987C
+^field qty
+   5
+^field DESCRIPTION
+Pens                     
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     5.50 
+^field TOTAL_PRICE
+   27.50
+^field ITEM
+654A
+^field qty
+  10
+^field DESCRIPTION
+Copier Paper             
+^field UNITS
+BOX  
+^field UNIT_PRICE
+   135.25 
+^field TOTAL_PRICE
+ 1352.50
+^field ITEM
+343B
+^field qty
+   2
+^field DESCRIPTION
+Rulers                   
+^field UNITS
+EA   
+^field UNIT_PRICE
+     3.50 
+^field TOTAL_PRICE
+    7.00
+^field ITEM
+987D
+^field qty
+  10
+^field DESCRIPTION
+Ballpoint Pens           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     2.60 
+^field TOTAL_PRICE
+   26.00
+^field ITEM
+380T
+^field qty
+   1
+^field DESCRIPTION
+Printer Calculator       
+^field UNITS
+EA   
+^field UNIT_PRICE
+    42.50 
+^field TOTAL_PRICE
+   42.50
+^field ITEM
+459N
+^field qty
+   8
+^field DESCRIPTION
+Staples                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     1.50 
+^field TOTAL_PRICE
+   12.00
+^field ITEM
+343D
+^field qty
+  10
+^field DESCRIPTION
+Foldback Clips           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+      .80 
+^field TOTAL_PRICE
+    8.00
+^field ITEM
+475R
+^field qty
+   6
+^field DESCRIPTION
+Erasers                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+    12.50 
+^field TOTAL_PRICE
+   75.00
+^field ITEM
+A799
+^field qty
+   5
+^field DESCRIPTION
+Mechanical Pencils       
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.00 
+^field TOTAL_PRICE
+   30.00
+^field ITEM
+A798
+^field qty
+   4
+^field DESCRIPTION
+Pencil Leads - .5mm      
+^field UNITS
+TUBE 
+^field UNIT_PRICE
+     1.30 
+^field TOTAL_PRICE
+    5.20
+^field ITEM
+878D
+^field qty
+   4
+^field DESCRIPTION
+Desk Pads                
+^field UNITS
+EA   
+^field UNIT_PRICE
+    35.00 
+^field TOTAL_PRICE
+  140.00
+^field ITEM
+886C
+^field qty
+   4
+^field DESCRIPTION
+Memo Sheet Refill        
+^field UNITS
+PKG  
+^field UNIT_PRICE
+      .85 
+^field TOTAL_PRICE
+    3.40
+^field ITEM
+446G
+^field qty
+  10
+^field DESCRIPTION
+Desk Trays               
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.90 
+^field TOTAL_PRICE
+   69.00
+^field ITEM
+355U
+^field qty
+   3
+^field DESCRIPTION
+Rotary Files             
+^field UNITS
+EA   
+^field UNIT_PRICE
+    65.00 
+^field TOTAL_PRICE
+  195.0098
+^field ITEM
+654A
+^field qty
+  10
+^field DESCRIPTION
+Copier Paper             
+^field UNITS
+BOX  
+^field UNIT_PRICE
+   135.25 
+^field TOTAL_PRICE
+ 1352.50
+^field ITEM
+343B
+^field qty
+   2
+^field DESCRIPTION
+Rulers                   
+^field UNITS
+EA   
+^field UNIT_PRICE
+     3.50 
+^field TOTAL_PRICE
+    7.00
+^field ITEM
+987D
+^field qty
+  10
+^field DESCRIPTION
+Ballpoint Pens           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     2.60 
+^field TOTAL_PRICE
+   26.00
+^field ITEM
+380T
+^field qty
+   1
+^field DESCRIPTION
+Printer Calculator       
+^field UNITS
+EA   
+^field UNIT_PRICE
+    42.50 
+^field TOTAL_PRICE
+   42.50
+^field ITEM
+459N
+^field qty
+   8
+^field DESCRIPTION
+Staples                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     1.50 
+^field TOTAL_PRICE
+   12.00
+^field ITEM
+343D
+^field qty
+  10
+^field DESCRIPTION
+Foldback Clips           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+      .80 
+^field TOTAL_PRICE
+    8.00
+^field ITEM
+475R
+^field qty
+   6
+^field DESCRIPTION
+Erasers                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+    12.50 
+^field TOTAL_PRICE
+   75.00
+^field ITEM
+A799
+^field qty
+   5
+^field DESCRIPTION
+Mechanical Pencils       
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.00 
+^field TOTAL_PRICE
+   30.00
+^field ITEM
+A798
+^field qty
+   4
+^field DESCRIPTION
+Pencil Leads - .5mm      
+^field UNITS
+TUBE 
+^field UNIT_PRICE
+     1.30 
+^field TOTAL_PRICE
+    5.20
+^field ITEM
+878D
+^field qty
+   4
+^field DESCRIPTION
+Desk Pads                
+^field UNITS
+EA   
+^field UNIT_PRICE
+    35.00 
+^field TOTAL_PRICE
+  140.00
+^field ITEM
+886C
+^field qty
+   4
+^field DESCRIPTION
+Memo Sheet Refill        
+^field UNITS
+PKG  
+^field UNIT_PRICE
+      .85 
+^field TOTAL_PRICE
+    3.40
+^field ITEM
+446G
+^field qty
+  10
+^field DESCRIPTION
+Desk Trays               
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.90 
+^field TOTAL_PRICE
+   69.00
+^field ITEM
+355U
+^field qty
+   3
+^field DESCRIPTION
+Rotary Files             
+^field UNITS
+EA   
+^field UNIT_PRICE
+    65.00 
+^field TOTAL_PRICE
+  195.0098
+^field ITEM
+654A
+^field qty
+  10
+^field DESCRIPTION
+Copier Paper             
+^field UNITS
+BOX  
+^field UNIT_PRICE
+   135.25 
+^field TOTAL_PRICE
+ 1352.50
+^field ITEM
+343B
+^field qty
+   2
+^field DESCRIPTION
+Rulers                   
+^field UNITS
+EA   
+^field UNIT_PRICE
+     3.50 
+^field TOTAL_PRICE
+    7.00
+^field ITEM
+987D
+^field qty
+  10
+^field DESCRIPTION
+Ballpoint Pens           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     2.60 
+^field TOTAL_PRICE
+   26.00
+^field ITEM
+380T
+^field qty
+   1
+^field DESCRIPTION
+Printer Calculator       
+^field UNITS
+EA   
+^field UNIT_PRICE
+    42.50 
+^field TOTAL_PRICE
+   42.50
+^field ITEM
+459N
+^field qty
+   8
+^field DESCRIPTION
+Staples                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     1.50 
+^field TOTAL_PRICE
+   12.00
+^field ITEM
+343D
+^field qty
+  10
+^field DESCRIPTION
+Foldback Clips           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+      .80 
+^field TOTAL_PRICE
+    8.00
+^field ITEM
+475R
+^field qty
+   6
+^field DESCRIPTION
+Erasers                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+    12.50 
+^field TOTAL_PRICE
+   75.00
+^field ITEM
+A799
+^field qty
+   5
+^field DESCRIPTION
+Mechanical Pencils       
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.00 
+^field TOTAL_PRICE
+   30.00
+^field ITEM
+A798
+^field qty
+   4
+^field DESCRIPTION
+Pencil Leads - .5mm      
+^field UNITS
+TUBE 
+^field UNIT_PRICE
+     1.30 
+^field TOTAL_PRICE
+    5.20
+^field ITEM
+878D
+^field qty
+   4
+^field DESCRIPTION
+Desk Pads                
+^field UNITS
+EA   
+^field UNIT_PRICE
+    35.00 
+^field TOTAL_PRICE
+  140.00
+^field ITEM
+886C
+^field qty
+   4
+^field DESCRIPTION
+Memo Sheet Refill        
+^field UNITS
+PKG  
+^field UNIT_PRICE
+      .85 
+^field TOTAL_PRICE
+    3.40
+^field ITEM
+446G
+^field qty
+  10
+^field DESCRIPTION
+Desk Trays               
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.90 
+^field TOTAL_PRICE
+   69.00
+^field ITEM
+355U
+^field qty
+   3
+^field DESCRIPTION
+Rotary Files             
+^field UNITS
+EA   
+^field UNIT_PRICE
+    65.00 
+^field TOTAL_PRICE
+  195.00
+^field TOTAL
+   2199.10
+^field PO_DATE
+06/31/1999
+^field REQNO
+ 65469
+^field VENDOR_CODE
+1002
+^field vendor_name
+ADB Computers & Supplies     
+^field venaddr1
+20 Second Avenue             
+^field venaddr2
+Anywhere, ST                 
+^field venaddr3
+12345-6789
+^field ADMINISTRATION
+X
+^field SALES
+ 
+^field MARKETING
+ 
+^field ITEM
+987C
+^field qty
+   5
+^field DESCRIPTION
+Pens                     
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     5.50 
+^field TOTAL_PRICE
+   27.50
+^field ITEM
+654A
+^field qty
+  10
+^field DESCRIPTION
+Copier Paper             
+^field UNITS
+BOX  
+^field UNIT_PRICE
+   135.25 
+^field TOTAL_PRICE
+ 1352.50
+^field ITEM
+343B
+^field qty
+   2
+^field DESCRIPTION
+Rulers                   
+^field UNITS
+EA   
+^field UNIT_PRICE
+     3.50 
+^field TOTAL_PRICE
+    7.00
+^field ITEM
+987D
+^field qty
+  10
+^field DESCRIPTION
+Ballpoint Pens           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     2.60 
+^field TOTAL_PRICE
+   26.00
+^field ITEM
+380T
+^field qty
+   1
+^field DESCRIPTION
+Printer Calculator       
+^field UNITS
+EA   
+^field UNIT_PRICE
+    42.50 
+^field TOTAL_PRICE
+   42.50
+^field ITEM
+459N
+^field qty
+   8
+^field DESCRIPTION
+Staples                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     1.50 
+^field TOTAL_PRICE
+   12.00
+^field ITEM
+343D
+^field qty
+  10
+^field DESCRIPTION
+Foldback Clips           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+      .80 
+^field TOTAL_PRICE
+    8.00
+^field ITEM
+475R
+^field qty
+   6
+^field DESCRIPTION
+Erasers                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+    12.50 
+^field TOTAL_PRICE
+   75.00
+^field ITEM
+A799
+^field qty
+   5
+^field DESCRIPTION
+Mechanical Pencils       
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.00 
+^field TOTAL_PRICE
+   30.00
+^field ITEM
+A798
+^field qty
+   4
+^field DESCRIPTION
+Pencil Leads - .5mm      
+^field UNITS
+TUBE 
+^field UNIT_PRICE
+     1.30 
+^field TOTAL_PRICE
+    5.20
+^field ITEM
+878D
+^field qty
+   4
+^field DESCRIPTION
+Desk Pads                
+^field UNITS
+EA   
+^field UNIT_PRICE
+    35.00 
+^field TOTAL_PRICE
+  140.00
+^field ITEM
+886C
+^field qty
+   4
+^field DESCRIPTION
+Memo Sheet Refill        
+^field UNITS
+PKG  
+^field UNIT_PRICE
+      .85 
+^field TOTAL_PRICE
+    3.40
+^field ITEM
+446G
+^field qty
+  10
+^field DESCRIPTION
+Desk Trays               
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.90 
+^field TOTAL_PRICE
+   69.00
+^field ITEM
+355U
+^field qty
+   3
+^field DESCRIPTION
+Rotary Files             
+^field UNITS
+EA   
+^field UNIT_PRICE
+    65.00 
+^field TOTAL_PRICE
+  195.00
+^field ITEM
+987C
+^field qty
+   5
+^field DESCRIPTION
+Pens                     
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     5.50 
+^field TOTAL_PRICE
+   27.50
+^field ITEM
+654A
+^field qty
+  10
+^field DESCRIPTION
+Copier Paper             
+^field UNITS
+BOX  
+^field UNIT_PRICE
+   135.25 
+^field TOTAL_PRICE
+ 1352.50
+^field ITEM
+343B
+^field qty
+   2
+^field DESCRIPTION
+Rulers                   
+^field UNITS
+EA   
+^field UNIT_PRICE
+     3.50 
+^field TOTAL_PRICE
+    7.00
+^field ITEM
+987D
+^field qty
+  10
+^field DESCRIPTION
+Ballpoint Pens           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     2.60 
+^field TOTAL_PRICE
+   26.00
+^field ITEM
+380T
+^field qty
+   1
+^field DESCRIPTION
+Printer Calculator       
+^field UNITS
+EA   
+^field UNIT_PRICE
+    42.50 
+^field TOTAL_PRICE
+   42.50
+^field ITEM
+459N
+^field qty
+   8
+^field DESCRIPTION
+Staples                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     1.50 
+^field TOTAL_PRICE
+   12.00
+^field ITEM
+343D
+^field qty
+  10
+^field DESCRIPTION
+Foldback Clips           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+      .80 
+^field TOTAL_PRICE
+    8.00
+^field ITEM
+475R
+^field qty
+   6
+^field DESCRIPTION
+Erasers                  
+^field UNITS
+BOX  
+^field UNIT_PRICE
+    12.50 
+^field TOTAL_PRICE
+   75.00
+^field ITEM
+A799
+^field qty
+   5
+^field DESCRIPTION
+Mechanical Pencils       
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.00 
+^field TOTAL_PRICE
+   30.00
+^field ITEM
+A798
+^field qty
+   4
+^field DESCRIPTION
+Pencil Leads - .5mm      
+^field UNITS
+TUBE 
+^field UNIT_PRICE
+     1.30 
+^field TOTAL_PRICE
+    5.20
+^field ITEM
+878D
+^field qty
+   4
+^field DESCRIPTION
+Desk Pads                
+^field UNITS
+EA   
+^field UNIT_PRICE
+    35.00 
+^field TOTAL_PRICE
+  140.00
+^field ITEM
+886C
+^field qty
+   4
+^field DESCRIPTION
+Memo Sheet Refill        
+^field UNITS
+PKG  
+^field UNIT_PRICE
+      .85 
+^field TOTAL_PRICE
+    3.40
+^field ITEM
+446G
+^field qty
+  10
+^field DESCRIPTION
+Desk Trays               
+^field UNITS
+EA   
+^field UNIT_PRICE
+     6.90 
+^field TOTAL_PRICE
+   69.00
+^field ITEM
+355U
+^field qty
+   3
+^field DESCRIPTION
+Rotary Files             
+^field UNITS
+EA   
+^field UNIT_PRICE
+    65.00 
+^field TOTAL_PRICE
+  195.0098
+^field ITEM
+654A
+^field qty
+  10
+^field DESCRIPTION
+Copier Paper             
+^field UNITS
+BOX  
+^field UNIT_PRICE
+   135.25 
+^field TOTAL_PRICE
+ 1352.50
+^field ITEM
+343B
+^field qty
+   2
+^field DESCRIPTION
+Rulers                   
+^field UNITS
+EA   
+^field UNIT_PRICE
+     3.50 
+^field TOTAL_PRICE
+    7.00
+^field ITEM
+987D
+^field qty
+  10
+^field DESCRIPTION
+Ballpoint Pens           
+^field UNITS
+BOX  
+^field UNIT_PRICE
+     2.60 
+^field TOTAL_PRICE
+   26.00
+^field TOTAL
+   2199.10

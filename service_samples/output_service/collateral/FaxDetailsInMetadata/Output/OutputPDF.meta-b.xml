@@ -1,0 +1,20 @@
+<root>
+	<record id='1131aae54'>
+		<system>
+			<data name='fileName'>/tmp/LCSamples/Output/FaxDetailsInMetadata/OutputPDF.pdf</data>
+			<data name='pageCount'>2</data>
+			<data name='surfaceCount'>2</data>
+			<data name='creationTime'>2010-02-23 10:04:43.937</data>
+			<data name='format'>PDF</data>
+			<data name='template'>null</data>
+			<data name='batchID'>1131aae54</data>
+		</system>
+		<user>
+			<data name='purchaseNumber'>P0001</data>
+			<data name='grandTotal'>34963.05</data>
+			<data name='faxNumber'>123456-7899</data>
+			<data name='faxSubject'>Purchase Order Details</data>
+			<data name='faxTo'>Contact Name</data>
+		</user>
+	</record>
+</root>

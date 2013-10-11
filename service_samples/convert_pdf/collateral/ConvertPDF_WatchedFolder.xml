@@ -1,0 +1,51 @@
+<!--
+ADOBE SYSTEMS INCORPORATED
+Copyright 2009 Adobe Systems Incorporated
+All Rights Reserved
+
+NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance
+with the terms of the Adobe license agreement accompanying it.  If you have received
+this file from a source other than Adobe, then your use, modification, or distribution
+of it requires the prior written permission of Adobe.
+-->
+
+<ConvertPDFToImageOrPostScript>
+
+<!--
+	The format of the result. Possible values are "JPEG", "JPEG2K", "PNG", "TIFF" and "PostScript".
+	This is a REQUIRED property.
+-->
+	<ConversionFormat>PostScript</ConversionFormat>
+
+<!--
+	The file path of the input pdf.
+	This is a REQUIRED property.
+-->
+	<InputPdfUri>/tmp/LCSamples/Resources/ConvertPDFInput.pdf</InputPdfUri>
+
+<!--
+	The result directory path without a trailing slash.
+	This is an REQUIRED property.
+-->
+	<OutFileDir>/tmp/LCSamples/Output/ConvertPDFToImageOrPostScript</OutFileDir>
+
+<!--
+	The suffix of the result files. For example if the result file name is 'Output.ps' the suffix will be 'Output'.
+	The file extension will be decided on the basis of conversion format used.
+	This is an OPTIONAL property. Default value is "Output"
+-->
+	<OutFileNameSuffix>ConvertPDFOutput</OutFileNameSuffix>
+
+<!--
+	The Language Level to use when the conversion format is PostScript. Possible values are "LEVEL_2" and "LEVEL_3".
+	This is an OPTIONAL property. Default value is "LEVEL_2"
+-->
+	<PSLevel>LEVEL_2</PSLevel>
+
+<!--
+	Boolean flag to decide whether to generate a multipage tiff when conversion format is TIFF.	Possible values are "true" and "false".
+	This is an OPTIONAL property. Default value is "false".
+-->
+	<IsMultipageTIFF>false</IsMultipageTIFF>
+
+</ConvertPDFToImageOrPostScript>

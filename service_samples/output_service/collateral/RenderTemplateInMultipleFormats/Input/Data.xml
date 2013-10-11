@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form1>
+	<leaveRequest>
+		<txtEmpName>Joe Schmoe</txtEmpName>
+		<txtEmpId>00101</txtEmpId>
+		<txtManagersName>Joe Manager</txtManagersName>
+		<txtDept>Finance Dept.</txtDept>
+		<drpType>Family Related</drpType>
+		<txtComment>Trip to India</txtComment>
+		<dtmStartDate>01/23/2007</dtmStartDate>
+		<dtmEndDate>01/24/2007</dtmEndDate>
+		<numDays>2.00</numDays>
+		<drpType>Sick</drpType>
+		<txtComment>Down with Fever</txtComment>
+		<dtmStartDate>01/29/2007</dtmStartDate>
+		<dtmEndDate>01/29/2007</dtmEndDate>
+		<numDays>1.00</numDays>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>
+		<drpType/>
+		<txtComment/>
+		<dtmStartDate/>
+		<dtmEndDate/>
+		<numDays/>		
+		<numTotalDays>3.00</numTotalDays>
+	</leaveRequest>
+</form1>

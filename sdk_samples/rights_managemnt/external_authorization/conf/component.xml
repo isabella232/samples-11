@@ -1,0 +1,29 @@
+<component xmlns="http://adobe.com/idp/dsc/component/document">
+<component-id>com.adobe.livecycle.samples.rightsmanagement.ExternalAuthorization</component-id>
+<version>1.0</version>
+<dynamic-import-packages>
+<package>com.adobe.livecycle.rightsmanagement.client.*</package>
+</dynamic-import-packages>
+<bootstrap-class>com.adobe.livecycle.samples.rightsmanagement.BootstrapImpl</bootstrap-class>
+<descriptor-class>com.adobe.idp.dsc.component.impl.DefaultPOJODescriptorImpl</descriptor-class>
+<services>
+<service name="PrintControlSPISample">
+<specifications>
+<specification spec-id="com.adobe.edc.server.spi.authorization.ExternalAuthorizer"/>
+</specifications>
+<specification-version>1.0</specification-version>
+<implementation-class>com.adobe.livecycle.samples.rightsmanagement.PrintServiceSPISample</implementation-class>
+<description>An external authorizer that allows one to print only one time.</description>
+<auto-deploy category-id="Samples" service-id="PrintControlSPISample" major-version="1" minor-version="0"/>
+<operations>
+<operation name="evaluate">
+<input-parameter name="input" type="com.adobe.edc.server.spi.authorization.ExternalAuthDTO" required="true"/>
+<output-parameter name="result" type="com.adobe.edc.server.spi.authorization.ExternalAuthResultDTO"/>
+</operation>
+<operation name="getProviderProperties">
+<output-parameter name="result" type="com.adobe.edc.server.spi.authorization.ExternalAuthPropertyDTO"/>
+</operation>
+</operations>
+</service>
+</services>
+</component>

@@ -1,0 +1,2006 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns1="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://adobe.com/idp/services" xmlns:impl="http://adobe.com/idp/services" targetNamespace="http://adobe.com/idp/services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://adobe.com/idp/services">
+      <xsd:import namespace="http://xml.apache.org/xml-soap" />
+      <xsd:import namespace="http://ws-i.org/profiles/basic/1.1/xsd" />
+      <xsd:element name="getLicenseID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="inPDFDoc" type="impl:BLOB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="MyMapOf_xsd_string_To_xsd_anyType_Item">
+        <xsd:sequence>
+          <xsd:element name="key" nillable="true" type="xsd:string" />
+          <xsd:element name="value" nillable="true" type="xsd:anyType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MyMapOf_xsd_string_To_xsd_anyType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="impl:MyMapOf_xsd_string_To_xsd_anyType_Item" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BLOB">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="contentType" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="binaryData" type="xsd:base64Binary" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="attachmentID" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="remoteURL" type="xsd:string" />
+          <xsd:element xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmime:expectedContentTypes="*/*" minOccurs="0" maxOccurs="1" name="MTOM" type="xsd:base64Binary" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="swaRef" type="tns1:swaRef" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="attributes" type="impl:MyMapOf_xsd_string_To_xsd_anyType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getLicenseIDResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="licenseId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SDKException" type="xsd:anyType" />
+      <xsd:element name="applyPolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="inPDFDoc" type="impl:BLOB" />
+            <xsd:element name="documentName" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="policySetName" type="xsd:string" />
+            <xsd:element name="policyName" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="pubUsername" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="pubDomain" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="applyPolicyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="outPDFDoc" type="impl:BLOB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="inspectDocument">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="inDoc" type="impl:BLOB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="inspectDocumentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="inspectResult" type="impl:RMInspectResult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="DATE">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="date" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="calendar" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RMInspectResult">
+        <xsd:sequence>
+          <xsd:element name="alternateLicenseId" nillable="true" type="xsd:string" />
+          <xsd:element name="docName" nillable="true" type="xsd:string" />
+          <xsd:element name="licenseId" nillable="true" type="xsd:string" />
+          <xsd:element name="licenseIssuingAuthority" nillable="true" type="xsd:string" />
+          <xsd:element name="policyId" nillable="true" type="xsd:string" />
+          <xsd:element name="policyName" nillable="true" type="xsd:string" />
+          <xsd:element name="policySetId" nillable="true" type="xsd:string" />
+          <xsd:element name="policySetName" nillable="true" type="xsd:string" />
+          <xsd:element name="policyType" nillable="true" type="xsd:string" />
+          <xsd:element name="publishTime" nillable="true" type="impl:DATE" />
+          <xsd:element name="publisherId" nillable="true" type="xsd:string" />
+          <xsd:element name="publisherName" nillable="true" type="xsd:string" />
+          <xsd:element name="revokeURL" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="protectDocument">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="inDoc" type="impl:BLOB" />
+            <xsd:element name="documentName" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="policySetName" type="xsd:string" />
+            <xsd:element name="policyName" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="pubUsername" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="pubDomain" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="locale" type="impl:RMLocale" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="RMLocale">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="en" />
+          <xsd:enumeration value="fr" />
+          <xsd:enumeration value="ja" />
+          <xsd:enumeration value="de" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:element name="protectDocumentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ProtectedDocument" type="impl:BLOB" />
+            <xsd:element name="PolicyID" type="xsd:string" />
+            <xsd:element name="DocumentID" type="xsd:string" />
+            <xsd:element name="MimeType" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="applyPolicyByPolicyId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="inPDFDoc" type="impl:BLOB" />
+            <xsd:element name="documentName" type="xsd:string" />
+            <xsd:element name="policyId" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="pubUsername" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="pubDomain" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="applyPolicyByPolicyIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="outPDFDoc" type="impl:BLOB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="removePolicySecurity">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="inPDFDoc" type="impl:BLOB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="removePolicySecurityResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="outPDFDoc" type="impl:BLOB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="unlockPDFUsingPolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="inPDFDoc" type="impl:BLOB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="unlockPDFUsingPolicyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="outPDFDoc" type="impl:BLOB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLicense">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="licenseId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLicenseResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultLicense" type="impl:LicenseSpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="LicenseSpec">
+        <xsd:sequence>
+          <xsd:element name="alternateId" nillable="true" type="xsd:string" />
+          <xsd:element name="licenseXML" nillable="true" type="xsd:string" />
+          <xsd:element name="revocationReason" type="xsd:int" />
+          <xsd:element name="revocationURL" nillable="true" type="xsd:string" />
+          <xsd:element name="revoked" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="revokeLicense">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="licenseId" type="xsd:string" />
+            <xsd:element name="reason" type="impl:Reason" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="revocationUrl" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="Reason">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="DOCUMENT_REVISED" />
+          <xsd:enumeration value="DOCUMENT_TERMINATED" />
+          <xsd:enumeration value="GENERAL_MESSAGE" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:element name="revokeLicenseResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="unrevokeLicense">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="licenseId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="unrevokeLicenseResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="updateRevocationURL">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="licenseId" type="xsd:string" />
+            <xsd:element name="revocationUrl" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateRevocationURLResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="changeLicensePolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="licenseId" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="newPolicySetName" type="xsd:string" />
+            <xsd:element name="newPolicyName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changeLicensePolicyResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="setLicenseAlternateId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="licenseId" type="xsd:string" />
+            <xsd:element name="alternateId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setLicenseAlternateIdResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getLicenseByAlternateId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="alternateId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLicenseByAlternateIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultLicense" type="impl:LicenseSpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLicenses">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="filter" type="impl:LicenseSearchFilterSpec" />
+            <xsd:element name="maxResults" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="MyArrayOf_xsd_anyType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:anyType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Principal">
+        <xsd:sequence>
+          <xsd:element name="canonicalName" nillable="true" type="xsd:string" />
+          <xsd:element name="commonName" nillable="true" type="xsd:string" />
+          <xsd:element name="description" nillable="true" type="xsd:string" />
+          <xsd:element name="directGroupMemberships" nillable="true" type="impl:MyArrayOf_xsd_anyType" />
+          <xsd:element name="domainCommonName" nillable="true" type="xsd:string" />
+          <xsd:element name="domainName" nillable="true" type="xsd:string" />
+          <xsd:element name="email" nillable="true" type="xsd:string" />
+          <xsd:element name="emailAliases" nillable="true" type="impl:MyArrayOf_xsd_anyType" />
+          <xsd:element name="groupMemberships" nillable="true" type="impl:MyArrayOf_xsd_anyType" />
+          <xsd:element name="local" type="xsd:boolean" />
+          <xsd:element name="locked" type="xsd:boolean" />
+          <xsd:element name="oid" nillable="true" type="xsd:string" />
+          <xsd:element name="org" nillable="true" type="xsd:string" />
+          <xsd:element name="principalType" nillable="true" type="xsd:string" />
+          <xsd:element name="roleMembership" nillable="true" type="impl:MyArrayOf_xsd_anyType" />
+          <xsd:element name="status" nillable="true" type="xsd:string" />
+          <xsd:element name="system" type="xsd:boolean" />
+          <xsd:element name="timestampCreated" nillable="true" type="impl:DATE" />
+          <xsd:element name="timestampUpdated" nillable="true" type="impl:DATE" />
+          <xsd:element name="visibility" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Group">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="impl:Principal">
+            <xsd:sequence>
+              <xsd:element name="groupType" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Locale">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="language" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="country" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="variant" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="User">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="impl:Principal">
+            <xsd:sequence>
+              <xsd:element name="businessCalendarKey" nillable="true" type="xsd:string" />
+              <xsd:element name="disabled" type="xsd:boolean" />
+              <xsd:element name="familyName" nillable="true" type="xsd:string" />
+              <xsd:element name="givenName" nillable="true" type="xsd:string" />
+              <xsd:element name="initials" nillable="true" type="xsd:string" />
+              <xsd:element name="locale" nillable="true" type="impl:Locale" />
+              <xsd:element name="postalAddress" nillable="true" type="xsd:string" />
+              <xsd:element name="telephoneNumber" nillable="true" type="xsd:string" />
+              <xsd:element name="timezone" nillable="true" type="xsd:string" />
+              <xsd:element name="userid" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="UserImpl">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="impl:User">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="GroupImpl">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="impl:Group">
+            <xsd:sequence>
+              <xsd:element name="mutable" type="xsd:boolean" />
+              <xsd:element name="relAppName" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="LicenseSearchFilterSpec">
+        <xsd:sequence>
+          <xsd:element name="beginLicenseIssueDate" nillable="true" type="impl:DATE" />
+          <xsd:element name="documentName" nillable="true" type="xsd:string" />
+          <xsd:element name="endLicenseIssueDate" nillable="true" type="impl:DATE" />
+          <xsd:element name="policyId" nillable="true" type="xsd:string" />
+          <xsd:element name="publisher" nillable="true" type="impl:Principal" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getLicensesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultLicenses" type="impl:MyArrayOfLicenseSpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="MyArrayOfLicenseSpec">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="impl:LicenseSpec" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="switchPolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="licenseId" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="newPolicySetName" type="xsd:string" />
+            <xsd:element name="newPolicyName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="switchPolicyResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="registerWatermark">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="watermark" type="impl:WatermarkSpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="WatermarkSpec">
+        <xsd:sequence>
+          <xsd:element name="deleted" type="xsd:boolean" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+          <xsd:element name="name" nillable="true" type="xsd:string" />
+          <xsd:element name="values" nillable="true" type="impl:MyArrayOf_xsd_anyType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="registerWatermarkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultWatermarkId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteWatermark">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="watermarkId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteWatermarkResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="updateWatermark">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="watermark" type="impl:WatermarkSpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateWatermarkResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getWatermark">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="watermarkId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWatermarkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultWatermark" type="impl:WatermarkSpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWatermarkByName">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="watermarkName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWatermarkByNameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultWatermark" type="impl:WatermarkSpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registerPolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="policy" type="impl:PolicySpec" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="policySetName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="PolicySpec">
+        <xsd:sequence>
+          <xsd:element name="accessDeniedErrorMessage" nillable="true" type="xsd:string" />
+          <xsd:element name="alternateId" nillable="true" type="xsd:string" />
+          <xsd:element name="autoGenerated" type="xsd:boolean" />
+          <xsd:element name="creationTime" nillable="true" type="impl:DATE" />
+          <xsd:element name="deleted" type="xsd:boolean" />
+          <xsd:element name="description" nillable="true" type="xsd:string" />
+          <xsd:element name="encryptionAlgorithmAndKeySize" nillable="true" type="xsd:string" />
+          <xsd:element name="lastUpdateTime" nillable="true" type="impl:DATE" />
+          <xsd:element name="name" nillable="true" type="xsd:string" />
+          <xsd:element name="offlineLeasePeriod" type="xsd:int" />
+          <xsd:element name="owner" nillable="true" type="impl:User" />
+          <xsd:element name="policyId" nillable="true" type="xsd:string" />
+          <xsd:element name="policySetName" nillable="true" type="xsd:string" />
+          <xsd:element name="policyType" type="xsd:int" />
+          <xsd:element name="policyXml" nillable="true" type="xsd:string" />
+          <xsd:element name="principals" nillable="true" type="impl:MyArrayOf_xsd_anyType" />
+          <xsd:element name="watermarkName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="registerPolicyResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="deletePolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="policySetName" type="xsd:string" />
+            <xsd:element name="policyName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deletePolicyResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="deleteMyPolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="policyName" type="xsd:string" />
+            <xsd:element name="ownerUsername" type="xsd:string" />
+            <xsd:element name="ownerDomain" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteMyPolicyResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="updatePolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="policySetName" type="xsd:string" />
+            <xsd:element name="policyName" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="offlineLeasePeriod" type="xsd:int" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="principalsToAdd" type="impl:MyArrayOf_xsd_anyType" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="principalsToRemove" type="impl:MyArrayOf_xsd_anyType" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="watermarkName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updatePolicyResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="updatePolicyFromSDK">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updatedPolicy" type="impl:PolicySpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updatePolicyFromSDKResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="createPolicyFromTemplate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="newPolicySetName" type="xsd:string" />
+            <xsd:element name="newPolicyName" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="policySetName" type="xsd:string" />
+            <xsd:element name="policyName" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="offlineLeasePeriod" type="xsd:int" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="principalsToAdd" type="impl:MyArrayOf_xsd_anyType" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="principalsToRemove" type="impl:MyArrayOf_xsd_anyType" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="watermarkName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createPolicyFromTemplateResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getPolicyByPolicyId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="policyId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPolicyByPolicyIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultPolicy" type="impl:PolicySpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="policySetName" type="xsd:string" />
+            <xsd:element name="policyName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPolicyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultPolicy" type="impl:PolicySpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getMyPolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="policyName" type="xsd:string" />
+            <xsd:element name="ownerUsername" type="xsd:string" />
+            <xsd:element name="ownerDomain" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getMyPolicyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultPolicy" type="impl:PolicySpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPolicies">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="filter" type="impl:PolicySearchFilterSpec" />
+            <xsd:element name="maxResults" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="PolicySearchFilterSpec">
+        <xsd:sequence>
+          <xsd:element name="asDocumentPublisher" type="xsd:boolean" />
+          <xsd:element name="fillPrincipalAttributes" type="xsd:boolean" />
+          <xsd:element name="policyId" nillable="true" type="xsd:string" />
+          <xsd:element name="policyName" nillable="true" type="xsd:string" />
+          <xsd:element name="policyOwner" nillable="true" type="impl:Principal" />
+          <xsd:element name="policySetName" nillable="true" type="xsd:string" />
+          <xsd:element name="policyType" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getPoliciesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultPolicies" type="impl:MyArrayOf_xsd_anyType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changePolicyOwner">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="policyName" type="xsd:string" />
+            <xsd:element name="existingOwner" type="impl:PrincipalReference" />
+            <xsd:element name="newOwner" type="impl:PrincipalReference" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="PrincipalReference">
+        <xsd:sequence>
+          <xsd:element name="canonicalName" nillable="true" type="xsd:string" />
+          <xsd:element name="commonName" nillable="true" type="xsd:string" />
+          <xsd:element name="domainCommonName" nillable="true" type="xsd:string" />
+          <xsd:element name="domainName" nillable="true" type="xsd:string" />
+          <xsd:element name="email" nillable="true" type="xsd:string" />
+          <xsd:element name="oid" nillable="true" type="xsd:string" />
+          <xsd:element name="org" nillable="true" type="xsd:string" />
+          <xsd:element name="principalType" nillable="true" type="xsd:string" />
+          <xsd:element name="status" nillable="true" type="xsd:string" />
+          <xsd:element name="system" type="xsd:boolean" />
+          <xsd:element name="visibility" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="changePolicyOwnerResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getPolicyByAlternateId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="alternateId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPolicyByAlternateIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultPolicy" type="impl:PolicySpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="inviteExternalUsers">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="emails" type="impl:MyArrayOf_xsd_anyType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="inviteExternalUsersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultUsers" type="impl:MyArrayOf_xsd_anyType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="resetExternalUserPassword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="impl:User" />
+            <xsd:element name="pwd" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="resetExternalUserPasswordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchForEvents">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="event" type="impl:EventSpec" />
+            <xsd:element name="maxResults" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="EventSpec">
+        <xsd:sequence>
+          <xsd:element name="documentId" nillable="true" type="xsd:string" />
+          <xsd:element name="eventCode" nillable="true" type="xsd:string" />
+          <xsd:element name="eventName" nillable="true" type="xsd:string" />
+          <xsd:element name="eventNamespace" nillable="true" type="xsd:string" />
+          <xsd:element name="firstTime" nillable="true" type="impl:DATE" />
+          <xsd:element name="lastTime" nillable="true" type="impl:DATE" />
+          <xsd:element name="policyId" nillable="true" type="xsd:string" />
+          <xsd:element name="userOid" nillable="true" type="xsd:string" />
+          <xsd:element name="wasAllowed" nillable="true" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="searchForEventsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultEvent" type="impl:MyArrayOf_xsd_anyType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteEvents">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="event" type="impl:EventSpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteEventsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numOfEventsDeleted" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getNumberOfSearchedEvents">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="event" type="impl:EventSpec" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getNumberOfSearchedEventsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numOfEventsSearched" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="exportEvents">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="event" type="impl:EventSpec" />
+            <xsd:element name="filePrefix" type="xsd:string" />
+            <xsd:element name="maxRecordsPerFile" type="xsd:int" />
+            <xsd:element name="fileFormat" type="impl:EventExportFileFormat" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="EventExportFileFormat">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="CSV" />
+          <xsd:enumeration value="XML" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:element name="exportEventsResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getAllPolicySetNames">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getAllPolicySetNamesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultPolicySetNames" type="impl:MyArrayOf_xsd_string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="MyArrayOf_xsd_string">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getPolicyNames">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="policySetName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPolicyNamesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultPolicyNames" type="impl:MyArrayOf_xsd_string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAllWatermarkNames">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getAllWatermarkNamesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultWatermarkNames" type="impl:MyArrayOf_xsd_string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAllDomainNames">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getAllDomainNamesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultDomainNames" type="impl:MyArrayOf_xsd_string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCustomPermissions">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getCustomPermissionsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultCustomPermissions" type="impl:MyArrayOf_xsd_string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createPolicyFromExistingPolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="policySetNameOfNewPolicy" type="xsd:string" />
+            <xsd:element name="newPolicyName" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="policySetNameOfExistingPolicy" type="xsd:string" />
+            <xsd:element name="existingPolicyName" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="offlineLeasePeriod" type="xsd:int" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="startingDate" type="impl:DATE" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expirationDate" type="impl:DATE" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="principalsToAdd" type="impl:IUserlist" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="permissions" type="impl:MyArrayOf_xsd_anyType" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="principalsToRemove" type="impl:IUserlist" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="watermarkName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="IUserlistPrincipal">
+        <xsd:sequence>
+          <xsd:element name="properties" nillable="true" type="apachesoap:Map" />
+          <xsd:element name="type" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IUserlist">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="principal" nillable="true" type="impl:IUserlistPrincipal" />
+          <xsd:element name="principals" nillable="true" type="impl:MyArrayOf_xsd_anyType" />
+          <xsd:element name="serviceCall" nillable="true" type="xsd:anyType" />
+          <xsd:element name="serviceVersion" nillable="true" type="xsd:string" />
+          <xsd:element name="type" type="xsd:int" />
+          <xsd:element name="version" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="createPolicyFromExistingPolicyResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:complexType name="AuditSpec">
+        <xsd:sequence>
+          <xsd:element name="allowed" type="xsd:boolean" />
+          <xsd:element name="eventCode" nillable="true" type="xsd:string" />
+          <xsd:element name="eventId" nillable="true" type="xsd:string" />
+          <xsd:element name="eventName" nillable="true" type="xsd:string" />
+          <xsd:element name="eventNamespace" nillable="true" type="xsd:string" />
+          <xsd:element name="licenseId" nillable="true" type="xsd:string" />
+          <xsd:element name="loginId" nillable="true" type="xsd:string" />
+          <xsd:element name="timestamp" nillable="true" type="impl:DATE" />
+          <xsd:element name="userOid" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ValueMapSpec">
+        <xsd:sequence>
+          <xsd:element name="key" nillable="true" type="xsd:string" />
+          <xsd:element name="value" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RMSecureDocumentResult">
+        <xsd:sequence>
+          <xsd:element name="licenseId" nillable="true" type="xsd:string" />
+          <xsd:element name="mimeType" nillable="true" type="xsd:string" />
+          <xsd:element name="policyId" nillable="true" type="xsd:string" />
+          <xsd:element name="protectedDoc" nillable="true" type="impl:BLOB" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Role">
+        <xsd:sequence>
+          <xsd:element name="description" nillable="true" type="xsd:string" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+          <xsd:element name="mutable" type="xsd:boolean" />
+          <xsd:element name="name" nillable="true" type="xsd:string" />
+          <xsd:element name="oid" nillable="true" type="xsd:string" />
+          <xsd:element name="relAppName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RoleImpl">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="impl:Role">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PrincipalReferenceImpl">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="impl:PrincipalReference">
+            <xsd:sequence>
+              <xsd:element name="isSystem" type="xsd:boolean" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://ws-i.org/profiles/basic/1.1/xsd">
+      <xsd:import namespace="http://adobe.com/idp/services" />
+      <xsd:import namespace="http://xml.apache.org/xml-soap" />
+      <xsd:simpleType name="swaRef">
+        <xsd:restriction base="xsd:anyURI" />
+      </xsd:simpleType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://xml.apache.org/xml-soap">
+      <xsd:import namespace="http://adobe.com/idp/services" />
+      <xsd:import namespace="http://ws-i.org/profiles/basic/1.1/xsd" />
+      <xsd:complexType name="Vector">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:anyType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="mapItem">
+        <xsd:sequence>
+          <xsd:element name="key" nillable="true" type="xsd:anyType" />
+          <xsd:element name="value" nillable="true" type="xsd:anyType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Map">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="apachesoap:mapItem" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SDKException">
+    <wsdl:part name="SDKException" element="impl:SDKException" />
+  </wsdl:message>
+  <wsdl:message name="changeLicensePolicyRequest">
+    <wsdl:part name="parameters" element="impl:changeLicensePolicy" />
+  </wsdl:message>
+  <wsdl:message name="protectDocumentResponse">
+    <wsdl:part name="parameters" element="impl:protectDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWatermarkByNameRequest">
+    <wsdl:part name="parameters" element="impl:getWatermarkByName" />
+  </wsdl:message>
+  <wsdl:message name="applyPolicyByPolicyIdResponse">
+    <wsdl:part name="parameters" element="impl:applyPolicyByPolicyIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePolicyRequest">
+    <wsdl:part name="parameters" element="impl:updatePolicy" />
+  </wsdl:message>
+  <wsdl:message name="changePolicyOwnerResponse">
+    <wsdl:part name="parameters" element="impl:changePolicyOwnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="inspectDocumentRequest">
+    <wsdl:part name="parameters" element="impl:inspectDocument" />
+  </wsdl:message>
+  <wsdl:message name="getLicensesRequest">
+    <wsdl:part name="parameters" element="impl:getLicenses" />
+  </wsdl:message>
+  <wsdl:message name="deleteWatermarkResponse">
+    <wsdl:part name="parameters" element="impl:deleteWatermarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomPermissionsRequest">
+    <wsdl:part name="parameters" element="impl:getCustomPermissions" />
+  </wsdl:message>
+  <wsdl:message name="registerWatermarkRequest">
+    <wsdl:part name="parameters" element="impl:registerWatermark" />
+  </wsdl:message>
+  <wsdl:message name="getPolicyNamesResponse">
+    <wsdl:part name="parameters" element="impl:getPolicyNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLicenseIDResponse">
+    <wsdl:part name="parameters" element="impl:getLicenseIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="applyPolicyResponse">
+    <wsdl:part name="parameters" element="impl:applyPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPolicyRequest">
+    <wsdl:part name="parameters" element="impl:getPolicy" />
+  </wsdl:message>
+  <wsdl:message name="applyPolicyRequest">
+    <wsdl:part name="parameters" element="impl:applyPolicy" />
+  </wsdl:message>
+  <wsdl:message name="getAllWatermarkNamesRequest">
+    <wsdl:part name="parameters" element="impl:getAllWatermarkNames" />
+  </wsdl:message>
+  <wsdl:message name="getWatermarkRequest">
+    <wsdl:part name="parameters" element="impl:getWatermark" />
+  </wsdl:message>
+  <wsdl:message name="registerPolicyResponse">
+    <wsdl:part name="parameters" element="impl:registerPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomPermissionsResponse">
+    <wsdl:part name="parameters" element="impl:getCustomPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWatermarkResponse">
+    <wsdl:part name="parameters" element="impl:getWatermarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPoliciesRequest">
+    <wsdl:part name="parameters" element="impl:getPolicies" />
+  </wsdl:message>
+  <wsdl:message name="getPolicyByPolicyIdRequest">
+    <wsdl:part name="parameters" element="impl:getPolicyByPolicyId" />
+  </wsdl:message>
+  <wsdl:message name="getAllWatermarkNamesResponse">
+    <wsdl:part name="parameters" element="impl:getAllWatermarkNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="inviteExternalUsersRequest">
+    <wsdl:part name="parameters" element="impl:inviteExternalUsers" />
+  </wsdl:message>
+  <wsdl:message name="updatePolicyResponse">
+    <wsdl:part name="parameters" element="impl:updatePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="exportEventsRequest">
+    <wsdl:part name="parameters" element="impl:exportEvents" />
+  </wsdl:message>
+  <wsdl:message name="getNumberOfSearchedEventsRequest">
+    <wsdl:part name="parameters" element="impl:getNumberOfSearchedEvents" />
+  </wsdl:message>
+  <wsdl:message name="revokeLicenseResponse">
+    <wsdl:part name="parameters" element="impl:revokeLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllPolicySetNamesResponse">
+    <wsdl:part name="parameters" element="impl:getAllPolicySetNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMyPolicyResponse">
+    <wsdl:part name="parameters" element="impl:getMyPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePolicyFromSDKResponse">
+    <wsdl:part name="parameters" element="impl:updatePolicyFromSDKResponse" />
+  </wsdl:message>
+  <wsdl:message name="unlockPDFUsingPolicyResponse">
+    <wsdl:part name="parameters" element="impl:unlockPDFUsingPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLicenseIDRequest">
+    <wsdl:part name="parameters" element="impl:getLicenseID" />
+  </wsdl:message>
+  <wsdl:message name="getPolicyByAlternateIdResponse">
+    <wsdl:part name="parameters" element="impl:getPolicyByAlternateIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLicenseRequest">
+    <wsdl:part name="parameters" element="impl:getLicense" />
+  </wsdl:message>
+  <wsdl:message name="getLicensesResponse">
+    <wsdl:part name="parameters" element="impl:getLicensesResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletePolicyRequest">
+    <wsdl:part name="parameters" element="impl:deletePolicy" />
+  </wsdl:message>
+  <wsdl:message name="removePolicySecurityResponse">
+    <wsdl:part name="parameters" element="impl:removePolicySecurityResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchForEventsRequest">
+    <wsdl:part name="parameters" element="impl:searchForEvents" />
+  </wsdl:message>
+  <wsdl:message name="revokeLicenseRequest">
+    <wsdl:part name="parameters" element="impl:revokeLicense" />
+  </wsdl:message>
+  <wsdl:message name="createPolicyFromTemplateRequest">
+    <wsdl:part name="parameters" element="impl:createPolicyFromTemplate" />
+  </wsdl:message>
+  <wsdl:message name="getNumberOfSearchedEventsResponse">
+    <wsdl:part name="parameters" element="impl:getNumberOfSearchedEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePolicyFromSDKRequest">
+    <wsdl:part name="parameters" element="impl:updatePolicyFromSDK" />
+  </wsdl:message>
+  <wsdl:message name="updateRevocationURLResponse">
+    <wsdl:part name="parameters" element="impl:updateRevocationURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPolicyByAlternateIdRequest">
+    <wsdl:part name="parameters" element="impl:getPolicyByAlternateId" />
+  </wsdl:message>
+  <wsdl:message name="setLicenseAlternateIdRequest">
+    <wsdl:part name="parameters" element="impl:setLicenseAlternateId" />
+  </wsdl:message>
+  <wsdl:message name="switchPolicyRequest">
+    <wsdl:part name="parameters" element="impl:switchPolicy" />
+  </wsdl:message>
+  <wsdl:message name="updateRevocationURLRequest">
+    <wsdl:part name="parameters" element="impl:updateRevocationURL" />
+  </wsdl:message>
+  <wsdl:message name="resetExternalUserPasswordResponse">
+    <wsdl:part name="parameters" element="impl:resetExternalUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPoliciesResponse">
+    <wsdl:part name="parameters" element="impl:getPoliciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWatermarkByNameResponse">
+    <wsdl:part name="parameters" element="impl:getWatermarkByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllPolicySetNamesRequest">
+    <wsdl:part name="parameters" element="impl:getAllPolicySetNames" />
+  </wsdl:message>
+  <wsdl:message name="inspectDocumentResponse">
+    <wsdl:part name="parameters" element="impl:inspectDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="registerPolicyRequest">
+    <wsdl:part name="parameters" element="impl:registerPolicy" />
+  </wsdl:message>
+  <wsdl:message name="resetExternalUserPasswordRequest">
+    <wsdl:part name="parameters" element="impl:resetExternalUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="createPolicyFromTemplateResponse">
+    <wsdl:part name="parameters" element="impl:createPolicyFromTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLicenseResponse">
+    <wsdl:part name="parameters" element="impl:getLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteEventsResponse">
+    <wsdl:part name="parameters" element="impl:deleteEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="unrevokeLicenseResponse">
+    <wsdl:part name="parameters" element="impl:unrevokeLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="setLicenseAlternateIdResponse">
+    <wsdl:part name="parameters" element="impl:setLicenseAlternateIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLicenseByAlternateIdResponse">
+    <wsdl:part name="parameters" element="impl:getLicenseByAlternateIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPolicyResponse">
+    <wsdl:part name="parameters" element="impl:getPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="createPolicyFromExistingPolicyRequest">
+    <wsdl:part name="parameters" element="impl:createPolicyFromExistingPolicy" />
+  </wsdl:message>
+  <wsdl:message name="unrevokeLicenseRequest">
+    <wsdl:part name="parameters" element="impl:unrevokeLicense" />
+  </wsdl:message>
+  <wsdl:message name="getLicenseByAlternateIdRequest">
+    <wsdl:part name="parameters" element="impl:getLicenseByAlternateId" />
+  </wsdl:message>
+  <wsdl:message name="updateWatermarkResponse">
+    <wsdl:part name="parameters" element="impl:updateWatermarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="changeLicensePolicyResponse">
+    <wsdl:part name="parameters" element="impl:changeLicensePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllDomainNamesResponse">
+    <wsdl:part name="parameters" element="impl:getAllDomainNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteEventsRequest">
+    <wsdl:part name="parameters" element="impl:deleteEvents" />
+  </wsdl:message>
+  <wsdl:message name="registerWatermarkResponse">
+    <wsdl:part name="parameters" element="impl:registerWatermarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="applyPolicyByPolicyIdRequest">
+    <wsdl:part name="parameters" element="impl:applyPolicyByPolicyId" />
+  </wsdl:message>
+  <wsdl:message name="getPolicyNamesRequest">
+    <wsdl:part name="parameters" element="impl:getPolicyNames" />
+  </wsdl:message>
+  <wsdl:message name="updateWatermarkRequest">
+    <wsdl:part name="parameters" element="impl:updateWatermark" />
+  </wsdl:message>
+  <wsdl:message name="switchPolicyResponse">
+    <wsdl:part name="parameters" element="impl:switchPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="exportEventsResponse">
+    <wsdl:part name="parameters" element="impl:exportEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="removePolicySecurityRequest">
+    <wsdl:part name="parameters" element="impl:removePolicySecurity" />
+  </wsdl:message>
+  <wsdl:message name="deletePolicyResponse">
+    <wsdl:part name="parameters" element="impl:deletePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteMyPolicyRequest">
+    <wsdl:part name="parameters" element="impl:deleteMyPolicy" />
+  </wsdl:message>
+  <wsdl:message name="getPolicyByPolicyIdResponse">
+    <wsdl:part name="parameters" element="impl:getPolicyByPolicyIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteMyPolicyResponse">
+    <wsdl:part name="parameters" element="impl:deleteMyPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteWatermarkRequest">
+    <wsdl:part name="parameters" element="impl:deleteWatermark" />
+  </wsdl:message>
+  <wsdl:message name="inviteExternalUsersResponse">
+    <wsdl:part name="parameters" element="impl:inviteExternalUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllDomainNamesRequest">
+    <wsdl:part name="parameters" element="impl:getAllDomainNames" />
+  </wsdl:message>
+  <wsdl:message name="unlockPDFUsingPolicyRequest">
+    <wsdl:part name="parameters" element="impl:unlockPDFUsingPolicy" />
+  </wsdl:message>
+  <wsdl:message name="createPolicyFromExistingPolicyResponse">
+    <wsdl:part name="parameters" element="impl:createPolicyFromExistingPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchForEventsResponse">
+    <wsdl:part name="parameters" element="impl:searchForEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="changePolicyOwnerRequest">
+    <wsdl:part name="parameters" element="impl:changePolicyOwner" />
+  </wsdl:message>
+  <wsdl:message name="getMyPolicyRequest">
+    <wsdl:part name="parameters" element="impl:getMyPolicy" />
+  </wsdl:message>
+  <wsdl:message name="protectDocumentRequest">
+    <wsdl:part name="parameters" element="impl:protectDocument" />
+  </wsdl:message>
+  <wsdl:portType name="RightsManagementService">
+    <wsdl:operation name="getLicenseID">
+      <wsdl:input name="getLicenseIDRequest" message="impl:getLicenseIDRequest" />
+      <wsdl:output name="getLicenseIDResponse" message="impl:getLicenseIDResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="applyPolicy">
+      <wsdl:input name="applyPolicyRequest" message="impl:applyPolicyRequest" />
+      <wsdl:output name="applyPolicyResponse" message="impl:applyPolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="inspectDocument">
+      <wsdl:input name="inspectDocumentRequest" message="impl:inspectDocumentRequest" />
+      <wsdl:output name="inspectDocumentResponse" message="impl:inspectDocumentResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="protectDocument">
+      <wsdl:input name="protectDocumentRequest" message="impl:protectDocumentRequest" />
+      <wsdl:output name="protectDocumentResponse" message="impl:protectDocumentResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="applyPolicyByPolicyId">
+      <wsdl:input name="applyPolicyByPolicyIdRequest" message="impl:applyPolicyByPolicyIdRequest" />
+      <wsdl:output name="applyPolicyByPolicyIdResponse" message="impl:applyPolicyByPolicyIdResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="removePolicySecurity">
+      <wsdl:input name="removePolicySecurityRequest" message="impl:removePolicySecurityRequest" />
+      <wsdl:output name="removePolicySecurityResponse" message="impl:removePolicySecurityResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="unlockPDFUsingPolicy">
+      <wsdl:input name="unlockPDFUsingPolicyRequest" message="impl:unlockPDFUsingPolicyRequest" />
+      <wsdl:output name="unlockPDFUsingPolicyResponse" message="impl:unlockPDFUsingPolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getLicense">
+      <wsdl:input name="getLicenseRequest" message="impl:getLicenseRequest" />
+      <wsdl:output name="getLicenseResponse" message="impl:getLicenseResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="revokeLicense">
+      <wsdl:input name="revokeLicenseRequest" message="impl:revokeLicenseRequest" />
+      <wsdl:output name="revokeLicenseResponse" message="impl:revokeLicenseResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="unrevokeLicense">
+      <wsdl:input name="unrevokeLicenseRequest" message="impl:unrevokeLicenseRequest" />
+      <wsdl:output name="unrevokeLicenseResponse" message="impl:unrevokeLicenseResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRevocationURL">
+      <wsdl:input name="updateRevocationURLRequest" message="impl:updateRevocationURLRequest" />
+      <wsdl:output name="updateRevocationURLResponse" message="impl:updateRevocationURLResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="changeLicensePolicy">
+      <wsdl:input name="changeLicensePolicyRequest" message="impl:changeLicensePolicyRequest" />
+      <wsdl:output name="changeLicensePolicyResponse" message="impl:changeLicensePolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="setLicenseAlternateId">
+      <wsdl:input name="setLicenseAlternateIdRequest" message="impl:setLicenseAlternateIdRequest" />
+      <wsdl:output name="setLicenseAlternateIdResponse" message="impl:setLicenseAlternateIdResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getLicenseByAlternateId">
+      <wsdl:input name="getLicenseByAlternateIdRequest" message="impl:getLicenseByAlternateIdRequest" />
+      <wsdl:output name="getLicenseByAlternateIdResponse" message="impl:getLicenseByAlternateIdResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getLicenses">
+      <wsdl:input name="getLicensesRequest" message="impl:getLicensesRequest" />
+      <wsdl:output name="getLicensesResponse" message="impl:getLicensesResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="switchPolicy">
+      <wsdl:input name="switchPolicyRequest" message="impl:switchPolicyRequest" />
+      <wsdl:output name="switchPolicyResponse" message="impl:switchPolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="registerWatermark">
+      <wsdl:input name="registerWatermarkRequest" message="impl:registerWatermarkRequest" />
+      <wsdl:output name="registerWatermarkResponse" message="impl:registerWatermarkResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWatermark">
+      <wsdl:input name="deleteWatermarkRequest" message="impl:deleteWatermarkRequest" />
+      <wsdl:output name="deleteWatermarkResponse" message="impl:deleteWatermarkResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="updateWatermark">
+      <wsdl:input name="updateWatermarkRequest" message="impl:updateWatermarkRequest" />
+      <wsdl:output name="updateWatermarkResponse" message="impl:updateWatermarkResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getWatermark">
+      <wsdl:input name="getWatermarkRequest" message="impl:getWatermarkRequest" />
+      <wsdl:output name="getWatermarkResponse" message="impl:getWatermarkResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getWatermarkByName">
+      <wsdl:input name="getWatermarkByNameRequest" message="impl:getWatermarkByNameRequest" />
+      <wsdl:output name="getWatermarkByNameResponse" message="impl:getWatermarkByNameResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="registerPolicy">
+      <wsdl:input name="registerPolicyRequest" message="impl:registerPolicyRequest" />
+      <wsdl:output name="registerPolicyResponse" message="impl:registerPolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePolicy">
+      <wsdl:input name="deletePolicyRequest" message="impl:deletePolicyRequest" />
+      <wsdl:output name="deletePolicyResponse" message="impl:deletePolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteMyPolicy">
+      <wsdl:input name="deleteMyPolicyRequest" message="impl:deleteMyPolicyRequest" />
+      <wsdl:output name="deleteMyPolicyResponse" message="impl:deleteMyPolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePolicy">
+      <wsdl:input name="updatePolicyRequest" message="impl:updatePolicyRequest" />
+      <wsdl:output name="updatePolicyResponse" message="impl:updatePolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePolicyFromSDK">
+      <wsdl:input name="updatePolicyFromSDKRequest" message="impl:updatePolicyFromSDKRequest" />
+      <wsdl:output name="updatePolicyFromSDKResponse" message="impl:updatePolicyFromSDKResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="createPolicyFromTemplate">
+      <wsdl:input name="createPolicyFromTemplateRequest" message="impl:createPolicyFromTemplateRequest" />
+      <wsdl:output name="createPolicyFromTemplateResponse" message="impl:createPolicyFromTemplateResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPolicyByPolicyId">
+      <wsdl:input name="getPolicyByPolicyIdRequest" message="impl:getPolicyByPolicyIdRequest" />
+      <wsdl:output name="getPolicyByPolicyIdResponse" message="impl:getPolicyByPolicyIdResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPolicy">
+      <wsdl:input name="getPolicyRequest" message="impl:getPolicyRequest" />
+      <wsdl:output name="getPolicyResponse" message="impl:getPolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyPolicy">
+      <wsdl:input name="getMyPolicyRequest" message="impl:getMyPolicyRequest" />
+      <wsdl:output name="getMyPolicyResponse" message="impl:getMyPolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPolicies">
+      <wsdl:input name="getPoliciesRequest" message="impl:getPoliciesRequest" />
+      <wsdl:output name="getPoliciesResponse" message="impl:getPoliciesResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="changePolicyOwner">
+      <wsdl:input name="changePolicyOwnerRequest" message="impl:changePolicyOwnerRequest" />
+      <wsdl:output name="changePolicyOwnerResponse" message="impl:changePolicyOwnerResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPolicyByAlternateId">
+      <wsdl:input name="getPolicyByAlternateIdRequest" message="impl:getPolicyByAlternateIdRequest" />
+      <wsdl:output name="getPolicyByAlternateIdResponse" message="impl:getPolicyByAlternateIdResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="inviteExternalUsers">
+      <wsdl:input name="inviteExternalUsersRequest" message="impl:inviteExternalUsersRequest" />
+      <wsdl:output name="inviteExternalUsersResponse" message="impl:inviteExternalUsersResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="resetExternalUserPassword">
+      <wsdl:input name="resetExternalUserPasswordRequest" message="impl:resetExternalUserPasswordRequest" />
+      <wsdl:output name="resetExternalUserPasswordResponse" message="impl:resetExternalUserPasswordResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="searchForEvents">
+      <wsdl:input name="searchForEventsRequest" message="impl:searchForEventsRequest" />
+      <wsdl:output name="searchForEventsResponse" message="impl:searchForEventsResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteEvents">
+      <wsdl:input name="deleteEventsRequest" message="impl:deleteEventsRequest" />
+      <wsdl:output name="deleteEventsResponse" message="impl:deleteEventsResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getNumberOfSearchedEvents">
+      <wsdl:input name="getNumberOfSearchedEventsRequest" message="impl:getNumberOfSearchedEventsRequest" />
+      <wsdl:output name="getNumberOfSearchedEventsResponse" message="impl:getNumberOfSearchedEventsResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="exportEvents">
+      <wsdl:input name="exportEventsRequest" message="impl:exportEventsRequest" />
+      <wsdl:output name="exportEventsResponse" message="impl:exportEventsResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllPolicySetNames">
+      <wsdl:input name="getAllPolicySetNamesRequest" message="impl:getAllPolicySetNamesRequest" />
+      <wsdl:output name="getAllPolicySetNamesResponse" message="impl:getAllPolicySetNamesResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getPolicyNames">
+      <wsdl:input name="getPolicyNamesRequest" message="impl:getPolicyNamesRequest" />
+      <wsdl:output name="getPolicyNamesResponse" message="impl:getPolicyNamesResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllWatermarkNames">
+      <wsdl:input name="getAllWatermarkNamesRequest" message="impl:getAllWatermarkNamesRequest" />
+      <wsdl:output name="getAllWatermarkNamesResponse" message="impl:getAllWatermarkNamesResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainNames">
+      <wsdl:input name="getAllDomainNamesRequest" message="impl:getAllDomainNamesRequest" />
+      <wsdl:output name="getAllDomainNamesResponse" message="impl:getAllDomainNamesResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomPermissions">
+      <wsdl:input name="getCustomPermissionsRequest" message="impl:getCustomPermissionsRequest" />
+      <wsdl:output name="getCustomPermissionsResponse" message="impl:getCustomPermissionsResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+    <wsdl:operation name="createPolicyFromExistingPolicy">
+      <wsdl:input name="createPolicyFromExistingPolicyRequest" message="impl:createPolicyFromExistingPolicyRequest" />
+      <wsdl:output name="createPolicyFromExistingPolicyResponse" message="impl:createPolicyFromExistingPolicyResponse" />
+      <wsdl:fault name="SDKException" message="impl:SDKException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RightsManagementServiceSoapBinding" type="impl:RightsManagementService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getLicenseID">
+      <wsdlsoap:operation soapAction="getLicenseID..9.0.0" />
+      <wsdl:input name="getLicenseIDRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getLicenseIDResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="applyPolicy">
+      <wsdlsoap:operation soapAction="applyPolicy..9.0.0" />
+      <wsdl:input name="applyPolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="applyPolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="inspectDocument">
+      <wsdlsoap:operation soapAction="inspectDocument..9.0.0" />
+      <wsdl:input name="inspectDocumentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="inspectDocumentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="protectDocument">
+      <wsdlsoap:operation soapAction="protectDocument..9.0.0" />
+      <wsdl:input name="protectDocumentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="protectDocumentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="applyPolicyByPolicyId">
+      <wsdlsoap:operation soapAction="applyPolicyByPolicyId..9.0.0" />
+      <wsdl:input name="applyPolicyByPolicyIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="applyPolicyByPolicyIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePolicySecurity">
+      <wsdlsoap:operation soapAction="removePolicySecurity..9.0.0" />
+      <wsdl:input name="removePolicySecurityRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removePolicySecurityResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unlockPDFUsingPolicy">
+      <wsdlsoap:operation soapAction="unlockPDFUsingPolicy..9.0.0" />
+      <wsdl:input name="unlockPDFUsingPolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unlockPDFUsingPolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLicense">
+      <wsdlsoap:operation soapAction="getLicense..9.0.0" />
+      <wsdl:input name="getLicenseRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getLicenseResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="revokeLicense">
+      <wsdlsoap:operation soapAction="revokeLicense..9.0.0" />
+      <wsdl:input name="revokeLicenseRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="revokeLicenseResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unrevokeLicense">
+      <wsdlsoap:operation soapAction="unrevokeLicense..9.0.0" />
+      <wsdl:input name="unrevokeLicenseRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unrevokeLicenseResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateRevocationURL">
+      <wsdlsoap:operation soapAction="updateRevocationURL..9.0.0" />
+      <wsdl:input name="updateRevocationURLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateRevocationURLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeLicensePolicy">
+      <wsdlsoap:operation soapAction="changeLicensePolicy..9.0.0" />
+      <wsdl:input name="changeLicensePolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeLicensePolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setLicenseAlternateId">
+      <wsdlsoap:operation soapAction="setLicenseAlternateId..9.0.0" />
+      <wsdl:input name="setLicenseAlternateIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setLicenseAlternateIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLicenseByAlternateId">
+      <wsdlsoap:operation soapAction="getLicenseByAlternateId..9.0.0" />
+      <wsdl:input name="getLicenseByAlternateIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getLicenseByAlternateIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLicenses">
+      <wsdlsoap:operation soapAction="getLicenses..9.0.0" />
+      <wsdl:input name="getLicensesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getLicensesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="switchPolicy">
+      <wsdlsoap:operation soapAction="switchPolicy..9.0.0" />
+      <wsdl:input name="switchPolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="switchPolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerWatermark">
+      <wsdlsoap:operation soapAction="registerWatermark..9.0.0" />
+      <wsdl:input name="registerWatermarkRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="registerWatermarkResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWatermark">
+      <wsdlsoap:operation soapAction="deleteWatermark..9.0.0" />
+      <wsdl:input name="deleteWatermarkRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteWatermarkResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateWatermark">
+      <wsdlsoap:operation soapAction="updateWatermark..9.0.0" />
+      <wsdl:input name="updateWatermarkRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateWatermarkResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getWatermark">
+      <wsdlsoap:operation soapAction="getWatermark..9.0.0" />
+      <wsdl:input name="getWatermarkRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getWatermarkResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getWatermarkByName">
+      <wsdlsoap:operation soapAction="getWatermarkByName..9.0.0" />
+      <wsdl:input name="getWatermarkByNameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getWatermarkByNameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerPolicy">
+      <wsdlsoap:operation soapAction="registerPolicy..9.0.0" />
+      <wsdl:input name="registerPolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="registerPolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deletePolicy">
+      <wsdlsoap:operation soapAction="deletePolicy..9.0.0" />
+      <wsdl:input name="deletePolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deletePolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMyPolicy">
+      <wsdlsoap:operation soapAction="deleteMyPolicy..9.0.0" />
+      <wsdl:input name="deleteMyPolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteMyPolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePolicy">
+      <wsdlsoap:operation soapAction="updatePolicy..9.0.0" />
+      <wsdl:input name="updatePolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updatePolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePolicyFromSDK">
+      <wsdlsoap:operation soapAction="updatePolicyFromSDK..9.0.0" />
+      <wsdl:input name="updatePolicyFromSDKRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updatePolicyFromSDKResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createPolicyFromTemplate">
+      <wsdlsoap:operation soapAction="createPolicyFromTemplate..9.0.0" />
+      <wsdl:input name="createPolicyFromTemplateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createPolicyFromTemplateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPolicyByPolicyId">
+      <wsdlsoap:operation soapAction="getPolicyByPolicyId..9.0.0" />
+      <wsdl:input name="getPolicyByPolicyIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPolicyByPolicyIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPolicy">
+      <wsdlsoap:operation soapAction="getPolicy..9.0.0" />
+      <wsdl:input name="getPolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMyPolicy">
+      <wsdlsoap:operation soapAction="getMyPolicy..9.0.0" />
+      <wsdl:input name="getMyPolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getMyPolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPolicies">
+      <wsdlsoap:operation soapAction="getPolicies..9.0.0" />
+      <wsdl:input name="getPoliciesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPoliciesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changePolicyOwner">
+      <wsdlsoap:operation soapAction="changePolicyOwner..9.0.0" />
+      <wsdl:input name="changePolicyOwnerRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changePolicyOwnerResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPolicyByAlternateId">
+      <wsdlsoap:operation soapAction="getPolicyByAlternateId..9.0.0" />
+      <wsdl:input name="getPolicyByAlternateIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPolicyByAlternateIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="inviteExternalUsers">
+      <wsdlsoap:operation soapAction="inviteExternalUsers..9.0.0" />
+      <wsdl:input name="inviteExternalUsersRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="inviteExternalUsersResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="resetExternalUserPassword">
+      <wsdlsoap:operation soapAction="resetExternalUserPassword..9.0.0" />
+      <wsdl:input name="resetExternalUserPasswordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="resetExternalUserPasswordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="searchForEvents">
+      <wsdlsoap:operation soapAction="searchForEvents..9.0.0" />
+      <wsdl:input name="searchForEventsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchForEventsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEvents">
+      <wsdlsoap:operation soapAction="deleteEvents..9.0.0" />
+      <wsdl:input name="deleteEventsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteEventsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getNumberOfSearchedEvents">
+      <wsdlsoap:operation soapAction="getNumberOfSearchedEvents..9.0.0" />
+      <wsdl:input name="getNumberOfSearchedEventsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getNumberOfSearchedEventsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="exportEvents">
+      <wsdlsoap:operation soapAction="exportEvents..9.0.0" />
+      <wsdl:input name="exportEventsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="exportEventsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllPolicySetNames">
+      <wsdlsoap:operation soapAction="getAllPolicySetNames..9.0.0" />
+      <wsdl:input name="getAllPolicySetNamesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllPolicySetNamesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPolicyNames">
+      <wsdlsoap:operation soapAction="getPolicyNames..9.0.0" />
+      <wsdl:input name="getPolicyNamesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPolicyNamesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllWatermarkNames">
+      <wsdlsoap:operation soapAction="getAllWatermarkNames..9.0.0" />
+      <wsdl:input name="getAllWatermarkNamesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllWatermarkNamesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainNames">
+      <wsdlsoap:operation soapAction="getAllDomainNames..9.0.0" />
+      <wsdl:input name="getAllDomainNamesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllDomainNamesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomPermissions">
+      <wsdlsoap:operation soapAction="getCustomPermissions..9.0.0" />
+      <wsdl:input name="getCustomPermissionsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCustomPermissionsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createPolicyFromExistingPolicy">
+      <wsdlsoap:operation soapAction="createPolicyFromExistingPolicy..9.0.0" />
+      <wsdl:input name="createPolicyFromExistingPolicyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createPolicyFromExistingPolicyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SDKException">
+        <wsdlsoap:fault use="literal" name="SDKException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RightsManagementServiceService">
+    <wsdl:port name="RightsManagementService" binding="impl:RightsManagementServiceSoapBinding">
+      <wsdlsoap:address location="http://aditya-desk:8080/soap/services/RightsManagementService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,81 @@
+# ---------------------------------------------------------------------------------
+#
+# ADOBE SYSTEMS INCORPORATED
+# Copyright 2007 Adobe Systems Incorporated
+# All Rights Reserved
+# 
+# NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the
+# terms of the Adobe license agreement accompanying it.  If you have received this file from a
+# source other than Adobe, then your use, modification, or distribution of it requires the prior
+# written permission of Adobe.
+#
+# ---------------------------------------------------------------------------------
+#
+# Input Properties to the sample FormsServiceThruSOAP
+# Replace LC_Sample with correct LiveCycle Sample directory path (i.e. The path where the zip file is extracted)
+# ---------------------------------------------------------------------------------
+
+# The location from where this client program should pick the input form/data file. 
+# This is a REQUIRED property.
+
+contentRootURI=LC_Sample/Forms/FormsServiceThruSOAP/collaterals/resources
+
+# --------------------------------------------------------------------------------------------------
+
+# The URL to use for invoking FormsService on the LiveCycle Server. This should look something like 
+# http://localhost:8080/soap/services/FormsService for JBOSS running on localhost with HTTP port number 8080.
+# This is a REQUIRED property.
+
+soapEndpointURL=http://localhost:8080/soap/services/FormsService
+
+# --------------------------------------------------------------------------------------------------
+
+# The user-name to be used to log on to LiveCycle Server. It could be, say administrator.
+# This is a REQUIRED property.
+
+userName=administrator
+
+# --------------------------------------------------------------------------------------------------
+
+# The password to be used to log on to LiveCycle Server. This is a REQUIRED property.
+
+password=password
+
+# --------------------------------------------------------------------------------------------------
+
+# The input form to be used, lying under the contentRoot location. This is an OPTIONAL property. 
+# Default value of this property is taken as "input.xdp".
+
+# inputForm=input.xdp
+
+# --------------------------------------------------------------------------------------------------
+
+# The input XML data used to render the input form. This is an OPTIONAL property.
+
+inputData=../collaterals/resources/input.xml
+
+# --------------------------------------------------------------------------------------------------
+
+# The directory where all output is placed on running the sample.
+# This is an OPTIONAL property. Default value of this property is taken as "../collaterals/output".
+
+# outputFile=../output.pdf
+outputDir=../collaterals/output
+
+# --------------------------------------------------------------------------------------------------
+
+# transformTo specifies the type of HTML form to render.
+# Legal values are: XHTML, AUTO, NoScriptXHTML, HTML4, MSDHTML, StaticHTML
+# This is an OPTIONAL property. Default value of this property is taken as "AUTO".
+
+transformTo=AUTO
+
+# --------------------------------------------------------------------------------------------------
+
+# userAgent is the HTTP_USER_AGENT header that provides information about the target device.
+# This parameter is used when formPreference is set to AUTO.
+# This is an OPTIONAL property. Default value of this property is taken as "Mozilla/3.*".
+
+userAgent=Mozilla/3.*
+
+# --------------------------------------------------------------------------------------------------

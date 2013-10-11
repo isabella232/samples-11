@@ -1,0 +1,147 @@
+^job exmpl2 -axxEXTRANS @JobName..out "C:\Program Files\Adobe\Central\Samples\Extrans\tdf\@JobName..tdf"
+                               Any Company Inc.
+                                PURCHASE ORDER
+
+                                                   Date:   01/31/1999
+                                        Requisition No.:       100295
+ Vendor:
+
+ ABC Computer Supplies         1001               Administration              
+ 10 First Avenue                               X  Sales
+ Anywhere, ST                                     Marketing
+ 12345-6789
+
+
+
+ Item  Qty        Description        Units  Unit Price  Total Price
+ 
+ 333C    5  Mouse Pads               EA           2.50        12.50
+ 123A   10  Desk Calendars           EA          12.25       122.50
+ 343B    2  Desk Lamp                EA          35.50        71.00
+
+
+                                                Total:       206.00
+
+                               Any Company Inc.
+                                PURCHASE ORDER
+
+                                                   Date:   06/31/1999
+                                        Requisition No.:       230299
+ Vendor:
+
+ XYZ Computers & Supplies      1002            X  Administration              
+ 20 Second Avenue                                 Sales
+ Anywhere, ST                                     Marketing
+ 12345-6789
+
+
+
+ Item  Qty        Description        Units  Unit Price  Total Price
+ 
+ 987C    5  Pens                     BOX          5.50        27.50
+ 654A   10  Copier Paper             BOX        135.25      1352.50
+ 343B    2  Rulers                   EA           3.50         7.00
+ 987D   10  Ballpoint Pens           BOX          2.60        26.00
+ 380T    1  Printer Calculator       EA          42.50        42.50
+ 459N    8  Staples                  BOX          1.50        12.00
+ 343D   10  Foldback Clips           BOX           .80         8.00
+ 475R    6  Erasers                  BOX         12.50        75.00
+ A799    5  Mechanical Pencils       EA           6.00        30.00
+ A798    4  Pencil Leads - .5mm      TUBE         1.30         5.20
+ 878D    4  Desk Pads                EA          35.00       140.00
+ 886C    4  Memo Sheet Refill        PKG           .85         3.40
+ 446G   10  Desk Trays               EA           6.90        69.00
+ 355U    3  Rotary Files             EA          65.00       195.00
+ 987C    5  Pens                     BOX          5.50        27.50
+ 654A   10  Copier Paper             BOX        135.25      1352.50
+ 343B    2  Rulers                   EA           3.50         7.00
+ 987D   10  Ballpoint Pens           BOX          2.60        26.00
+ 380T    1  Printer Calculator       EA          42.50        42.50
+ 459N    8  Staples                  BOX          1.50        12.00
+ 343D   10  Foldback Clips           BOX           .80         8.00
+ 475R    6  Erasers                  BOX         12.50        75.00
+ A799    5  Mechanical Pencils       EA           6.00        30.00
+ A798    4  Pencil Leads - .5mm      TUBE         1.30         5.20
+ 878D    4  Desk Pads                EA          35.00       140.00
+ 886C    4  Memo Sheet Refill        PKG           .85         3.40
+ 446G   10  Desk Trays               EA           6.90        69.00
+ 355U    3  Rotary Files             EA          65.00       195.00987C    5  Pens                     BOX          5.50        27.50
+ 654A   10  Copier Paper             BOX        135.25      1352.50
+ 343B    2  Rulers                   EA           3.50         7.00
+ 987D   10  Ballpoint Pens           BOX          2.60        26.00
+ 380T    1  Printer Calculator       EA          42.50        42.50
+ 459N    8  Staples                  BOX          1.50        12.00
+ 343D   10  Foldback Clips           BOX           .80         8.00
+ 475R    6  Erasers                  BOX         12.50        75.00
+ A799    5  Mechanical Pencils       EA           6.00        30.00
+ A798    4  Pencil Leads - .5mm      TUBE         1.30         5.20
+ 878D    4  Desk Pads                EA          35.00       140.00
+ 886C    4  Memo Sheet Refill        PKG           .85         3.40
+ 446G   10  Desk Trays               EA           6.90        69.00
+ 355U    3  Rotary Files             EA          65.00       195.00987C    5  Pens                     BOX          5.50        27.50
+ 654A   10  Copier Paper             BOX        135.25      1352.50
+ 343B    2  Rulers                   EA           3.50         7.00
+ 987D   10  Ballpoint Pens           BOX          2.60        26.00
+ 380T    1  Printer Calculator       EA          42.50        42.50
+ 459N    8  Staples                  BOX          1.50        12.00
+ 343D   10  Foldback Clips           BOX           .80         8.00
+ 475R    6  Erasers                  BOX         12.50        75.00
+ A799    5  Mechanical Pencils       EA           6.00        30.00
+ A798    4  Pencil Leads - .5mm      TUBE         1.30         5.20
+ 878D    4  Desk Pads                EA          35.00       140.00
+ 886C    4  Memo Sheet Refill        PKG           .85         3.40
+ 446G   10  Desk Trays               EA           6.90        69.00
+ 355U    3  Rotary Files             EA          65.00       195.00
+
+                                                Total:      2199.10
+
+                               Any Company Inc.
+                                PURCHASE ORDER
+
+                                                   Date:   06/31/1999
+                                        Requisition No.:       65469
+ Vendor:
+
+ ADB Computers & Supplies      1002            X  Administration              
+ 20 Second Avenue                                 Sales
+ Anywhere, ST                                     Marketing
+ 12345-6789
+
+
+
+ Item  Qty        Description        Units  Unit Price  Total Price
+ 
+ 987C    5  Pens                     BOX          5.50        27.50
+ 654A   10  Copier Paper             BOX        135.25      1352.50
+ 343B    2  Rulers                   EA           3.50         7.00
+ 987D   10  Ballpoint Pens           BOX          2.60        26.00
+ 380T    1  Printer Calculator       EA          42.50        42.50
+ 459N    8  Staples                  BOX          1.50        12.00
+ 343D   10  Foldback Clips           BOX           .80         8.00
+ 475R    6  Erasers                  BOX         12.50        75.00
+ A799    5  Mechanical Pencils       EA           6.00        30.00
+ A798    4  Pencil Leads - .5mm      TUBE         1.30         5.20
+ 878D    4  Desk Pads                EA          35.00       140.00
+ 886C    4  Memo Sheet Refill        PKG           .85         3.40
+ 446G   10  Desk Trays               EA           6.90        69.00
+ 355U    3  Rotary Files             EA          65.00       195.00
+ 987C    5  Pens                     BOX          5.50        27.50
+ 654A   10  Copier Paper             BOX        135.25      1352.50
+ 343B    2  Rulers                   EA           3.50         7.00
+ 987D   10  Ballpoint Pens           BOX          2.60        26.00
+ 380T    1  Printer Calculator       EA          42.50        42.50
+ 459N    8  Staples                  BOX          1.50        12.00
+ 343D   10  Foldback Clips           BOX           .80         8.00
+ 475R    6  Erasers                  BOX         12.50        75.00
+ A799    5  Mechanical Pencils       EA           6.00        30.00
+ A798    4  Pencil Leads - .5mm      TUBE         1.30         5.20
+ 878D    4  Desk Pads                EA          35.00       140.00
+ 886C    4  Memo Sheet Refill        PKG           .85         3.40
+ 446G   10  Desk Trays               EA           6.90        69.00
+ 355U    3  Rotary Files             EA          65.00       195.00987C    5  Pens                     BOX          5.50        27.50
+ 654A   10  Copier Paper             BOX        135.25      1352.50
+ 343B    2  Rulers                   EA           3.50         7.00
+ 987D   10  Ballpoint Pens           BOX          2.60        26.00
+ 
+
+                                                Total:      2199.10

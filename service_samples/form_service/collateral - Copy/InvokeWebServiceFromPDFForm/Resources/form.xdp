@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V9.0.0.0.20091029.1.612548" APIVersion="3.1.9277.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2010-03-12T02:44:31Z" uuid="16955acd-33a9-4ffd-bffb-13fe13325e51">
+<template xmlns="http://www.xfa.org/schema/xfa-template/2.4/">
+   <?formServer defaultPDFRenderFormat acrobat7.0.5static?>
+   <subform name="form1" layout="tb" locale="en_US">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="203.2mm" h="756pt">
+         <subform name="Body" y="0.102mm" w="203.587mm" h="42.722mm">
+            <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+            <subform name="invoke" x="0.001mm">
+               <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+               <field name="inputString" y="1.073mm" w="198.025mm" h="9.525mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Input String</text>
+                     </value>
+                  </caption>
+                  <connect connection="DataConnection" usage="exportOnly" ref="inputString"/>
+               </field>
+               <connect connection="DataConnection" usage="exportOnly" ref="invoke"/>
+               <?templateDesigner expand 1?></subform>
+            <connect connection="DataConnection" usage="exportOnly" ref="!connectionData.DataConnection.Body"/>
+            <?templateDesigner expand 1?>
+            <draw name="Text1" y="14.773mm" x="2.175mm" w="111.499mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>The input string that will be converted to upper case using the web service.</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 313226 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 76 The input string that will be converted to upper case using the web service. 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="outputString" y="27.473mm" x="2.175mm" w="198.025mm" h="9mm" access="readOnly">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="23.9866mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Output String</text>
+                  </value>
+               </caption>
+               <connect connection="DataConnection" usage="importOnly" ref="!connectionData.DataConnection.Body.invokeResponse.outputString"/>
+            </field>
+         </subform>
+         <subform name="Body" y="38.1mm" w="203.587mm" h="15.875mm">
+            <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+            <subform name="invokeResponse">
+               <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+               <connect connection="DataConnection" usage="importOnly" ref="invokeResponse"/>
+               <?templateDesigner expand 1?></subform>
+            <connect connection="DataConnection" usage="importOnly" ref="!connectionData.DataConnection.Body"/>
+            <?templateDesigner expand 1?>
+            <draw name="Text2" y="0.63mm" x="2.175mm" w="81.629mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>The result of  converting the input string to upper case.</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 228555 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 57 The result of  converting the input string to upper case. 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+         </subform>
+         <field name="invokeBtn" y="57.15mm" x="76.2mm" w="44.45mm" h="9.525mm">
+            <ui>
+               <button/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <caption>
+               <value>
+                  <text>Invoke Web Service</text>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </caption>
+            <border hand="right">
+               <edge stroke="raised"/>
+               <fill>
+                  <color value="212,208,200"/>
+               </fill>
+            </border>
+            <bind match="none"/>
+            <event activity="click">
+               <execute connection="DataConnection"/>
+            </event>
+         </field>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">8.1.1.2188.1.406459.359820</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 108 27 0001000F002A003000340035003800420043004400450046004700480049004A004C004D004F00500051005300540055005600570058 .IOSTWabcdefghiklnoprstuvw?></subform>
+   <?templateDesigner DefaultLanguage FormCalc?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner DefaultPreviewType print?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner FormTargetVersion 24?>
+   <?templateDesigner Zoom 80?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/1.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.65</version>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.1/">
+   <wsdlConnection name="DataConnection" dataDescription="DataConnectioninvokeRequestDD">
+      <soapAddress>http://lc-server:8080/soap/services/Samples%20-%20Forms/Processes/Invoke%20Web%20Service%20From%20PDF%20Form</soapAddress>
+      <wsdlAddress>http://lc-server:8080/soap/services/Samples - Forms/Processes/Invoke Web Service From PDF Form?wsdl</wsdlAddress>
+      <soapAction>invoke</soapAction>
+      <operation input="invokeRequest" output="invokeResponse">invoke</operation>
+      <?templateDesigner fileDigest shaHash="Bana4EOr162xGTlpArXcKeiR068="?></wsdlConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="DataConnectioninvokeRequestDD">
+      <DataConnection>
+         <soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+            <impl:invoke xmlns:impl="http://adobe.com/idp/services">
+               <impl:inputString dd:minOccur="0" dd:nullType="exclude"/>
+            </impl:invoke>
+         </soap:Body>
+      </DataConnection>
+   </dd:dataDescription>
+</xfa:datasets>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.1/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.0-c319 44.281645, Sun Mar 25 2007 16:17:34">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2010-03-12T02:44:31Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 9.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 9.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:16955acd-33a9-4ffd-bffb-13fe13325e51</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>8.1.1.2188.1.406459.359820</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

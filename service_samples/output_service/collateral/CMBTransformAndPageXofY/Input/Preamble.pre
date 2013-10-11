@@ -1,0 +1,44 @@
+^comment ************************************************************************************
+^comment * NOTE. Because the custom properties JFPREAMBLE_n
+^comment *             will be overwritten when you compile you should
+^comment *             apply your preamble overrides to the JFPREAMBLE
+^comment *             custom property following the reference to the
+^comment *             ^FILE DOCVAR:JFPREAMBLE_1 DICTIONARY  below.
+^comment ************************************************************************************
+^FILE DOCVAR:JFPREAMBLE_1 DICTIONARY
+^comment *    Preamble overrides...
+^comment *       'page n of m' preamble
+^comment *  Count the transactions
+^comment *  Define the global with the page "n of m" text.
+^comment *  Restart the page number at 1 for each transaction
+^comment *  Trace the page count at the end of each transaction
+^comment *
+^define global:totpgs 0
+^define group:SWITCHPAGE       \page1\defineresolveglobal:totpgs,@global:totpgs+1\field$POSITION.
+^define user:TransCount          0
+^define group:!IncrTransCount \defineresolve:TransCount,"@(@:TransCount.+1)".
+^define global:Page_Num         @$page. of @:PagesInTrans.
+^define user:PagesInTrans      @(If("@:PageCountForTrans_@:TransCount."==0,"?","@:PageCountForTrans_@:TransCount.")).
+^define group:!NewPage1        \$page1\defineresolvegroup:!NewPage1,"\page1\$page1.".
+^comment define group:!TrcPgCnt           \trace"^define User:PageCountForTrans_@:TransCount. @$page. @global:totpgs. @LF.".
+^define group:!TrcPgCnt           \trace"^define User:PageCountForTrans_@:TransCount. @$page. @LF.".
+^comment *
+^comment *  Do this at the beginning of every transaction
+^comment *
+^define group:!BeginTrans   \group!EndTrans\group!BeginTrans1.
+^define group:!BeginTrans1 \group!IncrTransCount\group!BeginTrans2.
+^define group:!BeginTrans2 \group!NewPage1\group!BeginTrans3.
+^define group:!BeginTrans3 \defineresolve:Detail_Header,"Detail_Header"\group!BeginTrans4.
+^define group:!BeginTrans4 \group!ResetTrlr.
+^comment *
+^comment *  Do this at the end of every transaction and at end-of-file
+^comment *
+^define group:JfEndData!EndData \group!EndTrans.
+^define group:!EndTrans     @(If(@:TransCount.==0,"","\group!EndTrans1.")).
+^define group:!EndTrans1   \group!EndTrans2.
+^define group:!EndTrans2   \group!TrcPgCnt.
+^comment *
+^comment *  The !OnEntry event of the major subform/group for a transaction
+^comment *  should invoke !BeginTrans
+^define group:G_po_hdr!OnEntry        \group!BeginTrans.
+^comment *

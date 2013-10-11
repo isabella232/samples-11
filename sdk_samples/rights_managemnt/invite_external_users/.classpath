@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/activation.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/common/adobe-livecycle-client.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/common/adobe-rightsmanagement-client.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/common/adobe-usermanager-client.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/axis.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/commons-discovery.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/commons-logging.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/jaxb-api.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/jaxb-impl.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/jaxb-libs.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/mail.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/relaxngDatatype.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/spi/edc-server-spi.jar"/>
+	<classpathentry kind="var" path="LIVECYCLE_SDK_DIR/client-libs/thirdparty/xsdlib.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

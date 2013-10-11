@@ -1,0 +1,122 @@
+ ==== Transformation Definition File
+ ==== Created by the Visual Transformation Editor Version 5.7.0.08296
+ ==== Mar 9, 2009
+
+ ==== Option Table :
+ ==== O [quote] [discard formfeed] [lines per page] [carriage control] [strip newlines]
+ ====   [page script] [sections per page] [file type] [delimiter]
+O ' Y 0 N N Y Y O
+
+ ==== Section Table :
+ ==== S [previous section] [next section] [search string]
+ ====   [start line] [end line] [start column] [end column] [operator]
+S *		Header	'Any Company'	1	1	1	70	
+S Header	Total	'Total:'	18	120	1	70	
+
+ ==== Extraction Table :
+ ==== E [extract name] [section name] [search string] [occurence]
+ ====   [start line] [end line] [from column] [to column] [from row] [to row] [terminator]
+E PO_DATE		Header	'Date:'		1	4	4	8	18	0	0	''
+E REQNO			Header	'Requisition'	1	5	5	22	29	0	0	''
+E VENDOR_CODE		Header	''		1	8	8	32	35	0	0	''
+E vendor_name		Header	''		1	+7	+7	2	30	0	0	''
+E venaddr1		Header	''		1	+8	+8	2	30	0	0	''
+E venaddr2		Header	''		1	+9	+9	2	30	0	0	''
+E venaddr3		Header	''		1	+10	+10	2	30	0	0	''
+E ADMINISTRATION	Header	''		1	8	8	48	48	0	0	''
+E SALES			Header	''		1	9	9	48	48	0	0	''
+E MARKETING		Header	''		1	10	10	48	48	0	0	''
+E ITEM			Header	''		1	17	116	2	5	0	0	''
+E qty			Header	''		1	17	116	7	10	0	0	''
+E DESCRIPTION		Header	''		1	17	116	13	37	0	0	''
+E UNITS			Header	''		1	17	116	38	42	0	0	''
+E UNIT_PRICE		Header	''		1	17	116	46	55	0	0	''
+E TOTAL_PRICE		Header	''		1	17	116	60	69	0	0	''
+E TOTAL			Total	'Total:'	1	0	0	9	19	0	0	''
+
+ ==== Visual Transformation Editor
+ ==== Warning : Do not change or move the text enclosed within "----"
+
+ ==== Script Table :
+#startscript Header
+#comment ---- PO_DATE ----
+^field PO_DATE
+@PO_DATE
+#comment ---- REQNO ----
+^field REQNO
+@REQNO
+#comment ---- VENDOR_CODE ----
+^field VENDOR_CODE
+@VENDOR_CODE
+#comment ---- vendor_name ----
+^field vendor_name
+@vendor_name
+#comment ---- venaddr1 ----
+^field venaddr1
+@venaddr1
+#comment ---- venaddr2 ----
+^field venaddr2
+@venaddr2
+#comment ---- venaddr3 ----
+^field venaddr3
+@venaddr3
+#comment ---- ADMINISTRATION ----
+^field ADMINISTRATION
+@ADMINISTRATION
+#comment ---- SALES ----
+^field SALES
+@SALES
+#comment ---- MARKETING ----
+^field MARKETING
+@MARKETING
+#comment ---- ITEM ----
+#For ITEM
+^field ITEM
+@ITEM
+#comment ---- qty ----
+^field qty
+@qty
+#comment ---- DESCRIPTION ----
+^field DESCRIPTION
+@DESCRIPTION
+#comment ---- UNITS ----
+^field UNITS
+@UNITS
+#comment ---- UNIT_PRICE ----
+^field UNIT_PRICE
+@UNIT_PRICE
+#comment ---- TOTAL_PRICE ----
+^field TOTAL_PRICE
+@TOTAL_PRICE
+#ENDFOR
+#endscript 
+
+#startscript Total
+#comment ---- TOTAL ----
+^field TOTAL
+@TOTAL
+#endscript 
+
+
+
+ ==== Visual Transformation Editor ==== 
+ ==== [DO NOT EDIT] ==== 
+ <Properties> 
+ <sessionPaths>
+ <samples>C:\customers\arpit\</samples>
+ <tdfs>C:\Users\agoliya\Desktop\Work- 07 to 16 March 2009\forSecondUseCaseCMBfrmHicks\</tdfs>
+ <forms>[basePath]</forms>
+ <outputs>C:\customers\arpit\</outputs>
+ <logs>C:\customers\arpit\</logs>
+ </sessionPaths>
+ <inputFile>chtestin4.txt</inputFile>
+ <outputFile>chpotest.out</outputFile>
+ <logFile>chpotest.log</logFile>
+ <formFile/>
+ <inputLines>200</inputLines>
+ <recLen>-1</recLen>
+ <startRecordSection>*</startRecordSection>
+ <pageBannersVisible>true</pageBannersVisible>
+ <defaultSectionsVisible>true</defaultSectionsVisible>
+ </Properties> 
+ 

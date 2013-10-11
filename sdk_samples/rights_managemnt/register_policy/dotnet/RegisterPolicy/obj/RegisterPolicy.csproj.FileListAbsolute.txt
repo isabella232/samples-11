@@ -1,0 +1,9 @@
+C:\Documents and Settings\sneh\My Documents\Visual Studio 2005\Projects\RegisterPolicy\RegisterPolicy\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\sneh\My Documents\Visual Studio 2005\Projects\RegisterPolicy\RegisterPolicy\bin\Debug\RegisterPolicy.exe.config
+C:\Documents and Settings\sneh\My Documents\Visual Studio 2005\Projects\RegisterPolicy\RegisterPolicy\bin\Debug\RegisterPolicy.exe
+C:\Documents and Settings\sneh\My Documents\Visual Studio 2005\Projects\RegisterPolicy\RegisterPolicy\bin\Debug\RegisterPolicy.pdb
+C:\Documents and Settings\sneh\My Documents\Visual Studio 2005\Projects\RegisterPolicy\RegisterPolicy\obj\Debug\RegisterPolicy.exe
+C:\Documents and Settings\sneh\My Documents\Visual Studio 2005\Projects\RegisterPolicy\RegisterPolicy\obj\Debug\RegisterPolicy.pdb
+C:\SDK Samples\SDK Samples refined\RegisterPolicy\DOTNET\RegisterPolicy\bin\Debug\RegisterPolicy.exe.config
+C:\SDK Samples\SDK Samples refined\RegisterPolicy\DOTNET\RegisterPolicy\obj\Debug\RegisterPolicy.exe
+C:\SDK Samples\SDK Samples refined\RegisterPolicy\DOTNET\RegisterPolicy\obj\Debug\RegisterPolicy.pdb

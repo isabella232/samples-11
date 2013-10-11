@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build" name="RegisterPolicy">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.5"/>
+    <property name="source" value="1.5"/>
+    <property file="build.properties"/>
+    <path id="RegisterPolicy.classpath">
+        <pathelement location="."/>
+        
+        <pathelement location="${livecycle.sdk.path}/common/adobe-livecycle-client.jar"/>
+        <pathelement location="${livecycle.sdk.path}/common/adobe-rightsmanagement-client.jar"/>
+        <pathelement location="${livecycle.sdk.path}/common/adobe-usermanager-client.jar"/>
+	<pathelement location="${livecycle.sdk.path}/thirdparty/activation.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/axis.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/commons-discovery.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/commons-logging.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/jaxb-api.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/jaxb-impl.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/jaxb-libs.jar"/>
+	<pathelement location="${livecycle.sdk.path}/thirdparty/jaxrpc.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/mail.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/wsdl4j.jar"/>
+	<pathelement location="${livecycle.sdk.path}/thirdparty/saaj.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/xsdlib.jar"/>
+        <pathelement location="${livecycle.sdk.path}/thirdparty/relaxngDatatype.jar"/>
+	<pathelement location="${livecycle.sdk.path}/thirdparty/xercesImpl.jar"/>
+
+        <pathelement location="${jboss.home}/client/jbossall-client.jar"/>
+    </path>
+    <target name="init">
+        <copy includeemptydirs="false" todir=".">
+            <fileset dir="." excludes="**/*.launch, **/*.java"/>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete>
+            <fileset dir="." includes="**/*.class"/>
+        </delete>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="run" name="build"/>
+   
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="." source="${source}" target="${target}">
+            <src path="."/>
+            <classpath refid="RegisterPolicy.classpath"/>
+        </javac>
+    </target>
+    <target depends="build-project" name="run" >
+        <echo message="${ant.project.name}: ${ant.file}"/>
+	
+	<java classname="com.adobe.livecycle.samples.rightsmanagement.RegisterPolicySample">
+		<arg line="${server.url}"/>
+		<arg line="${username}"/>
+		<arg line="${password}"/>
+		<arg line="${server.type}"/>
+		<arg line="${connection.mode}"/>
+        <classpath refid="RegisterPolicy.classpath"/>
+       </java>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+</project>

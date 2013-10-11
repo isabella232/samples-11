@@ -1,0 +1,9 @@
+<metadata-spec>
+	<user>
+		<map xpath="header/txtPONum" name="purchaseNumber"/>
+		<map xpath="total/numTotal" name="grandTotal"/>
+		<map xpath="fax-details/fax-number" name="faxNumber"/>
+		<map xpath="fax-details/subject" name="faxSubject"/>
+		<map xpath="header/txtOrderedByContactName" name="faxTo"/>
+	</user>
+</metadata-spec>

@@ -1,0 +1,47 @@
+# ---------------------------------------------------------------------------------
+#
+# ADOBE SYSTEMS INCORPORATED
+# Copyright 2007 Adobe Systems Incorporated
+# All Rights Reserved
+# 
+# NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the
+# terms of the Adobe license agreement accompanying it.  If you have received this file from a
+# source other than Adobe, then your use, modification, or distribution of it requires the prior
+# written permission of Adobe.
+#
+# ---------------------------------------------------------------------------------
+#
+# Input Properties to the Orchestration client com.adobe.lces.samples.LCPrintCommandLine
+#
+# ---------------------------------------------------------------------------------
+
+# The URL to use for doing a lookup to the LiveCycle Server. This should look something like 
+# jnp://localhost:1099 for JBOSS running on localhost at port number 1099. This is a REQUIRED property.
+
+ejbEndpoint=jnp://localhost:1099
+
+# --------------------------------------------------------------------------------------------------
+
+# The user-name to be used to log on to LiveCycle Server. It could be, say administrator.
+# This is a REQUIRED property.
+
+userName=administrator
+
+# --------------------------------------------------------------------------------------------------
+
+# The password to be used to log on to LiveCycle Server. This is a REQUIRED property.
+
+password=password
+
+# --------------------------------------------------------------------------------------------------
+
+# If this property is given the orchestration will use PrintService and try to print on the given printer's URL
+
+# printURI=\\server\printer-Name
+
+# --------------------------------------------------------------------------------------------------
+
+# The output file on which result is to be written, lying under the contentRoot location. 
+# This is a REQUIRED property. Possible values of this property are PCL,PostScript,ZPL
+
+outputFormat=PostScript

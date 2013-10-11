@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***************************************************************************
+
+    ADOBE SYSTEMS INCORPORATED
+    Copyright 2007 Adobe Systems Incorporated
+    All Rights Reserved
+ 
+    NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the
+    of the Adobe license agreement accompanying it.  If you have received this file from a
+    source other than Adobe, then your use, modification, or distribution of it requires the prior
+    written permission of Adobe.
+
+***************************************************************************
+
+    Replace the values with correct  directory path and file name
+
+***************************************************************************
+-->
+<LetterWithAttachment>
+    <ContentRootUrl>/tmp/LCSamples/Resources/LetterWithAttachment</ContentRootUrl>
+    <ExtractDataXslName>ExtractData.xsl</ExtractDataXslName>
+    <ExtractDdxXslName>ExtractDdx.xsl</ExtractDdxXslName>
+    <XmlName>Input.xml</XmlName>
+</LetterWithAttachment>

@@ -1,0 +1,1 @@
+ant -f build.xml -Dserver.url=%1 -Dusername=%2 -Dpassword=%3 -Dserver.type=%4 -Dconnection.mode=%5

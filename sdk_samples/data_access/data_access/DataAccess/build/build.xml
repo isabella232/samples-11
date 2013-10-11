@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<project name="dataaccess" default="dist" basedir=".">
+
+	<property file="build.properties"/>
+    
+	          
+	<path id="dataaccess.classpath.compile">
+   		<pathelement path="${COMMON_LIB}/adobe-livecycle-client.jar"/>
+		<pathelement path="${THIRDPARTY_LIB}/xercesImpl.jar"/>
+	</path>
+
+	<path id="dataaccess.classpath.runtime">
+   		<pathelement path="${JBOSS_CLIENT}/jbossall-client.jar"/>
+	</path>
+
+	<target name="clean">
+		<delete dir="${dataaccess.build.dir}"/>
+		<delete dir="${dataaccess.dist.dir}"/>
+	</target>	        
+    
+	<target name="init">
+		<mkdir dir="${dataaccess.build.dir}" />
+		<mkdir dir="${dataaccess.dist.dir}/common/sdk" />
+	</target>	
+	
+    <target name="compile" depends="init" description="Compile files">
+		<javac destdir="${dataaccess.build.dir}" srcdir="${dataaccess.src.dir}"	classpathref="dataaccess.classpath.compile" debug="true"/>
+    </target>   
+    
+	
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: update-version-info                      
+         - - - - - - - - - - - - - - - - - -->
+	<target name="copy-property-files" depends="init">
+		<copy todir="${dataaccess.build.dir}" verbose="true">
+			<filterset>
+				<filter token="version" value="${component.version}"/>
+				<filter token="specificationVersion" value="${specification.version}"/>
+			</filterset>
+			<fileset dir="${basedir}/../etc">
+				<include name="component.xml"/>
+			</fileset>
+		</copy>
+
+	</target>
+
+	<!-- ================================= 
+          target: dist-client              
+         ================================= -->
+    <target name="dist-client" depends="init,compile" description="--> To create client">
+        <jar destfile="${dataaccess.dist.dir}/common/sdk/adobe-samples-dataaccesssample-client.jar">
+			<fileset dir="${dataaccess.build.dir}">
+				<include name="**/client/*.class"/>
+				<include name="**/exception/*.class"/>
+			</fileset>        	
+        </jar>
+    </target>
+	
+    <target name="dist" depends="init,compile,dist-client,copy-property-files">
+
+		<jar destFile="${dataaccess.dist.dir}/common/adobe-samples-dataaccess-dsc.jar">
+
+			<fileset dir="${dataaccess.build.dir}">
+				<include name="**/*.class" />
+				<exclude name="**/client/*.class"/>
+				<include name="component.xml" />
+			</fileset>
+
+		</jar>
+
+    </target>
+
+	<target name="run" depends="dist">
+		
+	</target>
+	
+</project>

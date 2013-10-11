@@ -1,0 +1,22 @@
+<component xmlns="http://adobe.com/idp/dsc/component/document">
+<component-id>com.adobe.livecycle.samples.rightsmanagement.InviteExternalUsers</component-id>
+<version>1.0</version>
+<bootstrap-class>com.adobe.livecycle.samples.rightsmanagement.BootstrapImpl</bootstrap-class>
+<descriptor-class>com.adobe.idp.dsc.component.impl.DefaultPOJODescriptorImpl</descriptor-class>
+<services>
+<service name="InviteExternalUsersSample">
+<specifications>
+<specification spec-id="com.adobe.edc.server.spi.ersp.InvitedUserProvider"/>
+</specifications>
+<specification-version>1.0</specification-version>
+<implementation-class>com.adobe.livecycle.samples.rightsmanagement.InviteExternalUsersSample</implementation-class>
+<auto-deploy category-id="Samples" service-id="InviteExternalUsersSample" major-version="1" minor-version="0"/>
+<operations>
+<operation name="invitedUser">
+<input-parameter name="input" type="java.util.List" required="true"/>
+<output-parameter name="result" type="com.adobe.edc.server.spi.esrp.InvitedUserProviderResult[]"/>
+</operation>
+</operations>
+</service>
+</services>
+</component>
